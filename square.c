@@ -20,35 +20,32 @@ const char*  TESTING          = "test";
 const char*  PASSWORD         = "1111";
 const char*  FILE_TEST        = "file";
 const char*  DEFAULT_TEST     = "default";
+const char*  DEFAULT_ENTER    = "default";
+const char*  CUSTOM_ENTER     = "custom";
 //---------------------------------------------------------------------------------------------
 
 int main(void)
 {
-    // TODO: unused variables
-    double a = NAN, b = NAN, c = NAN;
     double x1 = NAN, x2 = NAN;
 
     int count_solutions = 0, count_bad_enter = 0, flag_stat = 1, flag_exit = 1;
     int flag_stop_program = 0;
-    enum enum_decisions quantity = NO_ROOTS;
-    enum enum_opportunity_user choice = GO;
+    enum_decisions quantity = NO_ROOTS;
 
-    struct coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
+    coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
 
     while (1)
     {
-        // TODO: ask_user move to switch (...)
-        choice = ask_user(&flag_stat, &flag_exit, &count_bad_enter);
-        switch (choice)
+        switch (ask_user(&flag_stat, &flag_exit, &count_bad_enter))
         {
             case STOP:
                 flag_stop_program = 1;
                 [[fallthrough]];
             case STAT:
-                statistic(&count_solutions, &count_bad_enter, &flag_exit);
+                calculate_statics(&count_solutions, &count_bad_enter, &flag_exit);
                 break;
             case GO:
-                input_coeffs(&coeffs, &count_bad_enter);
+                choose_enter(&coeffs, &count_bad_enter);
                 decide_equation(coeffs, &x1, &x2, &quantity);
                 print_answer(quantity, &x1, &x2, &count_solutions);
                 break;
@@ -62,8 +59,7 @@ int main(void)
         if (flag_stop_program)
             break;
     }
-    // TODO: return 0
-    return 1;
+    return 0;
 }
 
 //---------------------------------------------------------------------------------------------
@@ -92,7 +88,6 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
     // double d = calc_discr(coeff);
     double d = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
 
-    // TODO: codestyle
     if (is_zero(d))
     {
         *x1_ptr = -coeffs.b / (2 * coeffs.a);
@@ -102,9 +97,8 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
         return NO_ROOTS;
     else
     {
-        // TODO: codestyle
         *x1_ptr = (-coeffs.b + sqrt(d)) / (2 * coeffs.a);
-        *x2_ptr = (- coeffs.b - sqrt(d)) / (2 * coeffs.a);
+        *x2_ptr = (-coeffs.b - sqrt(d)) / (2 * coeffs.a);
         return TWO_ROOTS;
     }
 }
@@ -215,8 +209,7 @@ void print_answer(enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* 
 }
 //---------------------------------------------------------------------------------------------
 
-// TODO: rename calculate_statics
-void statistic(int* ptr_count_solutions, int* ptr_count_bad_enter, int* ptr_flag_exit)
+void calculate_statics(int* ptr_count_solutions, int* ptr_count_bad_enter, int* ptr_flag_exit)
 {
     assert (ptr_count_bad_enter != NULL);
     assert (ptr_flag_exit != NULL);
@@ -264,7 +257,6 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     assert (ptr_flag_exit != NULL);
     assert (ptr_count_bad_enter != NULL);
 
-    // TODO: codestyle
     char mode[BUFFER_SIZE] = {};
 
     if (*ptr_flag_stat)
@@ -321,8 +313,10 @@ bool check_test_password(int* ptr_count_bad_enter) //check password before testi
     assert (ptr_count_bad_enter != NULL);
 
     char password[BUFFER_SIZE] = {};
+
     printf(BLU "Please, enter the password\n" CRESET);
     scanf(" %5s", password);
+
     if (!strcmp(password, PASSWORD))
     {
         printf(GRN "Right password\n\n" CRESET);
@@ -365,4 +359,27 @@ int chose_test()
         printf(RED "Wrong enter, bye\n" CRESET);
         return 0;
     }
+}
+//------------------------------------------------------------------------------------------
+int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
+{
+    char test_chose[BUFFER_SIZE] = {};
+
+    printf(BLU "Choose enter format\n" CRESET);
+    printf(MAG "default -> default enter(by 1 coeff)\n");
+    printf("custom -> custom enter(full equalisation)\n" CRESET);
+
+    scanf(" %8s", test_chose);
+
+    if (!strcmp(test_chose, DEFAULT_ENTER))
+    {
+        input_coeffs(ptr_coeffs, ptr_count_bad_enter);
+        return 0;
+    }
+    else
+    {
+        custom_input(ptr_coeffs);
+        return 0;
+    }
+    return 1;
 }

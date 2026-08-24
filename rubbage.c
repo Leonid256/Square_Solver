@@ -69,3 +69,9 @@ void input_one_coeff(double*, int*);//ввод одного коэфф-та + п
 void statistic(int*, int*, int*); //статистика пользователя
 enum enum_opportunity_user ask_user(int* pflag_stat, int* pflag_exit, int* pcount_bad_enter); //запрос юзера
 */
+
+
+for (int i = 0; i < ENTER_LIMIT - 1; i++)
+    {
+        printf("%s ", equalisation[i]);
+    }

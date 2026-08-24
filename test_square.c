@@ -12,11 +12,9 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
     assert (ptr_count_fail != NULL);
 
     double x1 = NAN, x2 = NAN;
-    // TODO: codestyle (enum keyword)
-    enum enum_decisions quality_local = NO_ROOTS;
+    enum_decisions quality_local = NO_ROOTS;
 
-    // TODO: read about struct
-    struct coefficients coeffs_test = {.a = NAN, .b = NAN, .c = NAN};
+    coefficients coeffs_test = {.a = NAN, .b = NAN, .c = NAN};
 
     coeffs_test.a = test.a;
     coeffs_test.b = test.b;

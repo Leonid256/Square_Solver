@@ -33,13 +33,14 @@ struct coefficients
 //user functions
 // maybe TODO: remove enum keyword
 enum enum_opportunity_user ask_user(int* , int* , int* ); //запрос юзера
-void statistic(int*, int*, int*); //статистика пользователя
+void calculate_statics(int*, int*, int*); //статистика пользователя
 
 //---------------------------------------------------------------------------------------------
 //user input
 void input_coeffs(coefficients* coeffs, int* ); //ввод коэффициентов ур-я
 void input_one_coeff(double* ptr_1coeff, int*);//ввод одного коэфф-та + проверка
-
+void custom_input(coefficients* ptr_coeffs); //ввод уравнения
+int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter);// выбор ввода
 //---------------------------------------------------------------------------------------------
 //output
 void print_answer(enum_decisions quantity, double* , double* , int* ); //вывод ответа

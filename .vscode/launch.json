@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/leonid/Documents/GitHub/Square_Solver",
+      "program": "/Users/leonid/Documents/GitHub/Square_Solver/build/Debug/outDebug"
+    }
+  ]
+}
