@@ -1,7 +1,7 @@
-#include "function.h"
+#include "function.hpp"
 #include <stdio.h>
 #include <math.h>
-#include "visual.h"
+#include "visual.hpp"
 #include <unistd.h>
 #include <assert.h>
 //---------------------------------------------------------------------------------------------
@@ -28,7 +28,11 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
         {
             case (NO_ROOTS):
                 if (isnan(x1) && isnan(x2))
-                    printf(GRN "Test PASSED\n" CRESET);
+                {
+                    printf(GRN);
+                    print_typewriter("Test PASSED\n", 15);
+                    printf(CRESET);
+                }
                 else
                     print_failed(test, x1,
                     x2, quality_local, ptr_count_fail);
@@ -37,7 +41,11 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
             case (ONE_ROOT):
             case (INFINITE):
                 if ((is_equal(x1, test.x1ref) && is_equal(x2, test.x2ref)))
-                    printf(GRN "Test PASSED\n" CRESET);
+                {
+                    printf(GRN);
+                    print_typewriter("Test PASSED\n", 15);
+                    printf(CRESET);
+                }
                 else
                     print_failed(test, x1,
                     x2, quality_local, ptr_count_fail);
@@ -46,7 +54,11 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
             case (TWO_ROOTS):
                 if ((is_equal(x1, test.x1ref) && is_equal(x2, test.x2ref)) ||
                         (is_equal(x1, test.x2ref) && is_equal(x2, test.x1ref)))
-                    printf(GRN "Test PASSED\n" CRESET);
+                {
+                    printf(GRN);
+                    print_typewriter("Test PASSED\n", 15);
+                    printf(CRESET);
+                }
                 else
                     print_failed(test, x1,
                     x2, quality_local, ptr_count_fail);
@@ -64,7 +76,9 @@ void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr
 {
     assert (ptr_count_fail != NULL);
 
-    printf(RED "Test FAILED\n");
+    printf(RED);
+    print_typewriter("Test FAILED\n", 15);
+    printf(CRESET);
     printf("a = %lg, b = %lg, c = %lg\n", test.a, test.b, test.c);
     printf("got:      x1 = %lg, x2 = %lg, roots: %d\n", x1, x2, quality_local);
     printf("expected: x1 = %lg, x2 = %lg, roots: %d\n" CRESET, test.x1ref, test.x2ref, test.nRootsRef);
@@ -78,36 +92,26 @@ int RunTests()
     // TODO: think about macro-function (особенно про # в теле макроса)
 
     int count_fail = 0;
-    TestCase test1 = {.a = 0, .b = 0, .c = 0, .nRootsRef = INFINITE,
-                .x1ref = NAN, .x2ref = NAN};
-    RunOneTest(test1, &count_fail);
 
-    TestCase test2 = {.a = 1, .b = 0, .c = 0, .nRootsRef = 1,
-                .x1ref = 0, .x2ref = 1}; //error
-    RunOneTest(test2, &count_fail);
+    TestCase testsStreet[] =
+    {{.a = 0, .b = 0, .c = 0, .nRootsRef = INFINITE, .x1ref = NAN, .x2ref = NAN},
+    {.a = 1, .b = 0, .c = 0, .nRootsRef = 1, .x1ref = 0, .x2ref = 1},    //error
+    {.a = 0, .b = 1, .c = 0, .nRootsRef = 1, .x1ref = 0, .x2ref = NAN},
+    {.a = 0, .b = 0, .c = 1, .nRootsRef = 0, .x1ref = NAN, .x2ref = NAN},
+    {.a = 1, .b = 1, .c = 1, .nRootsRef = 0,.x1ref = NAN, .x2ref = NAN},
+    {.a = 1, .b = -1, .c = 0, .nRootsRef = 2, .x1ref = 5267, .x2ref = 1}, //error
+    {.a = 0, .b = 1, .c = 1, .nRootsRef = 1, .x1ref = -1, .x2ref = NAN}};
 
-    TestCase test3 = {.a = 0, .b = 1, .c = 0, .nRootsRef = 1,
-                .x1ref = 0, .x2ref = NAN};
-    RunOneTest(test3, &count_fail);
+    int size = sizeof(testsStreet) / sizeof(TestCase);
 
-    TestCase test4 = {.a = 0, .b = 0, .c = 1, .nRootsRef = 0,
-                .x1ref = NAN, .x2ref = NAN};
-    RunOneTest(test4, &count_fail);
+    for (int i = 0; i < size; i++)
+    {
+        RunOneTest(testsStreet[i], &count_fail);
+    }
 
-    TestCase test5 = {.a = 1, .b = 1, .c = 1, .nRootsRef = 0,
-                .x1ref = NAN, .x2ref = NAN};
-    RunOneTest(test5, &count_fail);
-
-    TestCase test6 = {.a = 1, .b = -1, .c = 0, .nRootsRef = 2,
-                .x1ref = 5267, .x2ref = 1}; //error
-    RunOneTest(test6, &count_fail);
-
-    TestCase test7 = {.a = 0, .b = 1, .c = 1, .nRootsRef = 1,
-                .x1ref = -1, .x2ref = NAN};
-    RunOneTest(test7, &count_fail);
-
-    printf("Testing is over\n");
-    printf("Failed test: %d\n\n", count_fail);
+    print_typewriter("Testing is over\n", 20);
+    print_typewriter("Failed test: ", 20);
+    printf("%d\n\n", count_fail);
 
     return count_fail;
 }
@@ -130,8 +134,10 @@ int RunTests_from_file()
         }
 
         fclose(fp);
-        printf("Testing is over\n");
-        printf("Failed test: %d\n\n", count_fail);
+        
+        print_typewriter("Testing is over\n", 20);
+        print_typewriter("Failed test: ", 20);
+        printf("%d\n\n", count_fail);
 
         return count_fail;
     }

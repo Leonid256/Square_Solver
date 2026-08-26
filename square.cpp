@@ -4,9 +4,10 @@
 #include <ctype.h>
 #include <unistd.h>
 #include <string.h>
-#include "function.h"
-#include "visual.h"
+#include "function.hpp"
+#include "visual.hpp"
 #include <stdbool.h>
+#include <unistd.h>
 
 //---------------------------------------------------------------------------------------------
 const double EPSILON          = 1e-3;     // == 0.001
@@ -23,6 +24,8 @@ const char*  DEFAULT_TEST     = "default";
 const char*  DEFAULT_ENTER    = "default";
 const char*  CUSTOM_ENTER     = "custom";
 //---------------------------------------------------------------------------------------------
+#define sleep_ms(ms) usleep((ms) * 1000)
+//---------------------------------------------------------------------------------------------
 
 int main(void)
 {
@@ -33,6 +36,10 @@ int main(void)
     enum_decisions quantity = NO_ROOTS;
 
     coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
+
+    printf("|--------------------------------------|\n");
+    printf("|" MAG "Hello, that is square solver programm" CRESET " |\n");
+    printf("|--------------------------------------|\n");
 
     while (1)
     {
@@ -138,19 +145,19 @@ void input_coeffs(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
     assert (ptr_coeffs != NULL);
     assert (ptr_count_bad_enter != NULL);
 
-    printf("Enter a\n");
+    print_typewriter("Enter a\n", 15);
     input_one_coeff(&((*ptr_coeffs).a), ptr_count_bad_enter);
 
-    printf("Enter b\n");
+    print_typewriter("Enter b\n", 15);
     input_one_coeff(&((*ptr_coeffs).b), ptr_count_bad_enter);
 
-    printf("Enter c\n");
+    print_typewriter("Enter c\n", 15);
     input_one_coeff(&((*ptr_coeffs).c), ptr_count_bad_enter);
 
-    printf(BLU "Your coeffitients: %lg %lg %lg\n" CRESET,
+    printf(BLU);
+    print_typewriter("Your coeffitients:", 15);
+    printf(BLU " %lg %lg %lg\n" CRESET,
                 (*ptr_coeffs).a, (*ptr_coeffs).b, (*ptr_coeffs).c);
-
-    sleep(1);
 }
 //---------------------------------------------------------------------------------------------
 
@@ -168,7 +175,10 @@ void input_one_coeff(double* ptr_1coeff, int* ptr_count_bad_enter)
 
         if (!right_coeff)
         {
-            printf(RED "Wrong enter\n" CRESET);
+            printf(RED);
+            print_typewriter("Wrong enter\n\n", 15);
+            printf(CRESET);
+
             ++(*ptr_count_bad_enter);
             continue;
         }
@@ -189,16 +199,22 @@ void print_answer(enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* 
     switch (quantity)
     {
         case NO_ROOTS:
-            printf("Нет решений\n\n");
+            print_typewriter("Уравнение не имеет решений\n\n", 15);
             break;
         case ONE_ROOT:
+            print_typewriter("Уравнение имеет одно решение:\n", 15);
             printf("x1 = x2 = %lg\n\n", *ptr_x1);
             break;
         case TWO_ROOTS:
-            printf("x1 = %lg, x2 = %lg\n\n", *ptr_x1, *ptr_x2);
+            print_typewriter("Уравнение имеет два решения:\n", 15);
+            print_typewriter("x1 = ", 10);
+            printf("%lg\n", *ptr_x1);
+            print_typewriter("x2 = ", 10);
+            printf("%lg\n\n",*ptr_x2);
             break;
         case INFINITE:
-            printf("0 = 0; infinite roots\n\n");
+            print_typewriter("Уравнение имеет вид: 0 = 0\n", 15);
+            print_typewriter("infinite roots\n\n", 15);
             break;
         default:
             assert(0 && "Unreachable"); // custom assert
@@ -217,15 +233,25 @@ void calculate_statics(int* ptr_count_solutions, int* ptr_count_bad_enter, int* 
 
     char mode_stat[BUFFER_SIZE] = {};
 
-    sleep(1);
+    printf("-------------------------|\n");
+    print_typewriter("Statistic:               |\n", 25);
 
-    printf("Statistic:\n");
-    printf(YEL "Решено уравнений: %d\n" CRESET, *ptr_count_solutions);
-    printf(RED "Wrong enter: %d\n\n" CRESET, *ptr_count_bad_enter);
+    printf(YEL);
+    print_typewriter("Решено уравнений: ", 20);
+    printf("%d", *ptr_count_solutions);
+    printf(CRESET);
+    printf("      |\n");
+
+    printf(RED);
+    print_typewriter("Wrong enter: ", 20);
+    printf("%d", *ptr_count_bad_enter);
+    printf(CRESET);
+    printf("           |\n");
+    printf("-------------------------|\n\n");
 
     if (*ptr_flag_exit)
     {
-        printf("restart -> restart statistic\nexit -> continue calculations\n");
+        print_typewriter("restart -> restart statistic\nexit -> continue calculations\n", 30);
         scanf(" %7s", mode_stat);      //7 длина читаемой строки
     }
 
@@ -235,14 +261,17 @@ void calculate_statics(int* ptr_count_solutions, int* ptr_count_bad_enter, int* 
         {
             *ptr_count_solutions = 0;
             *ptr_count_bad_enter = 0;
-            printf("Вычисления обнулены\n");
+            print_typewriter("Вычисления обнулены\n\n", 20);
             break;
         }
         else if (!(strcmp(mode_stat, EXIT_STAT)))
             break;
         else
         {
-            printf(RED "Wrong enter\n" CRESET);
+            printf(RED);
+            print_typewriter("Wrong enter\n", 10);
+            printf(CRESET);
+
             clean_stdin();
             (*ptr_count_bad_enter)++;
         }
@@ -259,10 +288,20 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
 
     char mode[BUFFER_SIZE] = {};
 
+    print_typewriter("Выберите дальнейшее действие\n", 20);
+
     if (*ptr_flag_stat)
-        printf(BLU "go -> continue; stop -> stop; stat -> statistic; test -> testing\n" CRESET);
+    {
+        printf(BLU);
+        print_typewriter("go -> continue solving; stop -> stop; stat -> statistic; test -> testing\n", 30);
+        printf(CRESET);
+    }
     else
-        printf(BLU "go -> continue; stop -> stop; test -> testing\n" CRESET);
+    {
+        printf(BLU);
+        print_typewriter("go -> continue solving; stop -> stop; test -> testing\n", 30);
+        printf(CRESET);
+    }
 
     scanf(" %5s", mode);       //5 - длина считываемой строки
 
@@ -274,7 +313,8 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     }
     else if (!strcmp(EXIT_CYCLE, mode))     //завершение программы
     {
-        printf("The end(\n");
+        print_typewriter("The end(\n", 15);
+
         *ptr_flag_exit = 0;
         return STOP;
     }
@@ -290,7 +330,10 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     }
     else
     {
-        printf(RED "Wrong enter\n\n" CRESET);
+        printf(RED);
+        print_typewriter("Wrong enter\n\n", 15);
+        printf(CRESET);
+
         clean_stdin();
         (*ptr_count_bad_enter)++;
 
@@ -314,17 +357,26 @@ bool check_test_password(int* ptr_count_bad_enter) //check password before testi
 
     char password[BUFFER_SIZE] = {};
 
-    printf(BLU "Please, enter the password\n" CRESET);
+    printf(BLU);
+    print_typewriter("Please, enter the password\n", 20);
+    printf(CRESET);
+
     scanf(" %5s", password);
 
     if (!strcmp(password, PASSWORD))
     {
-        printf(GRN "Right password\n\n" CRESET);
+        printf(GRN);
+        print_typewriter("Right password\n\n", 15);
+        printf(CRESET);
+
         return true;
     }
     else
     {
-        printf(RED "Wrong password, GoodBye\n" CRESET);
+        printf(RED);
+        print_typewriter("Wrong password, GoodBye\n", 15);
+        printf(CRESET);
+
         ++(*ptr_count_bad_enter);
         return false;
     }
@@ -334,52 +386,91 @@ int chose_test()
 {
     char test_chose[BUFFER_SIZE] = {};
 
-    printf(BLU "Choose variety of testing\n" CRESET);
-    printf("file -> testing from user file\n");
-    printf("default -> testing by default values\n");
+    printf(BLU);
+    print_typewriter("Choose variety of testing\n", 20);
+    printf(CRESET);
+    print_typewriter("file -> testing from user file\n", 20);
+    print_typewriter("default -> testing by default values\n", 20);
     scanf(" %8s", test_chose);
 
     if (!strcmp(test_chose, FILE_TEST))
     {
         // TODO: read filename
-        printf(BLU "Good, testing from user file\n" CRESET);
-        sleep(1);
+        printf(BLU);
+        print_typewriter("Good, testing from user file\n", 20);
+        printf(CRESET);
+
         RunTests_from_file();
         return 1;
     }
     else if (!strcmp(test_chose, DEFAULT_TEST))
     {
-        printf(BLU "Ok, default testing\n" CRESET);
-        sleep(1);   // TODO: is sleep really needed?
+        printf(BLU);
+        print_typewriter("Ok, default testing\n", 20);
+        printf(CRESET);
+
         RunTests();
         return 1;
     }
     else
     {
-        printf(RED "Wrong enter, bye\n" CRESET);
+        printf(RED);
+        print_typewriter("Wrong enter, bye\n", 20);
+        printf(CRESET);
         return 0;
     }
 }
 //------------------------------------------------------------------------------------------
 int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
 {
+    assert (ptr_coeffs != NULL);
+    assert (ptr_count_bad_enter != NULL);
+
     char test_chose[BUFFER_SIZE] = {};
 
-    printf(BLU "Choose enter format\n" CRESET);
-    printf(MAG "default -> default enter(by 1 coeff)\n");
-    printf("custom -> custom enter(full equalisation)\n" CRESET);
+    print_typewriter("Choose enter format\n", 50);
+    printf(MAG);
+    print_typewriter("default -> default enter(by 1 coeff)\n", 30);
+    print_typewriter("custom -> custom enter(full equalisation)\n", 30);
+    printf(CRESET);
 
-    scanf(" %8s", test_chose);
+    while (1)
+    {
+        scanf(" %8s", test_chose);      //8 - длина считываемой строки
 
-    if (!strcmp(test_chose, DEFAULT_ENTER))
-    {
-        input_coeffs(ptr_coeffs, ptr_count_bad_enter);
-        return 0;
+        if (!strcmp(test_chose, DEFAULT_ENTER))
+        {
+            printf(BLU);
+            print_typewriter("Enter coefficients one bu one\n", 40);
+            printf(CRESET);
+
+            input_coeffs(ptr_coeffs, ptr_count_bad_enter);
+            return 0;
+        }
+        else if (!strcmp(test_chose, CUSTOM_ENTER))
+        {
+            custom_input(ptr_coeffs);
+            return 0;
+        }
+        else
+        {
+            printf(RED);
+            print_typewriter("Wrong enter\n\n", 15);
+            printf(CRESET);
+
+            clean_stdin();
+            continue;
+        }
     }
-    else
-    {
-        custom_input(ptr_coeffs);
-        return 0;
-    }
+
     return 1;
+}
+//------------------------------------------------------------------------------------------
+void print_typewriter(const char *text, int delay_ms) {
+    while (*text) {
+        putchar(*text);
+        fflush(stdout);
+        sleep_ms(delay_ms);
+        text++;
+    }
 }
