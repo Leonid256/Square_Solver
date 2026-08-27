@@ -21,7 +21,9 @@ void custom_input(coefficients* ptr_coeffs)
     clean_stdin();
 
     printf(BLU);
-    print_typewriter("Enter Your square equalisation\n", 30);
+    print_typewriter("Enter Your square equalisation ", 30);
+    printf(RED);
+    print_typewriter("(extra symbols will be removed)\n", 30);
     printf(CRESET);
 
     int i = 0;
@@ -103,6 +105,11 @@ void custom_input(coefficients* ptr_coeffs)
 
     printf(BLU);
     print_typewriter("Your coeffitients: ", 15);
-    printf("%lg %lg %lg\n", (*ptr_coeffs).a, (*ptr_coeffs).b, (*ptr_coeffs).c);
-    printf(CRESET);
+    printf("a = " CRESET);
+    printf("%lg", (*ptr_coeffs).a);
+    printf(BLU "; b = " CRESET);
+    printf("%lg", (*ptr_coeffs).b);
+    printf(BLU "; c = " CRESET);
+    printf("%lg", (*ptr_coeffs).c);
+    printf(BLU ";\n" CRESET);
 }

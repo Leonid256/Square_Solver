@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include <ctype.h>
 #include <unistd.h>
 #include <string.h>
 #include "function.hpp"
@@ -18,7 +17,7 @@ const char*  STATISTIC        = "stat";
 const char*  RESTART_STAT     = "restart";
 const char*  EXIT_STAT        = "exit";
 const char*  TESTING          = "test";
-const char*  PASSWORD         = "1111";
+const char*  PASSWORD         = "5267";
 const char*  FILE_TEST        = "file";
 const char*  DEFAULT_TEST     = "default";
 const char*  DEFAULT_ENTER    = "default";
@@ -40,6 +39,8 @@ int main(void)
     printf("|--------------------------------------|\n");
     printf("|" MAG "Hello, that is square solver programm" CRESET " |\n");
     printf("|--------------------------------------|\n");
+
+    print_cat();
 
     while (1)
     {
@@ -155,9 +156,14 @@ void input_coeffs(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
     input_one_coeff(&((*ptr_coeffs).c), ptr_count_bad_enter);
 
     printf(BLU);
-    print_typewriter("Your coeffitients:", 15);
-    printf(BLU " %lg %lg %lg\n" CRESET,
-                (*ptr_coeffs).a, (*ptr_coeffs).b, (*ptr_coeffs).c);
+    print_typewriter("Your coeffitients: ", 15);
+    printf("a = " CRESET);
+    printf("%lg", (*ptr_coeffs).a);
+    printf(BLU "; b = " CRESET);
+    printf("%lg", (*ptr_coeffs).b);
+    printf(BLU "; c = " CRESET);
+    printf("%lg", (*ptr_coeffs).c);
+    printf(BLU ";\n" CRESET);
 }
 //---------------------------------------------------------------------------------------------
 
@@ -344,7 +350,8 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
 /*!
      \brief Функция сравнения двух чисел double
      \details Функция сравнивает два числа с плавающей точкой, учитывая введенную заранее погрешность
-     \param [in] x1, x2 сравниваемые числа
+     \param [in] x1,
+     \param [in] x2 сравниваемые числа
      \return "true" если числа равны с учетом погрешности
      \return "false" в противном случае
  */
@@ -480,4 +487,11 @@ void print_typewriter(const char *text, int delay_ms) {
         sleep_ms(delay_ms);
         text++;
     }
+}
+//------------------------------------------------------------------------------------------
+void print_cat(void)
+{
+    printf(WHT "\t\t|\\---/|\n" CRESET);
+    printf(BLU "\t\t| o_o |\n" CRESET);
+    printf(RED "\t\t \\_^_/ \n" CRESET);
 }

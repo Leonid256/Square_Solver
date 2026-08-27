@@ -45,6 +45,7 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter);// выбо
 //output
 void print_answer(enum_decisions quantity, double* , double* , int* ); //вывод ответа
 void print_typewriter(const char *text, int delay_ms);
+void print_cat(void);
 //---------------------------------------------------------------------------------------------
 //math functions
 void decide_equation(coefficients coeffs, double* , double* , enum enum_decisions*);
@@ -56,7 +57,7 @@ bool is_zero(double x);
 //---------------------------------------------------------------------------------------------
 //test functions
 int RunTests();
-void RunOneTest(struct TestCase, int* ptr_count_fail);
+void RunOneTest(struct TestCase, int* ptr_count_fail, int* ptr_count_success);
 void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr_count_fail);
 bool check_test_password(int* ptr_count_bad_enter);
 int RunTests_from_file();

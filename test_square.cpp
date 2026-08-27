@@ -6,9 +6,10 @@
 #include <assert.h>
 
 //---------------------------------------------------------------------------------------------
-void RunOneTest(TestCase test, int* ptr_count_fail)
+void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
 {
     assert (ptr_count_fail != NULL);
+    assert (ptr_count_success != NULL);
 
     double x1 = NAN, x2 = NAN;
     enum_decisions quality_local = NO_ROOTS;
@@ -31,6 +32,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
                     printf(GRN);
                     print_typewriter("Test PASSED\n", 15);
                     printf(CRESET);
+                    (*ptr_count_success)++;
                 }
                 else
                     print_failed(test, x1,
@@ -44,6 +46,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
                     printf(GRN);
                     print_typewriter("Test PASSED\n", 15);
                     printf(CRESET);
+                    (*ptr_count_success)++;
                 }
                 else
                     print_failed(test, x1,
@@ -57,6 +60,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail)
                     printf(GRN);
                     print_typewriter("Test PASSED\n", 15);
                     printf(CRESET);
+                    (*ptr_count_success)++;
                 }
                 else
                     print_failed(test, x1,
@@ -81,7 +85,7 @@ void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr
     printf("a = %lg, b = %lg, c = %lg\n", test.a, test.b, test.c);
     printf("got:      x1 = %lg, x2 = %lg, roots: %d\n", x1, x2, quality_local);
     printf("expected: x1 = %lg, x2 = %lg, roots: %d\n" CRESET, test.x1ref, test.x2ref, test.nRootsRef);
-    ++(*ptr_count_fail);
+    (*ptr_count_fail)++;
 }
 //---------------------------------------------------------------------------------------------
 int RunTests()
@@ -91,6 +95,7 @@ int RunTests()
     // TODO: think about macro-function (особенно про # в теле макроса)
 
     int count_fail = 0;
+    int count_success = 0;
 
     TestCase testsStreet[] =
     {{.a = 0, .b = 0, .c = 0, .nRootsRef = INFINITE, .x1ref = NAN, .x2ref = NAN},
@@ -99,7 +104,9 @@ int RunTests()
     {.a = 0, .b = 0, .c = 1, .nRootsRef = 0, .x1ref = NAN, .x2ref = NAN},
     {.a = 1, .b = 1, .c = 1, .nRootsRef = 0,.x1ref = NAN, .x2ref = NAN},
     {.a = 1, .b = -1, .c = 0, .nRootsRef = 2, .x1ref = 5267, .x2ref = 1}, //error
-    {.a = 0, .b = 1, .c = 1, .nRootsRef = 1, .x1ref = -1, .x2ref = NAN}};
+    {.a = 0, .b = 1, .c = 1, .nRootsRef = 1, .x1ref = -1, .x2ref = NAN},
+    {.a = 1, .b = -59, .c = 864, .nRootsRef = 2, .x1ref = 32, .x2ref = 27},
+    {.a = -2, .b = 72, .c = 74, .nRootsRef = 2, .x1ref = -1, .x2ref = 37}};
 
     int size = sizeof(testsStreet) / sizeof(TestCase);
 
@@ -107,12 +114,14 @@ int RunTests()
     {
         assert (i < size);
 
-        RunOneTest(testsStreet[i], &count_fail);
+        RunOneTest(testsStreet[i], &count_fail, &count_success);
     }
 
     print_typewriter("Testing is over\n", 20);
     print_typewriter("Failed test: ", 20);
-    printf("%d\n\n", count_fail);
+    printf("%d\n", count_fail);
+    print_typewriter("Successful test: ", 20);
+    printf("%d\n\n", count_success);
 
     return count_fail;
 }
@@ -122,6 +131,7 @@ int RunTests_from_file()
     if (FILE* fp = fopen("test_values.txt", "r"))
     {
         int count_fail = 0;
+        int count_success = 0;
 
         TestCase test_i = {.a = NAN, .b = NAN, .c = NAN, .nRootsRef = 0,
                     .x1ref = NAN, .x2ref = NAN};
@@ -131,14 +141,16 @@ int RunTests_from_file()
         {
             //printf("%lg %lg %lg %d %lg %lg\n", test_i.a, test_i.b, test_i.c, test_i.nRootsRef,
                     //test_i.x1ref, test_i.x2ref);
-            RunOneTest(test_i, &count_fail);
+            RunOneTest(test_i, &count_fail, &count_success);
         }
 
         fclose(fp);
 
         print_typewriter("Testing is over\n", 20);
         print_typewriter("Failed test: ", 20);
-        printf("%d\n\n", count_fail);
+        printf("%d\n", count_fail);
+        print_typewriter("Successful test: ", 20);
+        printf("%d\n\n", count_success);
 
         return count_fail;
     }
