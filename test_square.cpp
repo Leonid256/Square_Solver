@@ -128,33 +128,36 @@ int RunTests()
 //---------------------------------------------------------------------------------------------
 int RunTests_from_file()
 {
-    if (FILE* fp = fopen("test_values.txt", "r"))
+    FILE* fp = fopen("test_values.txt", "r");
+    
+    if (fp == NULL)
     {
-        int count_fail = 0;
-        int count_success = 0;
-
-        TestCase test_i = {.a = NAN, .b = NAN, .c = NAN, .nRootsRef = 0,
-                    .x1ref = NAN, .x2ref = NAN};
-
-        while (fscanf(fp, " %lg%lg%lg%d%lg%lg", &test_i.a, &test_i.b, &test_i.c, &test_i.nRootsRef,
-                        &test_i.x1ref, &test_i.x2ref) == 6)
-        {
-            //printf("%lg %lg %lg %d %lg %lg\n", test_i.a, test_i.b, test_i.c, test_i.nRootsRef,
-                    //test_i.x1ref, test_i.x2ref);
-            RunOneTest(test_i, &count_fail, &count_success);
-        }
-
-        fclose(fp);
-
-        print_typewriter("Testing is over\n", 20);
-        print_typewriter("Failed test: ", 20);
-        printf("%d\n", count_fail);
-        print_typewriter("Successful test: ", 20);
-        printf("%d\n\n", count_success);
-
-        return count_fail;
+        printf("Error, unsuccessful file opening\n");
+        return -1;
     }
 
-    return -1;
+    int count_fail = 0;
+    int count_success = 0;
+
+    TestCase test_i = {.a = NAN, .b = NAN, .c = NAN, .nRootsRef = 0,
+                .x1ref = NAN, .x2ref = NAN};
+
+    while (fscanf(fp, " %lg%lg%lg%d%lg%lg", &test_i.a, &test_i.b, &test_i.c, &test_i.nRootsRef,
+                    &test_i.x1ref, &test_i.x2ref) == 6)
+    {
+        //printf("%lg %lg %lg %d %lg %lg\n", test_i.a, test_i.b, test_i.c, test_i.nRootsRef,
+                //test_i.x1ref, test_i.x2ref);
+        RunOneTest(test_i, &count_fail, &count_success);
+    }
+
+    fclose(fp);
+
+    print_typewriter("Testing is over\n", 20);
+    print_typewriter("Failed test: ", 20);
+    printf("%d\n", count_fail);
+    print_typewriter("Successful test: ", 20);
+    printf("%d\n\n", count_success);
+
+    return count_fail;
 }
 

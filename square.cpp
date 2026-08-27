@@ -477,7 +477,8 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
     return 1;
 }
 //----------------------------------------------------------------------------------------
-void print_typewriter(const char *text, int delay_ms) {
+void print_typewriter(const char *text, int delay_ms)
+{
     while (*text) {
         putchar(*text);
         fflush(stdout);

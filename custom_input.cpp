@@ -45,29 +45,29 @@ void custom_input(coefficients* ptr_coeffs)
     int sign = 1, local_sign = 1;
 
 
-    for (int j = 0; equalisation[j] != '\0';) //leave + - x = xx digit
+    for (int i = 0; equalisation[i] != '\0';) //leave + - x = xx digit
     {
         double local_coeff = 0;
 
-        while (isdigit(equalisation[j]))
+        while (isdigit(equalisation[i]))
         {
-            local_coeff = local_coeff * 10 + (equalisation[j] - '0');
-            j++;
+            local_coeff = local_coeff * 10 + (equalisation[i] - '0');
+            i++;
         }
 
         // int len_coeff = 0;     //alternative (NOT WORK!!!)
         // sscanf(&equalisation[j], "%lg%n", &local_coeff, &len_coeff);
         // j += len_coeff;
 
-        if (equalisation[j] == 'x')
+        if (equalisation[i] == 'x')
         {
-            if (equalisation[j + 1] == 'x')     //_xx
+            if (equalisation[i + 1] == 'x')     //_xx
             {
                 if (local_coeff != 0)
                     (*ptr_coeffs).a += local_coeff * sign * local_sign;
                 else
                     (*ptr_coeffs).a += 1 * sign * local_sign; //case xx
-                j += 2;
+                i += 2;
                 continue;
             }
             else                                //_x_
@@ -76,7 +76,7 @@ void custom_input(coefficients* ptr_coeffs)
                     (*ptr_coeffs).b += local_coeff * sign * local_sign;
                 else
                     (*ptr_coeffs).b += 1 * sign * local_sign; //case x
-                j += 1;
+                i += 1;
                 continue;
             }
         }
@@ -85,21 +85,21 @@ void custom_input(coefficients* ptr_coeffs)
             (*ptr_coeffs).c += local_coeff * sign * local_sign;
         }
 
-        if (equalisation[j] == '+')
+        if (equalisation[i] == '+')
         {
             local_sign = 1;
-            j++;
+            i++;
         }
-        else if (equalisation[j] == '-')
+        else if (equalisation[i] == '-')
         {
             local_sign = -1;
-            j++;
+            i++;
         }
-        else if (equalisation[j] == '=')
+        else if (equalisation[i] == '=')
         {
             sign = -1;
             local_sign = 1;
-            j++;
+            i++;
         }
     }
 
