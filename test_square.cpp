@@ -4,8 +4,7 @@
 #include "visual.hpp"
 #include <unistd.h>
 #include <assert.h>
-//---------------------------------------------------------------------------------------------
-//const char* "test_values.txt"
+
 //---------------------------------------------------------------------------------------------
 void RunOneTest(TestCase test, int* ptr_count_fail)
 {
@@ -106,6 +105,8 @@ int RunTests()
 
     for (int i = 0; i < size; i++)
     {
+        assert (i < size);
+
         RunOneTest(testsStreet[i], &count_fail);
     }
 
@@ -134,7 +135,7 @@ int RunTests_from_file()
         }
 
         fclose(fp);
-        
+
         print_typewriter("Testing is over\n", 20);
         print_typewriter("Failed test: ", 20);
         printf("%d\n\n", count_fail);

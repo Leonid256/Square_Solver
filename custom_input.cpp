@@ -47,27 +47,33 @@ void custom_input(coefficients* ptr_coeffs)
     {
         double local_coeff = 0;
 
-        // while (isdigit(equalisation[j]))
-        // {
-        //     local_coeff = local_coeff * 10 + (equalisation[j] - '0');
-        //     j++;
-        // }
+        while (isdigit(equalisation[j]))
+        {
+            local_coeff = local_coeff * 10 + (equalisation[j] - '0');
+            j++;
+        }
 
-        int len_coeff = 0;
-        sscanf(&equalisation[j], "%lg%n", &local_coeff, &len_coeff);
-        j += len_coeff;
+        // int len_coeff = 0;     //alternative (NOT WORK)
+        // sscanf(&equalisation[j], "%lg%n", &local_coeff, &len_coeff);
+        // j += len_coeff;
 
         if (equalisation[j] == 'x')
         {
             if (equalisation[j + 1] == 'x')     //_xx
             {
-                (*ptr_coeffs).a += local_coeff * sign * local_sign;
+                if (local_coeff != 0)
+                    (*ptr_coeffs).a += local_coeff * sign * local_sign;
+                else
+                    (*ptr_coeffs).a += 1 * sign * local_sign; //case xx
                 j += 2;
                 continue;
             }
             else                                //_x_
             {
-                (*ptr_coeffs).b += local_coeff * sign * local_sign;
+                if (local_coeff != 0)
+                    (*ptr_coeffs).b += local_coeff * sign * local_sign;
+                else
+                    (*ptr_coeffs).b += 1 * sign * local_sign; //case x
                 j += 1;
                 continue;
             }

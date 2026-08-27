@@ -288,18 +288,18 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
 
     char mode[BUFFER_SIZE] = {};
 
-    print_typewriter("Выберите дальнейшее действие\n", 20);
+    print_typewriter("Выберите дальнейшее действие\n", 15);
 
     if (*ptr_flag_stat)
     {
         printf(BLU);
-        print_typewriter("go -> continue solving; stop -> stop; stat -> statistic; test -> testing\n", 30);
+        print_typewriter("go -> continue solving; stop -> stop; stat -> statistic; test -> testing\n", 20);
         printf(CRESET);
     }
     else
     {
         printf(BLU);
-        print_typewriter("go -> continue solving; stop -> stop; test -> testing\n", 30);
+        print_typewriter("go -> continue solving; stop -> stop; test -> testing\n", 20);
         printf(CRESET);
     }
 
@@ -341,6 +341,13 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     }
 }
 //---------------------------------------------------------------------------------------------
+/*!
+     \brief Функция сравнения двух чисел double
+     \details Функция сравнивает два числа с плавающей точкой, учитывая введенную заранее погрешность
+     \param [in] x1, x2 сравниваемые числа
+     \return "true" если числа равны с учетом погрешности
+     \return "false" в противном случае
+ */
 bool is_equal(double x1, double x2) //равенство double
 {
     if (isnan(x1) && isnan(x2))
@@ -428,10 +435,10 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
 
     char test_chose[BUFFER_SIZE] = {};
 
-    print_typewriter("Choose enter format\n", 50);
+    print_typewriter("Choose enter format\n", 40);
     printf(MAG);
-    print_typewriter("default -> default enter(by 1 coeff)\n", 30);
-    print_typewriter("custom -> custom enter(full equalisation)\n", 30);
+    print_typewriter("default -> default enter(by 1 coeff)\n", 25);
+    print_typewriter("custom -> custom enter(full equalisation)\n", 25);
     printf(CRESET);
 
     while (1)
@@ -441,7 +448,7 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
         if (!strcmp(test_chose, DEFAULT_ENTER))
         {
             printf(BLU);
-            print_typewriter("Enter coefficients one bu one\n", 40);
+            print_typewriter("Enter coefficients one bu one\n", 35);
             printf(CRESET);
 
             input_coeffs(ptr_coeffs, ptr_count_bad_enter);

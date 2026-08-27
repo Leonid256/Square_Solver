@@ -1,5 +1,7 @@
 #include <assert.h>
 
+//Функция позволяет вводить 3 коэффициента в строку через пробел
+//Проверка вводав данном случае работает хуже!
 void input_coeffs(double* pa, double* pb, double* pc)
 {
     assert (pa != NULL);
