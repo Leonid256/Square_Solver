@@ -32,14 +32,11 @@ int main(void)
 
     int count_solutions = 0, count_bad_enter = 0, flag_stat = 1, flag_exit = 1;
     int flag_stop_program = 0;
-    enum_decisions quantity = NO_ROOTS;
 
+    enum_decisions quantity = NO_ROOTS;
     coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
 
-    printf("|--------------------------------------|\n");
-    printf("|" MAG "Hello, that is square solver programm" CRESET " |\n");
-    printf("|--------------------------------------|\n");
-
+    print_logo();
     print_cat();
 
     while (1)
@@ -479,7 +476,7 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
 
     return 1;
 }
-//------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 void print_typewriter(const char *text, int delay_ms) {
     while (*text) {
         putchar(*text);
@@ -488,10 +485,17 @@ void print_typewriter(const char *text, int delay_ms) {
         text++;
     }
 }
-//------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 void print_cat(void)
 {
     printf(WHT "\t\t|\\---/|\n" CRESET);
     printf(BLU "\t\t| o_o |\n" CRESET);
     printf(RED "\t\t \\_^_/ \n" CRESET);
+}
+//----------------------------------------------------------------------------------------
+void print_logo(void)
+{
+    printf("|--------------------------------------|\n");
+    printf("|" MAG "Hello, that is square solver programm" CRESET " |\n");
+    printf("|--------------------------------------|\n");
 }

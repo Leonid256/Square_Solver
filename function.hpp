@@ -46,6 +46,7 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter);// выбо
 void print_answer(enum_decisions quantity, double* , double* , int* ); //вывод ответа
 void print_typewriter(const char *text, int delay_ms);
 void print_cat(void);
+void print_logo(void);
 //---------------------------------------------------------------------------------------------
 //math functions
 void decide_equation(coefficients coeffs, double* , double* , enum enum_decisions*);

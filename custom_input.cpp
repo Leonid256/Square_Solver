@@ -55,7 +55,7 @@ void custom_input(coefficients* ptr_coeffs)
             j++;
         }
 
-        // int len_coeff = 0;     //alternative (NOT WORK)
+        // int len_coeff = 0;     //alternative (NOT WORK!!!)
         // sscanf(&equalisation[j], "%lg%n", &local_coeff, &len_coeff);
         // j += len_coeff;
 
