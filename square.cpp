@@ -22,7 +22,7 @@ const char*  FILE_TEST        = "file";
 const char*  DEFAULT_TEST     = "default";
 const char*  DEFAULT_ENTER    = "def";
 const char*  CUSTOM_ENTER     = "cus";
-const int    DEBUG_MODE       = 1;
+const int    DEBUG_MODE       = 0;
 //---------------------------------------------------------------------------------------------
 #define sleep_ms(ms) usleep((ms) * 1000)
 //---------------------------------------------------------------------------------------------
@@ -214,7 +214,7 @@ void print_answer(coefficients coeffs, enum_decisions quantity, double* ptr_x1, 
             print_typewriter("Уравнение имеет одно решение:\n", 15);
             printf("x1 = x2 = %lg\n\n", *ptr_x1);
 
-            square_function_graphic(coeffs);
+            square_function_graphic(coeffs, *ptr_x1, *ptr_x2);
 
             break;
         case TWO_ROOTS:
@@ -224,7 +224,7 @@ void print_answer(coefficients coeffs, enum_decisions quantity, double* ptr_x1, 
             print_typewriter("x2 = ", 10);
             printf("%lg\n\n",*ptr_x2);
 
-            square_function_graphic(coeffs);
+            square_function_graphic(coeffs, *ptr_x1, *ptr_x2);
 
             break;
         case INFINITE:

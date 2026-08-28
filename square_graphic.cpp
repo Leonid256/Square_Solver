@@ -4,7 +4,7 @@
 #include "rlgl.h"
 //---------------------------------------------------------------------------------------------
 
-int square_function_graphic(coefficients coeffs)
+int square_function_graphic(coefficients coeffs, double x1, double x2)
 {
     const int screenWidth = 800;
     const int screenHeight = 450;
@@ -43,13 +43,15 @@ int square_function_graphic(coefficients coeffs)
         float scale_x = 5;
         float scale_y = 5;
 
+        /*
         //стрелки для осей
         DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_left, y_up_arrow_end, DARKGRAY);  //oY arrow
         DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_right, y_up_arrow_end, DARKGRAY);
 
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_up, DARKGRAY);  //oX arrow
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_down, DARKGRAY);
-
+        */
+        
         //сдвиг области видимости
         if (cameraPosition.target.x < (screenWidth * 3 - 15.0))
         {
@@ -126,7 +128,7 @@ int square_function_graphic(coefficients coeffs)
         {
             double y = (x) * (x) * coeffs.a + (x) * coeffs.b + coeffs.c;
 
-            DrawPixel(x * scale_x, -y * scale_y, BLACK);
+            DrawPixel(x * scale_x, -y * scale_y, SKYBLUE);
         }
         
         //отрисовка разметки оси оХ
@@ -140,6 +142,10 @@ int square_function_graphic(coefficients coeffs)
         {
             DrawCircle(0, y, 1, DARKGRAY);
         }
+
+        //отрисовка корней уравнения
+        DrawCircle(x1 * scale_x, 0, 2, RED);
+        DrawCircle(x2 * scale_x, 0, 2, RED);
 
         EndMode2D();
 
