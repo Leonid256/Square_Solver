@@ -22,6 +22,7 @@ const char*  FILE_TEST        = "file";
 const char*  DEFAULT_TEST     = "default";
 const char*  DEFAULT_ENTER    = "def";
 const char*  CUSTOM_ENTER     = "cus";
+const int    DEBUG_MODE       = 1;
 //---------------------------------------------------------------------------------------------
 #define sleep_ms(ms) usleep((ms) * 1000)
 //---------------------------------------------------------------------------------------------
@@ -36,8 +37,11 @@ int main(void)
     enum_decisions quantity = NO_ROOTS;
     coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
 
-    print_logo();
-    print_cat();
+    if (!DEBUG_MODE)
+    {
+        print_logo();
+        print_cat();
+    }
 
     while (1)
     {
@@ -109,6 +113,7 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
     }
 }
 //---------------------------------------------------------------------------------------------
+// ф-ия решение линейного уравнения
 enum enum_decisions decide_line(coefficients coeffs, double* ptr_x1) //линейное уравнение
 {
     assert (ptr_x1 != NULL);
@@ -303,13 +308,19 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     if (*ptr_flag_stat)
     {
         printf(BLU);
-        print_typewriter("go -> continue solving; stop -> stop; stat -> statistic; test -> testing\n", 10);
+
+        if (!DEBUG_MODE)
+            print_typewriter("go -> continue solving; stop -> stop; stat -> statistic; test -> testing\n", 10);
+
         printf(CRESET);
     }
     else
     {
         printf(BLU);
-        print_typewriter("go -> continue solving; stop -> stop; test -> testing\n", 10);
+
+        if (!DEBUG_MODE)
+            print_typewriter("go -> continue solving; stop -> stop; test -> testing\n", 10);
+
         printf(CRESET);
     }
 
@@ -407,8 +418,13 @@ int chose_test()
     printf(BLU);
     print_typewriter("Choose variety of testing\n", 20);
     printf(CRESET);
-    print_typewriter("file -> testing from user file\n", 20);
-    print_typewriter("default -> testing by default values\n", 20);
+
+    if(!DEBUG_MODE)
+    {
+        print_typewriter("file -> testing from user file\n", 20);
+        print_typewriter("default -> testing by default values\n", 20);
+    }
+
     scanf(" %8s", test_chose);
 
     if (!strcmp(test_chose, FILE_TEST))
@@ -447,10 +463,14 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
     char test_chose[BUFFER_SIZE] = {};
 
     print_typewriter("Choose enter format\n", 20);
-    printf(MAG);
-    print_typewriter("def -> default enter(by 1 coeff)\n", 15);
-    print_typewriter("cus -> custom enter(full equalisation)\n", 15);
-    printf(CRESET);
+    
+    if (!DEBUG_MODE)
+    {
+        printf(MAG);
+        print_typewriter("def -> default enter(by 1 coeff)\n", 15);
+        print_typewriter("cus -> custom enter(full equalisation)\n", 15);
+        printf(CRESET);
+    }
 
     while (1)
     {
@@ -459,7 +479,10 @@ int choose_enter(coefficients* ptr_coeffs, int* ptr_count_bad_enter)
         if (!strcmp(test_chose, DEFAULT_ENTER))
         {
             printf(BLU);
-            print_typewriter("Enter coefficients one by one\n", 25);
+
+            if (!DEBUG_MODE)
+                print_typewriter("Enter coefficients one by one\n", 25);
+
             printf(CRESET);
 
             input_coeffs(ptr_coeffs, ptr_count_bad_enter);

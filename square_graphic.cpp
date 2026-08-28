@@ -22,6 +22,8 @@ int square_function_graphic(coefficients coeffs)
     float y_right_arrow_end_up = screenHeight / 2 - 10;
     float y_right_arrow_end_down = screenHeight / 2 + 10;
 
+    float zoom_camera = 1.0;
+
     InitWindow(screenWidth, screenHeight, "Square_function_graphic");
 
     SetTargetFPS(90);
@@ -29,22 +31,26 @@ int square_function_graphic(coefficients coeffs)
     Camera2D cameraPosition = {};
     cameraPosition.target = (Vector2){0, 0};
     cameraPosition.offset = (Vector2){screenWidth / 2, screenHeight / 2};
-    cameraPosition.zoom = 1.0f;
+    cameraPosition.zoom = zoom_camera;
 
     while (!WindowShouldClose())
     {
+        cameraPosition.zoom = zoom_camera;
+
         float x_max = screenWidth * 3;
         float y_max = screenHeight * 3;
     
         float scale_x = 5;
         float scale_y = 5;
 
+        //стрелки для осей
         DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_left, y_up_arrow_end, DARKGRAY);  //oY arrow
         DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_right, y_up_arrow_end, DARKGRAY);
 
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_up, DARKGRAY);  //oX arrow
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_down, DARKGRAY);
 
+        //сдвиг области видимости
         if (cameraPosition.target.x < (screenWidth * 3 - 15.0))
         {
             if (IsKeyDown(KEY_RIGHT)) 
@@ -92,22 +98,30 @@ int square_function_graphic(coefficients coeffs)
             }
         }
 
+        //изменение зума
+        if (IsKeyDown(KEY_EQUAL))
+            zoom_camera += 0.25;
+        if (IsKeyDown(KEY_MINUS))
+            zoom_camera -= 0.25;
+
         BeginDrawing();
         ClearBackground(RAYWHITE);
         
         BeginMode2D(cameraPosition);
 
+        //отрисовка сетки графика
         rlPushMatrix();
         rlTranslatef(0, 450, 0);
         rlRotatef(90, 1, 0, 0);
         DrawGrid(1000, 5);
         rlPopMatrix();
-
         DrawGrid(1000, 10);  
 
+        //отрисовка координатных осей
         DrawLine(-screenWidth * 4, 0, screenWidth * 4, 0, DARKGRAY);
         DrawLine(0, -screenHeight * 4, 0, screenHeight * 4, DARKGRAY);
 
+        //отрисовка графика
         for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 0.002)
         {
             double y = (x) * (x) * coeffs.a + (x) * coeffs.b + coeffs.c;
@@ -115,15 +129,23 @@ int square_function_graphic(coefficients coeffs)
             DrawPixel(x * scale_x, -y * scale_y, BLACK);
         }
         
-
+        //отрисовка разметки оси оХ
         for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 5)
         {
             DrawCircle(x, 0, 1, DARKGRAY);
         }
+
+        //отрисовка разметки оси oY
+        for (double y = - screenWidth * 3; y <= screenWidth * 3; y += 5)
+        {
+            DrawCircle(0, y, 1, DARKGRAY);
+        }
+
         EndMode2D();
 
         EndDrawing();
     }
+
     CloseWindow();
 
     return 0;
