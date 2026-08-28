@@ -24,12 +24,22 @@
 */
 var NAVTREE =
 [
-  [ "Square Solver", "index.html", ]
+  [ "Square Solver", "index.html", [
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"files.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

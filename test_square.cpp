@@ -129,7 +129,7 @@ int RunTests()
 int RunTests_from_file()
 {
     FILE* fp = fopen("test_values.txt", "r");
-    
+
     if (fp == NULL)
     {
         printf("Error, unsuccessful file opening\n");

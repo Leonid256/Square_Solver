@@ -170,3 +170,51 @@ for (int i = 0; i < size; i++)
 //printf(BLU "Choose enter format\n" CRESET);
     //printf(MAG "default -> default enter(by 1 coeff)\n");
     //char choose_enter[] = "Choose enter format\n";
+
+
+#include "raylib.h"
+#include "function.hpp"
+
+int square_function_graphic(coefficients coeffs)
+{
+    const int screenWidth = 1200;
+    const int screenHeight = 800;
+
+    InitWindow(screenWidth, screenHeight, "Square_function_graphic");
+
+    SetTargetFPS(60);
+
+    float x_left = 0.0;
+    float x_right = 0.0;
+    float y_both = 0.0;
+
+    while (!WindowShouldClose())
+    {
+        Vector2 startPos_left = {(float)screenWidth/2 - x_left, (float)screenHeight/3 + y_both};
+        Vector2 startPos_right = {(float)screenWidth/2 + x_right, (float)screenHeight/3 + y_both};
+
+        y_both = coeffs.a * x_left * x_left + coeffs.b * x_left + coeffs.c;
+
+        x_left += 0.5;
+        x_right += 0.5;
+
+        Vector2 endPos_left = {(float)screenWidth/2 - x_left, (float)screenHeight/3 + y_both};
+        Vector2 endPos_right = {(float)screenWidth/2 + x_right, (float)screenHeight/3 + y_both};
+
+
+        BeginDrawing();
+
+            ClearBackground(RAYWHITE);
+
+            DrawText("Square graphic", 10, 10, 20, DARKGRAY);
+
+            DrawLineEx(startPos_left, endPos_left, 10.0, MAROON);
+            DrawLineEx(startPos_right, endPos_right, 10.0, MAROON);
+
+        EndDrawing();
+    }
+
+    CloseWindow();
+
+    return 0;
+}

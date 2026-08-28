@@ -1,0 +1,309 @@
+\doxysection{square.\+cpp File Reference}
+\hypertarget{square_8cpp}{}\label{square_8cpp}\index{square.cpp@{square.cpp}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$assert.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include "{}function.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}visual.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32}{sleep\+\_\+ms}}(ms)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{square_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+bool \doxymbox{\hyperlink{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}{is\+\_\+zero}} (double x)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
+\item 
+enum enum\+\_\+decisions \doxymbox{\hyperlink{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}} (coefficients coeffs, double \texorpdfstring{$\ast$}{*}x1\+\_\+ptr, double \texorpdfstring{$\ast$}{*}x2\+\_\+ptr)
+\item 
+enum enum\+\_\+decisions \doxymbox{\hyperlink{square_8cpp_a499e4c24353f604866c9cb6fdd3511a6}{decide\+\_\+line}} (coefficients coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}{decide\+\_\+equation}} (coefficients coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, enum enum\+\_\+decisions \texorpdfstring{$\ast$}{*}ptr\+\_\+quantity)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs}} (coefficients \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff}} (double \texorpdfstring{$\ast$}{*}ptr\+\_\+1coeff, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a00271d91d170fffc16060e58dd23498a}{print\+\_\+answer}} (enum\+\_\+decisions quantity, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_afde878832e2525a0544e54780161b9ef}{calculate\+\_\+statics}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit)
+\item 
+enum enum\+\_\+opportunity\+\_\+user \doxymbox{\hyperlink{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}{ask\+\_\+user}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+stat, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\item 
+bool \doxymbox{\hyperlink{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}{is\+\_\+equal}} (double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Функция сравнения двух чисел double. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}{check\+\_\+test\+\_\+password}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\item 
+int \doxymbox{\hyperlink{square_8cpp_acb80f878217fb56125032e5e8ed9ba9a}{chose\+\_\+test}} ()
+\item 
+int \doxymbox{\hyperlink{square_8cpp_a6ccadcadfcad5193e74681b2ce675577}{choose\+\_\+enter}} (coefficients \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}{print\+\_\+typewriter}} (const char \texorpdfstring{$\ast$}{*}text, int delay\+\_\+ms)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a2c1234a2e169329b975a6541cc561e81}{print\+\_\+cat}} (void)
+\item 
+void \doxymbox{\hyperlink{square_8cpp_a73eb533269566775275da2ac91350562}{print\+\_\+logo}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \doxymbox{\hyperlink{square_8cpp_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/3
+\item 
+const int \doxymbox{\hyperlink{square_8cpp_a91f806c1bc7c1f4f402a627773840252}{BUFFER\+\_\+\+SIZE}} = 10
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50}{EXIT\+\_\+\+CYCLE}} = "{}stop"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a62c799705ade295291e9127bcab6a31c}{CONTINUE\+\_\+\+CYCLE}} = "{}go"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_abe8246e4917267c8243deabf468ed151}{STATISTIC}} = "{}stat"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}{RESTART\+\_\+\+STAT}} = "{}restart"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}{EXIT\+\_\+\+STAT}} = "{}exit"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}{TESTING}} = "{}test"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27}{PASSWORD}} = "{}5267"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a197a7c576ca789117c70b644e804c78d}{FILE\+\_\+\+TEST}} = "{}file"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a0352bf2781fcf67b049d80da9ee00224}{DEFAULT\+\_\+\+TEST}} = "{}default"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9}{DEFAULT\+\_\+\+ENTER}} = "{}default"{}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a358b44201241ed6b50786b6ba468fba7}{CUSTOM\+\_\+\+ENTER}} = "{}custom"{}
+\end{DoxyCompactItemize}
+
+
+\label{square_8cpp_doc-define-members}
+\Hypertarget{square_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32}\index{square.cpp@{square.cpp}!sleep\_ms@{sleep\_ms}}
+\index{sleep\_ms@{sleep\_ms}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{sleep\_ms}{sleep\_ms}}
+{\footnotesize\ttfamily \label{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32} 
+\+\#define sleep\+\_\+ms(\begin{DoxyParamCaption}\item[{}]{ms}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{usleep((ms)\ *\ 1000)}
+
+\end{DoxyCode}
+
+
+\label{square_8cpp_doc-func-members}
+\Hypertarget{square_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}\index{square.cpp@{square.cpp}!ask\_user@{ask\_user}}
+\index{ask\_user@{ask\_user}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{ask\_user()}{ask\_user()}}
+{\footnotesize\ttfamily \label{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd} 
+enum enum\+\_\+opportunity\+\_\+user ask\+\_\+user (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+stat}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_afde878832e2525a0544e54780161b9ef}\index{square.cpp@{square.cpp}!calculate\_statics@{calculate\_statics}}
+\index{calculate\_statics@{calculate\_statics}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{calculate\_statics()}{calculate\_statics()}}
+{\footnotesize\ttfamily \label{square_8cpp_afde878832e2525a0544e54780161b9ef} 
+void calculate\+\_\+statics (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}\index{square.cpp@{square.cpp}!check\_test\_password@{check\_test\_password}}
+\index{check\_test\_password@{check\_test\_password}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_test\_password()}{check\_test\_password()}}
+{\footnotesize\ttfamily \label{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1} 
+bool check\+\_\+test\+\_\+password (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a6ccadcadfcad5193e74681b2ce675577}\index{square.cpp@{square.cpp}!choose\_enter@{choose\_enter}}
+\index{choose\_enter@{choose\_enter}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{choose\_enter()}{choose\_enter()}}
+{\footnotesize\ttfamily \label{square_8cpp_a6ccadcadfcad5193e74681b2ce675577} 
+int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{coefficients \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_acb80f878217fb56125032e5e8ed9ba9a}\index{square.cpp@{square.cpp}!chose\_test@{chose\_test}}
+\index{chose\_test@{chose\_test}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{chose\_test()}{chose\_test()}}
+{\footnotesize\ttfamily \label{square_8cpp_acb80f878217fb56125032e5e8ed9ba9a} 
+int chose\+\_\+test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_abb2d5d88a388d973362772065e6ed105}\index{square.cpp@{square.cpp}!clean\_stdin@{clean\_stdin}}
+\index{clean\_stdin@{clean\_stdin}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{clean\_stdin()}{clean\_stdin()}}
+{\footnotesize\ttfamily \label{square_8cpp_abb2d5d88a388d973362772065e6ed105} 
+void clean\+\_\+stdin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}\index{square.cpp@{square.cpp}!decide\_equation@{decide\_equation}}
+\index{decide\_equation@{decide\_equation}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{decide\_equation()}{decide\_equation()}}
+{\footnotesize\ttfamily \label{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3} 
+void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{coefficients}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{enum enum\+\_\+decisions \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+quantity}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a499e4c24353f604866c9cb6fdd3511a6}\index{square.cpp@{square.cpp}!decide\_line@{decide\_line}}
+\index{decide\_line@{decide\_line}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{decide\_line()}{decide\_line()}}
+{\footnotesize\ttfamily \label{square_8cpp_a499e4c24353f604866c9cb6fdd3511a6} 
+enum enum\+\_\+decisions decide\+\_\+line (\begin{DoxyParamCaption}\item[{coefficients}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}\index{square.cpp@{square.cpp}!decide\_square@{decide\_square}}
+\index{decide\_square@{decide\_square}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{decide\_square()}{decide\_square()}}
+{\footnotesize\ttfamily \label{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df} 
+enum enum\+\_\+decisions decide\+\_\+square (\begin{DoxyParamCaption}\item[{coefficients}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1\+\_\+ptr}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}\index{square.cpp@{square.cpp}!input\_coeffs@{input\_coeffs}}
+\index{input\_coeffs@{input\_coeffs}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_coeffs()}{input\_coeffs()}}
+{\footnotesize\ttfamily \label{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b} 
+void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{coefficients \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}\index{square.cpp@{square.cpp}!input\_one\_coeff@{input\_one\_coeff}}
+\index{input\_one\_coeff@{input\_one\_coeff}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_one\_coeff()}{input\_one\_coeff()}}
+{\footnotesize\ttfamily \label{square_8cpp_a664396f3f8957b88c1c89c59495e7d04} 
+void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+1coeff}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}\index{square.cpp@{square.cpp}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily \label{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2} 
+bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Функция сравнения двух чисел double. 
+
+Функция сравнивает два числа с плавающей точкой, учитывая введенную заранее погрешность 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em x1} & \\
+\hline
+\end{DoxyParams}
+param \+[in] x2 сравниваемые числа \begin{DoxyReturn}{Returns}
+"{}true"{} если числа равны с учетом погрешности 
+
+"{}false"{} в противном случае 
+\end{DoxyReturn}
+\Hypertarget{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}\index{square.cpp@{square.cpp}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily \label{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59} 
+bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\index{square.cpp@{square.cpp}!main@{main}}
+\index{main@{main}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{square_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a00271d91d170fffc16060e58dd23498a}\index{square.cpp@{square.cpp}!print\_answer@{print\_answer}}
+\index{print\_answer@{print\_answer}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_answer()}{print\_answer()}}
+{\footnotesize\ttfamily \label{square_8cpp_a00271d91d170fffc16060e58dd23498a} 
+void print\+\_\+answer (\begin{DoxyParamCaption}\item[{enum\+\_\+decisions}]{quantity}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a2c1234a2e169329b975a6541cc561e81}\index{square.cpp@{square.cpp}!print\_cat@{print\_cat}}
+\index{print\_cat@{print\_cat}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_cat()}{print\_cat()}}
+{\footnotesize\ttfamily \label{square_8cpp_a2c1234a2e169329b975a6541cc561e81} 
+void print\+\_\+cat (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_a73eb533269566775275da2ac91350562}\index{square.cpp@{square.cpp}!print\_logo@{print\_logo}}
+\index{print\_logo@{print\_logo}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_logo()}{print\_logo()}}
+{\footnotesize\ttfamily \label{square_8cpp_a73eb533269566775275da2ac91350562} 
+void print\+\_\+logo (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}\index{square.cpp@{square.cpp}!print\_typewriter@{print\_typewriter}}
+\index{print\_typewriter@{print\_typewriter}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_typewriter()}{print\_typewriter()}}
+{\footnotesize\ttfamily \label{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db} 
+void print\+\_\+typewriter (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{int}]{delay\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+\label{square_8cpp_doc-var-members}
+\Hypertarget{square_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{square_8cpp_a91f806c1bc7c1f4f402a627773840252}\index{square.cpp@{square.cpp}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily \label{square_8cpp_a91f806c1bc7c1f4f402a627773840252} 
+const int BUFFER\+\_\+\+SIZE = 10}
+
+\Hypertarget{square_8cpp_a62c799705ade295291e9127bcab6a31c}\index{square.cpp@{square.cpp}!CONTINUE\_CYCLE@{CONTINUE\_CYCLE}}
+\index{CONTINUE\_CYCLE@{CONTINUE\_CYCLE}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{CONTINUE\_CYCLE}{CONTINUE\_CYCLE}}
+{\footnotesize\ttfamily \label{square_8cpp_a62c799705ade295291e9127bcab6a31c} 
+const char\texorpdfstring{$\ast$}{*} CONTINUE\+\_\+\+CYCLE = "{}go"{}}
+
+\Hypertarget{square_8cpp_a358b44201241ed6b50786b6ba468fba7}\index{square.cpp@{square.cpp}!CUSTOM\_ENTER@{CUSTOM\_ENTER}}
+\index{CUSTOM\_ENTER@{CUSTOM\_ENTER}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_ENTER}{CUSTOM\_ENTER}}
+{\footnotesize\ttfamily \label{square_8cpp_a358b44201241ed6b50786b6ba468fba7} 
+const char\texorpdfstring{$\ast$}{*} CUSTOM\+\_\+\+ENTER = "{}custom"{}}
+
+\Hypertarget{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9}\index{square.cpp@{square.cpp}!DEFAULT\_ENTER@{DEFAULT\_ENTER}}
+\index{DEFAULT\_ENTER@{DEFAULT\_ENTER}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_ENTER}{DEFAULT\_ENTER}}
+{\footnotesize\ttfamily \label{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9} 
+const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+ENTER = "{}default"{}}
+
+\Hypertarget{square_8cpp_a0352bf2781fcf67b049d80da9ee00224}\index{square.cpp@{square.cpp}!DEFAULT\_TEST@{DEFAULT\_TEST}}
+\index{DEFAULT\_TEST@{DEFAULT\_TEST}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_TEST}{DEFAULT\_TEST}}
+{\footnotesize\ttfamily \label{square_8cpp_a0352bf2781fcf67b049d80da9ee00224} 
+const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+TEST = "{}default"{}}
+
+\Hypertarget{square_8cpp_a596344e5a2992d2beec43b76a6294de0}\index{square.cpp@{square.cpp}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
+{\footnotesize\ttfamily \label{square_8cpp_a596344e5a2992d2beec43b76a6294de0} 
+const double EPSILON = 1e-\/3}
+
+\Hypertarget{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50}\index{square.cpp@{square.cpp}!EXIT\_CYCLE@{EXIT\_CYCLE}}
+\index{EXIT\_CYCLE@{EXIT\_CYCLE}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{EXIT\_CYCLE}{EXIT\_CYCLE}}
+{\footnotesize\ttfamily \label{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50} 
+const char\texorpdfstring{$\ast$}{*} EXIT\+\_\+\+CYCLE = "{}stop"{}}
+
+\Hypertarget{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}\index{square.cpp@{square.cpp}!EXIT\_STAT@{EXIT\_STAT}}
+\index{EXIT\_STAT@{EXIT\_STAT}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{EXIT\_STAT}{EXIT\_STAT}}
+{\footnotesize\ttfamily \label{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054} 
+const char\texorpdfstring{$\ast$}{*} EXIT\+\_\+\+STAT = "{}exit"{}}
+
+\Hypertarget{square_8cpp_a197a7c576ca789117c70b644e804c78d}\index{square.cpp@{square.cpp}!FILE\_TEST@{FILE\_TEST}}
+\index{FILE\_TEST@{FILE\_TEST}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{FILE\_TEST}{FILE\_TEST}}
+{\footnotesize\ttfamily \label{square_8cpp_a197a7c576ca789117c70b644e804c78d} 
+const char\texorpdfstring{$\ast$}{*} FILE\+\_\+\+TEST = "{}file"{}}
+
+\Hypertarget{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27}\index{square.cpp@{square.cpp}!PASSWORD@{PASSWORD}}
+\index{PASSWORD@{PASSWORD}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{PASSWORD}{PASSWORD}}
+{\footnotesize\ttfamily \label{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27} 
+const char\texorpdfstring{$\ast$}{*} PASSWORD = "{}5267"{}}
+
+\Hypertarget{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}\index{square.cpp@{square.cpp}!RESTART\_STAT@{RESTART\_STAT}}
+\index{RESTART\_STAT@{RESTART\_STAT}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{RESTART\_STAT}{RESTART\_STAT}}
+{\footnotesize\ttfamily \label{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150} 
+const char\texorpdfstring{$\ast$}{*} RESTART\+\_\+\+STAT = "{}restart"{}}
+
+\Hypertarget{square_8cpp_abe8246e4917267c8243deabf468ed151}\index{square.cpp@{square.cpp}!STATISTIC@{STATISTIC}}
+\index{STATISTIC@{STATISTIC}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{STATISTIC}{STATISTIC}}
+{\footnotesize\ttfamily \label{square_8cpp_abe8246e4917267c8243deabf468ed151} 
+const char\texorpdfstring{$\ast$}{*} STATISTIC = "{}stat"{}}
+
+\Hypertarget{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}\index{square.cpp@{square.cpp}!TESTING@{TESTING}}
+\index{TESTING@{TESTING}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{TESTING}{TESTING}}
+{\footnotesize\ttfamily \label{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761} 
+const char\texorpdfstring{$\ast$}{*} TESTING = "{}test"{}}
+
