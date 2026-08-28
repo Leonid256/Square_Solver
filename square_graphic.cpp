@@ -1,7 +1,7 @@
 #include "/opt/homebrew/opt/raylib/include/raylib.h"
 #include "function.hpp"
 #include <stdio.h>
-
+#include "rlgl.h"
 //---------------------------------------------------------------------------------------------
 
 int square_function_graphic(coefficients coeffs)
@@ -10,15 +10,21 @@ int square_function_graphic(coefficients coeffs)
     const int screenHeight = 450;
     const float step_camera = 5.0;
 
-    float x_up_arrow_start = screenWidth / 2;
+    float x_up_arrow_start = screenWidth / 2;           //up arrow (oY)
     float x_up_arrow_end_left = screenWidth / 2 - 10;
     float x_up_arrow_end_right = screenWidth / 2 + 10;
     float y_up_arrow_start = 0;
     float y_up_arrow_end = 10;
 
+    float x_right_arrow_start = screenWidth;            //right arrow (oX)
+    float x_right_arrow_end = screenWidth - 10;
+    float y_right_arrow_start = screenHeight / 2;
+    float y_right_arrow_end_up = screenHeight / 2 - 10;
+    float y_right_arrow_end_down = screenHeight / 2 + 10;
+
     InitWindow(screenWidth, screenHeight, "Square_function_graphic");
 
-    SetTargetFPS(60);
+    SetTargetFPS(90);
     
     Camera2D cameraPosition = {};
     cameraPosition.target = (Vector2){0, 0};
@@ -30,11 +36,14 @@ int square_function_graphic(coefficients coeffs)
         float x_max = screenWidth * 3;
         float y_max = screenHeight * 3;
     
-        int scale_x = 10;
-        float scale_y = 0.5;
+        float scale_x = 5;
+        float scale_y = 5;
 
-        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_left, y_up_arrow_end, LIGHTGRAY);  //oY arrow
-        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_right, y_up_arrow_end, LIGHTGRAY);
+        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_left, y_up_arrow_end, DARKGRAY);  //oY arrow
+        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_right, y_up_arrow_end, DARKGRAY);
+
+        DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_up, DARKGRAY);  //oX arrow
+        DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_down, DARKGRAY);
 
         if (cameraPosition.target.x < (screenWidth * 3 - 15.0))
         {
@@ -61,28 +70,56 @@ int square_function_graphic(coefficients coeffs)
 
         if (cameraPosition.target.y < (screenHeight * 3 - 15.0))
         {
-            if (IsKeyDown(KEY_DOWN)) cameraPosition.target.y += step_camera;
+            if (IsKeyDown(KEY_DOWN)) 
+            {
+                cameraPosition.target.y += step_camera;
+
+                y_right_arrow_start -= step_camera;
+                y_right_arrow_end_up -= step_camera;
+                y_right_arrow_end_down -= step_camera;
+            }
+
         }
         if (cameraPosition.target.y > (-screenHeight * 3 + 15.0))
         {
-            if (IsKeyDown(KEY_UP)) cameraPosition.target.y -= step_camera;
+            if (IsKeyDown(KEY_UP)) 
+            {
+                cameraPosition.target.y -= step_camera;
+
+                y_right_arrow_start += step_camera;
+                y_right_arrow_end_up += step_camera;
+                y_right_arrow_end_down += step_camera;
+            }
         }
 
         BeginDrawing();
         ClearBackground(RAYWHITE);
-
+        
         BeginMode2D(cameraPosition);
 
-        DrawLine(-screenWidth * 4, 0, screenWidth * 4, 0, LIGHTGRAY);
-        DrawLine(0, -screenHeight * 4, 0, screenHeight * 4, LIGHTGRAY);
+        rlPushMatrix();
+        rlTranslatef(0, 450, 0);
+        rlRotatef(90, 1, 0, 0);
+        DrawGrid(1000, 5);
+        rlPopMatrix();
 
-        for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 0.005)
+        DrawGrid(1000, 10);  
+
+        DrawLine(-screenWidth * 4, 0, screenWidth * 4, 0, DARKGRAY);
+        DrawLine(0, -screenHeight * 4, 0, screenHeight * 4, DARKGRAY);
+
+        for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 0.002)
         {
-            double y = (x * scale_x) * (x * scale_x) * coeffs.a + (x * scale_x) * coeffs.b + coeffs.c;
+            double y = (x) * (x) * coeffs.a + (x) * coeffs.b + coeffs.c;
 
             DrawPixel(x * scale_x, -y * scale_y, BLACK);
         }
+        
 
+        for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 5)
+        {
+            DrawCircle(x, 0, 1, DARKGRAY);
+        }
         EndMode2D();
 
         EndDrawing();

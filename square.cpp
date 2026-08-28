@@ -52,7 +52,7 @@ int main(void)
             case GO:
                 choose_enter(&coeffs, &count_bad_enter);
                 decide_equation(coeffs, &x1, &x2, &quantity);
-                print_answer(quantity, &x1, &x2, &count_solutions);
+                print_answer(coeffs, quantity, &x1, &x2, &count_solutions);
                 break;
             case CONTINUE:
                 break;
@@ -136,8 +136,6 @@ void decide_equation(coefficients coeffs, double* ptr_x1,
         *ptr_quantity = decide_line(coeffs, ptr_x1);
     else
         *ptr_quantity = decide_square(coeffs, ptr_x1, ptr_x2);
-
-    square_function_graphic(coeffs);
 }
 //---------------------------------------------------------------------------------------------
 
@@ -194,7 +192,7 @@ void input_one_coeff(double* ptr_1coeff, int* ptr_count_bad_enter)
 }
 //---------------------------------------------------------------------------------------------
 
-void print_answer(enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* ptr_count_solutions)
+void print_answer(coefficients coeffs, enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* ptr_count_solutions)
 {
     assert (ptr_x1 != NULL);
     assert (ptr_x2 != NULL);
@@ -211,7 +209,7 @@ void print_answer(enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* 
             print_typewriter("Уравнение имеет одно решение:\n", 15);
             printf("x1 = x2 = %lg\n\n", *ptr_x1);
 
-            //square_function_graphic(coeffs);
+            square_function_graphic(coeffs);
 
             break;
         case TWO_ROOTS:
@@ -221,7 +219,7 @@ void print_answer(enum_decisions quantity, double* ptr_x1, double* ptr_x2, int* 
             print_typewriter("x2 = ", 10);
             printf("%lg\n\n",*ptr_x2);
 
-            //square_function_graphic(coeffs);
+            square_function_graphic(coeffs);
 
             break;
         case INFINITE:
