@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['restart_5fstat_0',['RESTART_STAT',['../square_8cpp.html#a7ca129c14e8aa9c4a0c100846c1af150',1,'square.cpp']]]
+  ['local_5fsign_0',['local_sign',['../rubbage_8cpp.html#a68b9b21aa3f03d15f9eb204a6d62d088',1,'rubbage.cpp']]]
 ];

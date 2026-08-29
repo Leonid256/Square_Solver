@@ -62,7 +62,7 @@ void RunOneTest(struct TestCase, int* ptr_count_fail, int* ptr_count_success);
 void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr_count_fail);
 bool check_test_password(int* ptr_count_bad_enter);
 int RunTests_from_file();
-int chose_test();
+int choose_test();
 
 //---------------------------------------------------------------------------------------------
 //service functions

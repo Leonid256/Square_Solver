@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['sleep_5fms_0',['sleep_ms',['../square_8cpp.html#abbfe5149f45ec05c139066cdd89f9f32',1,'square.cpp']]]
+  ['bblk_0',['BBLK',['../visual_8hpp.html#ab3bdb5557ea3a8f7ed80a55ad301e09c',1,'visual.hpp']]],
+  ['bblu_1',['BBLU',['../visual_8hpp.html#a9f40b3c1c240d5513da9f50685d5bf15',1,'visual.hpp']]],
+  ['bcyn_2',['BCYN',['../visual_8hpp.html#abd610b309fe5845f1e5fbd6666a22447',1,'visual.hpp']]],
+  ['bgrn_3',['BGRN',['../visual_8hpp.html#a003f38f51e5f6972a6a0796bda4ca11c',1,'visual.hpp']]],
+  ['bhblk_4',['BHBLK',['../visual_8hpp.html#ad0df2a06bd715233e93f52630d7ac90a',1,'visual.hpp']]],
+  ['bhblu_5',['BHBLU',['../visual_8hpp.html#abdcced5076a5280e2eb3ca4164dd06f5',1,'visual.hpp']]],
+  ['bhcyn_6',['BHCYN',['../visual_8hpp.html#a92895bcb6d037837b362c21ce02f9358',1,'visual.hpp']]],
+  ['bhgrn_7',['BHGRN',['../visual_8hpp.html#a43ac3967b70ffabac8e297291509d0a9',1,'visual.hpp']]],
+  ['bhmag_8',['BHMAG',['../visual_8hpp.html#a4803715200001bc1c5754fd0e01b3fb5',1,'visual.hpp']]],
+  ['bhred_9',['BHRED',['../visual_8hpp.html#ad1ed5807aac72daecdadc097787dcc4c',1,'visual.hpp']]],
+  ['bhwht_10',['BHWHT',['../visual_8hpp.html#a54535ac71843b6c3f28dc8ec104e823d',1,'visual.hpp']]],
+  ['bhyel_11',['BHYEL',['../visual_8hpp.html#a28233a8a5960b472441c17565d2827c9',1,'visual.hpp']]],
+  ['blk_12',['BLK',['../visual_8hpp.html#a6283768c836fd4a0f382514973bc3ff4',1,'visual.hpp']]],
+  ['blkb_13',['BLKB',['../visual_8hpp.html#a5bd5677083936088250881f96cab9f80',1,'visual.hpp']]],
+  ['blkhb_14',['BLKHB',['../visual_8hpp.html#af0f5cad4ce9edcba1fd65ffd05e9b69a',1,'visual.hpp']]],
+  ['blu_15',['BLU',['../visual_8hpp.html#add9307de87f38e77d336751e305886f6',1,'visual.hpp']]],
+  ['blub_16',['BLUB',['../visual_8hpp.html#a9214278790287807fafcedce015e5e2d',1,'visual.hpp']]],
+  ['bluhb_17',['BLUHB',['../visual_8hpp.html#aaf3a6b1d1acbdd2d9efdb841efda0fe3',1,'visual.hpp']]],
+  ['bmag_18',['BMAG',['../visual_8hpp.html#af1bdc3f8928aa1589ef44e3578a09464',1,'visual.hpp']]],
+  ['bred_19',['BRED',['../visual_8hpp.html#a2adb4c9e293ac446897ccfac5a52d6c2',1,'visual.hpp']]],
+  ['bwht_20',['BWHT',['../visual_8hpp.html#ae528cad0e6c76be71eb66776599ec5d9',1,'visual.hpp']]],
+  ['byel_21',['BYEL',['../visual_8hpp.html#a9b526756196d7c0efa31bc8fe4e5f138',1,'visual.hpp']]]
 ];

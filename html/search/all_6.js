@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['input_5fcoeffs_0',['input_coeffs',['../square_8cpp.html#a1fe611fa264c7f8c09bdf78c34cd170b',1,'square.cpp']]],
-  ['input_5fone_5fcoeff_1',['input_one_coeff',['../square_8cpp.html#a664396f3f8957b88c1c89c59495e7d04',1,'square.cpp']]],
-  ['is_5fequal_2',['is_equal',['../square_8cpp.html#ae4ae92e0a38ff7d1e9d50c43b044dfc2',1,'square.cpp']]],
-  ['is_5fzero_3',['is_zero',['../square_8cpp.html#ab9b65caeaf434e3a4cd7f65cf5db2e59',1,'square.cpp']]]
+  ['gets_5fsquare_0',['gets_square',['../square__input_8cpp.html#a110f7ed5016feeed35c5251825911855',1,'square_input.cpp']]],
+  ['go_1',['GO',['../function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985',1,'function.hpp']]],
+  ['grn_2',['GRN',['../visual_8hpp.html#aea69ffbacdcdf16c21b8c9961df84448',1,'visual.hpp']]],
+  ['grnb_3',['GRNB',['../visual_8hpp.html#a906e1183ece851df294cfd43b14561c8',1,'visual.hpp']]],
+  ['grnhb_4',['GRNHB',['../visual_8hpp.html#ad1c69f0fbadaa9bef5acfb1aac37cbbb',1,'visual.hpp']]]
 ];

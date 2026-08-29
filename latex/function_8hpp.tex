@@ -1,0 +1,592 @@
+\doxysection{function.\+hpp File Reference}
+\hypertarget{function_8hpp}{}\label{function_8hpp}\index{function.hpp@{function.hpp}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}
+\item 
+struct \doxymbox{\hyperlink{structcoefficients}{coefficients}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \{ \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c}{NO\+\_\+\+ROOTS}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}{INFINITE}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \{ \newline
+\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}{STOP}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}{GO}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457}{STAT}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374}{CONTINUE}}
+, \newline
+\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}{TEST}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \doxymbox{\hyperlink{function_8hpp_a6be70220f0cda5fc7cdcec12631fdfad}{ask\+\_\+user}} (int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция, запрашивающая дальнейшие действия у пользователя \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_afe9a5f95f6d5822c713f95f1eb1cac92}{calculate\+\_\+statics}} (int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция, отвечающая за статистику в программе \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_adc7bc98a6d8df416eecb031bd38a7299}{input\+\_\+coeffs}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}coeffs, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция для ввода коэффициентов уравнения 2 степени \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_a83f7b0f8c72c9e27e50e91227612e0ab}{input\+\_\+one\+\_\+coeff}} (double \texorpdfstring{$\ast$}{*}ptr\+\_\+1coeff, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция, запрашивающая у пользователя один коэффициент \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs)
+\item 
+int \doxymbox{\hyperlink{function_8hpp_a6ccadcadfcad5193e74681b2ce675577}{choose\+\_\+enter}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\begin{DoxyCompactList}\small\item\em Функция, позволяющая пользователю выбрать способ ввода уравнения \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_adefc6786c62015506c41569c1597bf43}{print\+\_\+answer}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity, double \texorpdfstring{$\ast$}{*}, double \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция печатает результат решения уравнения 2 степени \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_ac8a9bff796f173ee3f9d4fb4d5d096db}{print\+\_\+typewriter}} (const char \texorpdfstring{$\ast$}{*}text, int delay\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Функция плавного вывода \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_a2c1234a2e169329b975a6541cc561e81}{print\+\_\+cat}} (void)
+\begin{DoxyCompactList}\small\item\em Вывод кошечки :). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_a73eb533269566775275da2ac91350562}{print\+\_\+logo}} (void)
+\begin{DoxyCompactList}\small\item\em Вывод названия программы \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_ae0acfc90c431d37832980342c50f2468}{decide\+\_\+equation}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}, double \texorpdfstring{$\ast$}{*}, enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Функция, решающая любое уравнение 2 степени \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{function_8hpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}x1\+\_\+ptr, double \texorpdfstring{$\ast$}{*}x2\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Функция, решающая квадратное уравнение \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{function_8hpp_a43ca83245092576bcb3d31cde4bf61dd}{decide\+\_\+line}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}px1)
+\begin{DoxyCompactList}\small\item\em Функция, решающая линейное уравнение \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{function_8hpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}{is\+\_\+equal}} (double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Функция сравнения двух чисел double. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{function_8hpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}{is\+\_\+zero}} (double x)
+\begin{DoxyCompactList}\small\item\em Функция проверяющая double на равенство нулю \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{function_8hpp_a125423afc09023c1a7785f0813bb1dc1}{square\+\_\+function\+\_\+graphic}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double x1, double x2, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity)
+\item 
+int \doxymbox{\hyperlink{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}{Run\+Tests}} ()
+\item 
+void \doxymbox{\hyperlink{function_8hpp_a88830315c271a48e42cb5e44e3bf51ef}{Run\+One\+Test}} (struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+fail, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+success)
+\item 
+void \doxymbox{\hyperlink{function_8hpp_a8931d9d6150c9ac79676231a7e501425}{print\+\_\+failed}} (\doxymbox{\hyperlink{struct_test_case}{Test\+Case}} test, float x1, float x2, int quality\+\_\+local, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+fail)
+\item 
+bool \doxymbox{\hyperlink{function_8hpp_a17f9fd83d4b6bc4282de56e2635171d1}{check\+\_\+test\+\_\+password}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+\begin{DoxyCompactList}\small\item\em Функция, проверяющая пароль для раздела тестирования \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d}{Run\+Tests\+\_\+from\+\_\+file}} ()
+\item 
+int \doxymbox{\hyperlink{function_8hpp_acc6efad115158ec6c22da916ee4f6b85}{choose\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em Функция для выбора режима тестирования \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{function_8hpp_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
+\begin{DoxyCompactList}\small\item\em Функция очистки ввода \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{function_8hpp_doc-enum-members}
+\Hypertarget{function_8hpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6}\index{function.hpp@{function.hpp}!enum\_decisions@{enum\_decisions}}
+\index{enum\_decisions@{enum\_decisions}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{enum\_decisions}{enum\_decisions}}
+{\footnotesize\ttfamily \label{function_8hpp_a927a7a1c548cf274784f841511c283b6} 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ROOTS@{NO\_ROOTS}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!NO\_ROOTS@{NO\_ROOTS}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c} 
+NO\+\_\+\+ROOTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOT@{ONE\_ROOT}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!ONE\_ROOT@{ONE\_ROOT}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf} 
+ONE\+\_\+\+ROOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!TWO\_ROOTS@{TWO\_ROOTS}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81} 
+TWO\+\_\+\+ROOTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE@{INFINITE}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!INFINITE@{INFINITE}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb} 
+INFINITE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}\index{function.hpp@{function.hpp}!enum\_opportunity\_user@{enum\_opportunity\_user}}
+\index{enum\_opportunity\_user@{enum\_opportunity\_user}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{enum\_opportunity\_user}{enum\_opportunity\_user}}
+{\footnotesize\ttfamily \label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17} 
+enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP@{STOP}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!STOP@{STOP}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8} 
+STOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GO@{GO}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!GO@{GO}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985} 
+GO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STAT@{STAT}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!STAT@{STAT}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457} 
+STAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE@{CONTINUE}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!CONTINUE@{CONTINUE}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374} 
+CONTINUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!TEST@{TEST}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8} 
+TEST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{function_8hpp_doc-func-members}
+\Hypertarget{function_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{function_8hpp_a6be70220f0cda5fc7cdcec12631fdfad}\index{function.hpp@{function.hpp}!ask\_user@{ask\_user}}
+\index{ask\_user@{ask\_user}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{ask\_user()}{ask\_user()}}
+{\footnotesize\ttfamily \label{function_8hpp_a6be70220f0cda5fc7cdcec12631fdfad} 
+enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} ask\+\_\+user (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+stat}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+
+
+Функция, запрашивающая дальнейшие действия у пользователя 
+
+Функция дает пользователю выбор дальнейших действий(решение уравнений, остановка программы, открытие статистики, открытие раздела тестирования функции решения уравнений). Функция проверяет ввод, и в случае неверного ввода печатает это \begin{DoxyNote}{Note}
+Функция не позволяет дважды подряд открывать раздел статистики 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+flag\+\_\+stat} & Указатель на флаг возможности открытия раздела статистики(дважды подряд открытие невозможно) \\
+\hline
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+flag\+\_\+exit} & Указатель на флаг закрытия программы(для отсутствия запроса пользователя в разделе статистики) \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+bad\+\_\+enter} & Указатель на счетчик неверных вводов в программе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}\+GO"{} в случае выбора пользователем продолжения решения уравнений 
+
+"{}\+STOP"{} в случае выбора пользователем остановки программы 
+
+"{}\+STAT"{} в случае выбора пользователем открытия статистики 
+
+"{}\+TEST"{} в случае выбора пользователем открытия раздела тестирования 
+
+"{}\+CONTINUE"{} в случае неверного ввода 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_afe9a5f95f6d5822c713f95f1eb1cac92}\index{function.hpp@{function.hpp}!calculate\_statics@{calculate\_statics}}
+\index{calculate\_statics@{calculate\_statics}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{calculate\_statics()}{calculate\_statics()}}
+{\footnotesize\ttfamily \label{function_8hpp_afe9a5f95f6d5822c713f95f1eb1cac92} 
+void calculate\+\_\+statics (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{}\end{DoxyParamCaption})}
+
+
+
+Функция, отвечающая за статистику в программе 
+
+Данная функция печатает статистику программы(количество решенных уравнений и неверных вводов). Функция запрашивает у пользователя дальнейшие действия. По желанию пользователя, статистику можно обнулитьили же выйти из этого раздела. Стоит проверка на некорректный ввод(запрос пользователя повторяется). Статистика выводится при завершении программы, однако в этом случае нет запроса пользователя 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em ptr\+\_\+count\+\_\+solutions} & указатель на счетчик решенных уравнений \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+bad\+\_\+enter} & указатель на счетчик неверных вводов в программе(в самой статистике при неверном вводе счетчик также растет) \\
+\hline
+\doxymbox{\texttt{in}}  & {\em ptr\+\_\+flag\+\_\+exit} & указатель на флаг завершения программы \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a17f9fd83d4b6bc4282de56e2635171d1}\index{function.hpp@{function.hpp}!check\_test\_password@{check\_test\_password}}
+\index{check\_test\_password@{check\_test\_password}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{check\_test\_password()}{check\_test\_password()}}
+{\footnotesize\ttfamily \label{function_8hpp_a17f9fd83d4b6bc4282de56e2635171d1} 
+bool check\+\_\+test\+\_\+password (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+
+
+Функция, проверяющая пароль для раздела тестирования 
+
+Данная функция запрашивает пароль от раздела тестирования, далее сравнивает его с константным значением 
+\begin{DoxyParams}{Parameters}
+{\em указатель} & на счетчик неверных вводов в программе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+В случае неверного ввода пароля, раздел тестирования сразу закрывается, нет повторного запроса пароля 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+"{}true"{} в случае верного пароля 
+
+"{}false"{} в случае неверного пароля 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a6ccadcadfcad5193e74681b2ce675577}\index{function.hpp@{function.hpp}!choose\_enter@{choose\_enter}}
+\index{choose\_enter@{choose\_enter}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{choose\_enter()}{choose\_enter()}}
+{\footnotesize\ttfamily \label{function_8hpp_a6ccadcadfcad5193e74681b2ce675577} 
+int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+
+
+Функция, позволяющая пользователю выбрать способ ввода уравнения 
+
+Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения \begin{DoxySeeAlso}{See also}
+\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs()}, \doxylink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+coeffs} & указатель на коэффициенты уравнения, передаваемый функциям, считывающим сами коэффициенты \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+bad\+\_\+enter} & указатель на счетчик неверных вводов программе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 в случае успешного ввода коэффициентов либо уравнения 
+
+1 в ином случае 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_acc6efad115158ec6c22da916ee4f6b85}\index{function.hpp@{function.hpp}!choose\_test@{choose\_test}}
+\index{choose\_test@{choose\_test}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{choose\_test()}{choose\_test()}}
+{\footnotesize\ttfamily \label{function_8hpp_acc6efad115158ec6c22da916ee4f6b85} 
+int choose\+\_\+test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Функция для выбора режима тестирования 
+
+Данная функция позволяет пользователю выбрать режим тестирования(значениями из файла, либо значениями указанными в программе дефолтно). В случае верного ввода функция вызывает функции тестирования \begin{DoxySeeAlso}{See also}
+\doxylink{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d}{Run\+Tests\+\_\+from\+\_\+file()}, \doxylink{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}{Run\+Tests()} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+В случае неверного ввода режима раздел тестирования закрывается 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+1 в случае успешного запуска тестирования(любого) 
+
+0 в случае неверного ввода пользователем 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_abb2d5d88a388d973362772065e6ed105}\index{function.hpp@{function.hpp}!clean\_stdin@{clean\_stdin}}
+\index{clean\_stdin@{clean\_stdin}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{clean\_stdin()}{clean\_stdin()}}
+{\footnotesize\ttfamily \label{function_8hpp_abb2d5d88a388d973362772065e6ed105} 
+void clean\+\_\+stdin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Функция очистки ввода 
+
+Функция очищает входной поток от всех неиспользовавшихся символов \begin{DoxyNote}{Note}
+В случае пустого входного потока, функция будет ждать символ новой строки или EOF, не продолжая программу 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a79b0844a11842ac4941ee258fb83be64}\index{function.hpp@{function.hpp}!custom\_input@{custom\_input}}
+\index{custom\_input@{custom\_input}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{custom\_input()}{custom\_input()}}
+{\footnotesize\ttfamily \label{function_8hpp_a79b0844a11842ac4941ee258fb83be64} 
+void custom\+\_\+input (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{}\end{DoxyParamCaption})}
+
+\Hypertarget{function_8hpp_ae0acfc90c431d37832980342c50f2468}\index{function.hpp@{function.hpp}!decide\_equation@{decide\_equation}}
+\index{decide\_equation@{decide\_equation}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{decide\_equation()}{decide\_equation()}}
+{\footnotesize\ttfamily \label{function_8hpp_ae0acfc90c431d37832980342c50f2468} 
+void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+quantity}{}\end{DoxyParamCaption})}
+
+
+
+Функция, решающая любое уравнение 2 степени 
+
+Данная функция получает коэффициенты уравнения и, исходя из них, вызывает либо функцию, решающую линейное уравнение, либо функцию, решающую квадратное уравнение \begin{DoxySeeAlso}{See also}
+\doxylink{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}, \doxylink{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты уравнения 2 степени \\
+\hline
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+x1,ptr\+\_\+x2} & указатели для записи результатов решения уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+В случае единственного решения, результат будет записан по указателю на первый корень (ptr\+\_\+x1) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+\_\+quantity} & указатель для записи количества корней уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a43ca83245092576bcb3d31cde4bf61dd}\index{function.hpp@{function.hpp}!decide\_line@{decide\_line}}
+\index{decide\_line@{decide\_line}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{decide\_line()}{decide\_line()}}
+{\footnotesize\ttfamily \label{function_8hpp_a43ca83245092576bcb3d31cde4bf61dd} 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} decide\+\_\+line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x}{}\end{DoxyParamCaption})}
+
+
+
+Функция, решающая линейное уравнение 
+
+Данная функция решает линейное уравнение, записывая результат в значение переданного ей указателя 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты уравнения, где a = 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Функция выдает ошибку через assert, если в нее передать коэфициент уравнения a != 0 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+x} & указатель для записи результата решения уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}\+INFINITE"{} в случае, когда корней уравнения бесконечное количество (тождество 0 = 0) 
+
+"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия корней уравнения 
+
+"{}\+ONE\+\_\+\+ROOT"{} в случае обычного линейного уравнения с одним корнем 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a1c037c12a4cbfb7f6f8a0c599c7917df}\index{function.hpp@{function.hpp}!decide\_square@{decide\_square}}
+\index{decide\_square@{decide\_square}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{decide\_square()}{decide\_square()}}
+{\footnotesize\ttfamily \label{function_8hpp_a1c037c12a4cbfb7f6f8a0c599c7917df} 
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} decide\+\_\+square (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1\+\_\+ptr}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+
+
+Функция, решающая квадратное уравнение 
+
+Данная функция решает исключительно квадратные уравнения, записывая результат решения в значения переданных в нее указателей 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты квадратного уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Функция выдает ошибку через assert, если в нее передать коэфициент уравнения a = 0 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em x1\+\_\+ptr,x2\+\_\+ptr} & указатели, для записи в их значения результатов решения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}\+ONE\+\_\+\+ROOT"{} в случае единственного решения (дискриминант d = 0) 
+
+"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия решений (дискриминант d \texorpdfstring{$<$}{<} 0) 
+
+"{}\+TWO\+\_\+\+ROOTS"{} в случае двух решений (дискриминант \texorpdfstring{$>$}{>} 0) 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_adc7bc98a6d8df416eecb031bd38a7299}\index{function.hpp@{function.hpp}!input\_coeffs@{input\_coeffs}}
+\index{input\_coeffs@{input\_coeffs}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{input\_coeffs()}{input\_coeffs()}}
+{\footnotesize\ttfamily \label{function_8hpp_adc7bc98a6d8df416eecb031bd38a7299} 
+void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+
+
+Функция для ввода коэффициентов уравнения 2 степени 
+
+Данная функция запрашивает у пользователя 3 коэффициента уравнения, вызывая функцию, считывающую 1 коэффициент. Записывает ввод в значения переданных ей указателей. В конце печатает введенные пользователем коэффициенты \begin{DoxySeeAlso}{See also}
+\doxylink{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+coeffs} & указатель для записи введенных коэффициентов уравнения \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+bad\+\_\+enter} & указатель на количество неверных вводов во всей программе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a83f7b0f8c72c9e27e50e91227612e0ab}\index{function.hpp@{function.hpp}!input\_one\_coeff@{input\_one\_coeff}}
+\index{input\_one\_coeff@{input\_one\_coeff}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{input\_one\_coeff()}{input\_one\_coeff()}}
+{\footnotesize\ttfamily \label{function_8hpp_a83f7b0f8c72c9e27e50e91227612e0ab} 
+void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+1coeff}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
+
+
+
+Функция, запрашивающая у пользователя один коэффициент 
+
+Данная функция считывает один введеднный коэффициент уравнения и проверяет его на верность (тип double). В случае верного ввода, функция записывает коэффициент по указателю, переданному ей, иначе запрашивает повторно ввод коэффициента(увеличивая количество неверных вводов в программе). Вызывается функцией ввода трех коэффициентов уравнения (input\+\_\+coeffs) \begin{DoxySeeAlso}{See also}
+\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+1coeff} & указатель на адрес, куда записывается введенный коэффициент \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+bad\+\_\+enter} & указатель на счетчик неверных вводов во всей программе, который увеличивается при неверном вводе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}\index{function.hpp@{function.hpp}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
+{\footnotesize\ttfamily \label{function_8hpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2} 
+bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Функция сравнения двух чисел double. 
+
+Функция сравнивает два числа с плавающей точкой, учитывая введенную заранее погрешность 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em x1,x2} & сравниваемые числа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}true"{} если числа равны с учетом погрешности 
+
+"{}false"{} в противном случае 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}\index{function.hpp@{function.hpp}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily \label{function_8hpp_ab9b65caeaf434e3a4cd7f65cf5db2e59} 
+bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})}
+
+
+
+Функция проверяющая double на равенство нулю 
+
+Функция сравнивает модуль числа с плавающей точкой с указанной заранее погрешностью, берущейся за нуль 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em x} & проверяемое число \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}true"{} если число равно нулю с учетом погрешности 
+
+"{}false"{} если число не равно нулю 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_adefc6786c62015506c41569c1597bf43}\index{function.hpp@{function.hpp}!print\_answer@{print\_answer}}
+\index{print\_answer@{print\_answer}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_answer()}{print\_answer()}}
+{\footnotesize\ttfamily \label{function_8hpp_adefc6786c62015506c41569c1597bf43} 
+void print\+\_\+answer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{\doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}]{quantity}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{}\end{DoxyParamCaption})}
+
+
+
+Функция печатает результат решения уравнения 2 степени 
+
+Данная функция печатает количество корней уравнения, а также сами корни в случае их наличия. При одном или двух решениях данная функция строит график уравнения, вызывая square\+\_\+function\+\_\+graphic. Также функция увеличивает счетчик количества решенных уравнений \begin{DoxySeeAlso}{See also}
+\doxylink{function_8hpp_a125423afc09023c1a7785f0813bb1dc1}{square\+\_\+function\+\_\+graphic} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты решенного уравнения(нужны для передачи в качестве параметров функции построения графиков) \\
+\hline
+\doxymbox{\texttt{in}}  & {\em quantity} & количество решений уравнения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em ptr\+\_\+x1,ptr\+\_\+x2} & указатели на значения корней уравнения \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+solutions} & указатель на счетчик количества решенных уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a2c1234a2e169329b975a6541cc561e81}\index{function.hpp@{function.hpp}!print\_cat@{print\_cat}}
+\index{print\_cat@{print\_cat}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_cat()}{print\_cat()}}
+{\footnotesize\ttfamily \label{function_8hpp_a2c1234a2e169329b975a6541cc561e81} 
+void print\+\_\+cat (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Вывод кошечки :). 
+
+Данная функция выводит на экран кошечку, раскрашенную в цвета триколора 
+\begin{DoxyParams}{Parameters}
+{\em функция} & не принимает параметров \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a8931d9d6150c9ac79676231a7e501425}\index{function.hpp@{function.hpp}!print\_failed@{print\_failed}}
+\index{print\_failed@{print\_failed}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_failed()}{print\_failed()}}
+{\footnotesize\ttfamily \label{function_8hpp_a8931d9d6150c9ac79676231a7e501425} 
+void print\+\_\+failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case}{Test\+Case}}}]{test}{, }\item[{float}]{x1}{, }\item[{float}]{x2}{, }\item[{int}]{quality\+\_\+local}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+fail}{}\end{DoxyParamCaption})}
+
+\Hypertarget{function_8hpp_a73eb533269566775275da2ac91350562}\index{function.hpp@{function.hpp}!print\_logo@{print\_logo}}
+\index{print\_logo@{print\_logo}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_logo()}{print\_logo()}}
+{\footnotesize\ttfamily \label{function_8hpp_a73eb533269566775275da2ac91350562} 
+void print\+\_\+logo (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Вывод названия программы 
+
+Функция выводит название программы в рамочке 
+\begin{DoxyParams}{Parameters}
+{\em функция} & не принимает параметров \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_ac8a9bff796f173ee3f9d4fb4d5d096db}\index{function.hpp@{function.hpp}!print\_typewriter@{print\_typewriter}}
+\index{print\_typewriter@{print\_typewriter}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_typewriter()}{print\_typewriter()}}
+{\footnotesize\ttfamily \label{function_8hpp_ac8a9bff796f173ee3f9d4fb4d5d096db} 
+void print\+\_\+typewriter (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{int}]{delay\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+Функция плавного вывода 
+
+Данная функция позволяет выводить текст плавно, с задержкой после каждого символа 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em text} & -\/ текст, который нужно вывести \\
+\hline
+\doxymbox{\texttt{in}}  & {\em delay\+\_\+ms} & задержка после вывода каждого символа в миллисекундах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+функция ничего не возвращает 
+\end{DoxyReturn}
+\Hypertarget{function_8hpp_a88830315c271a48e42cb5e44e3bf51ef}\index{function.hpp@{function.hpp}!RunOneTest@{RunOneTest}}
+\index{RunOneTest@{RunOneTest}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{RunOneTest()}{RunOneTest()}}
+{\footnotesize\ttfamily \label{function_8hpp_a88830315c271a48e42cb5e44e3bf51ef} 
+void Run\+One\+Test (\begin{DoxyParamCaption}\item[{struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}}]{test}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+fail}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+success}{}\end{DoxyParamCaption})}
+
+\Hypertarget{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}\index{function.hpp@{function.hpp}!RunTests@{RunTests}}
+\index{RunTests@{RunTests}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{RunTests()}{RunTests()}}
+{\footnotesize\ttfamily \label{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc} 
+int Run\+Tests (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d}\index{function.hpp@{function.hpp}!RunTests\_from\_file@{RunTests\_from\_file}}
+\index{RunTests\_from\_file@{RunTests\_from\_file}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{RunTests\_from\_file()}{RunTests\_from\_file()}}
+{\footnotesize\ttfamily \label{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d} 
+int Run\+Tests\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{function_8hpp_a125423afc09023c1a7785f0813bb1dc1}\index{function.hpp@{function.hpp}!square\_function\_graphic@{square\_function\_graphic}}
+\index{square\_function\_graphic@{square\_function\_graphic}!function.hpp@{function.hpp}}
+\doxysubsubsection{\texorpdfstring{square\_function\_graphic()}{square\_function\_graphic()}}
+{\footnotesize\ttfamily \label{function_8hpp_a125423afc09023c1a7785f0813bb1dc1} 
+int square\+\_\+function\+\_\+graphic (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double}]{x1}{, }\item[{double}]{x2}{, }\item[{\doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}]{quantity}{}\end{DoxyParamCaption})}
+

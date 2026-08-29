@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['epsilon_0',['EPSILON',['../square_8cpp.html#a596344e5a2992d2beec43b76a6294de0',1,'square.cpp']]],
-  ['exit_5fcycle_1',['EXIT_CYCLE',['../square_8cpp.html#a4e372ec7906bfb51be8d025f6c706b50',1,'square.cpp']]],
-  ['exit_5fstat_2',['EXIT_STAT',['../square_8cpp.html#a891081cf8f2fcc36f2498b32e0bb3054',1,'square.cpp']]]
+  ['debug_5fmode_0',['DEBUG_MODE',['../square_8cpp.html#aa9e9a13d853e4999458828dabe893ad9',1,'square.cpp']]],
+  ['default_5fenter_1',['DEFAULT_ENTER',['../square_8cpp.html#ab33eefd5cc152fdb876903e92f234ea9',1,'square.cpp']]],
+  ['default_5ftest_2',['DEFAULT_TEST',['../square_8cpp.html#a0352bf2781fcf67b049d80da9ee00224',1,'square.cpp']]]
 ];
