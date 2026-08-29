@@ -4,7 +4,7 @@
 #include "rlgl.h"
 //---------------------------------------------------------------------------------------------
 
-int square_function_graphic(coefficients coeffs, double x1, double x2)
+int square_function_graphic(coefficients coeffs, double x1, double x2, enum_decisions quantity)
 {
     const int screenWidth = 800;
     const int screenHeight = 450;
@@ -28,6 +28,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2)
 
     SetTargetFPS(90);
     
+
     Camera2D cameraPosition = {};
     cameraPosition.target = (Vector2){0, 0};
     cameraPosition.offset = (Vector2){screenWidth / 2, screenHeight / 2};
@@ -51,7 +52,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2)
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_up, DARKGRAY);  //oX arrow
         DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_down, DARKGRAY);
         */
-        
+
         //сдвиг области видимости
         if (cameraPosition.target.x < (screenWidth * 3 - 15.0))
         {
@@ -119,6 +120,28 @@ int square_function_graphic(coefficients coeffs, double x1, double x2)
         rlPopMatrix();
         DrawGrid(1000, 10);  
 
+        //Легенда на графике + корни на оси
+        switch (quantity)
+        {
+            case ONE_ROOT:
+                DrawText("The equation has 1 solution", 10, 10, 20, BLACK);
+                DrawText(TextFormat("x1 = x2 = %lg", x1), 10, 30, 20, BLACK);
+
+                DrawCircle(x1 * scale_x, 0, 2, RED);
+                break;
+            case TWO_ROOTS:
+                DrawText("The equation has two solutions", 10, 10, 20, BLACK);
+                DrawText(TextFormat("x1 =  %lg", x1), 10, 30, 20, BLACK);
+                DrawText(TextFormat("x2 =  %lg", x2), 10, 50, 20, BLACK);
+
+                DrawCircle(x1 * scale_x, 0, 2, RED);
+                DrawCircle(x2 * scale_x, 0, 2, RED);
+
+                break;
+            default:
+                break;
+        }
+
         //отрисовка координатных осей
         DrawLine(-screenWidth * 4, 0, screenWidth * 4, 0, DARKGRAY);
         DrawLine(0, -screenHeight * 4, 0, screenHeight * 4, DARKGRAY);
@@ -142,10 +165,6 @@ int square_function_graphic(coefficients coeffs, double x1, double x2)
         {
             DrawCircle(0, y, 1, DARKGRAY);
         }
-
-        //отрисовка корней уравнения
-        DrawCircle(x1 * scale_x, 0, 2, RED);
-        DrawCircle(x2 * scale_x, 0, 2, RED);
 
         EndMode2D();
 

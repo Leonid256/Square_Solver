@@ -54,7 +54,7 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
 enum enum_decisions decide_line(coefficients coeffs, double* px1); //решение линейного уравнения
 bool is_equal(double x1, double x2);
 bool is_zero(double x);
-int square_function_graphic(coefficients coeffs, double x1, double x2);
+int square_function_graphic(coefficients coeffs, double x1, double x2, enum_decisions quantity);
 //---------------------------------------------------------------------------------------------
 //test functions
 int RunTests();
