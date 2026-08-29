@@ -3,7 +3,16 @@
 #include <stdio.h>
 #include "rlgl.h"
 //---------------------------------------------------------------------------------------------
-
+/**
+    \brief Постройка графика
+    \details Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, 
+    а также изменение зума клавишами + и - 
+    \param [in] coeffs коэффициенты уравнения
+    \param [in] x1, x2 корни уравнения
+    \note В случае одного решения у уравнения, корень x2 = NAN
+    \param [in] quantity количество корней
+    \return 0 в случае успешного завершения
+*/
 int square_function_graphic(coefficients coeffs, double x1, double x2, enum_decisions quantity)
 {
     const int screenWidth = 800;

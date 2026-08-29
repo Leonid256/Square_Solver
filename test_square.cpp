@@ -6,6 +6,16 @@
 #include <assert.h>
 
 //---------------------------------------------------------------------------------------------
+/**
+    \brief Функция с запуском одного теста
+    \details Данная функция проводит один тест функции решения уравнения. Вызывается другими функциями. В случае неуспешного теста 
+    вызывает функцию печати этого, при успехе самостоятельно печатает это
+    @decide_equation(), RunTests(), RunTests_from_file(), print_failed()
+    \param [in, out] test струтура со всеми данными об уравнении
+    \param [in, out] ptr_count_fail указатель на счетчик неуспешных тестов
+    \param [in, out] ptr_count_success указатель на счетчик успешных тестов
+    \return Функция ничего не возращает
+*/
 void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
 {
     assert (ptr_count_fail != NULL);
@@ -75,6 +85,16 @@ void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
     }
 }
 //---------------------------------------------------------------------------------------------
+/**
+    \brief Печать неуспешного теста
+    \details При неуспешного тестировании, вызывается данная функция, выводящая полученные и ожидаемые значения решения уравнения
+    @RunOneTest()
+    \param [in] test структура с ожидаемыми значениеми
+    \param [in] x1, x2 полученные корни уравнения
+    \param [in] quality_local полученное количество корней уравнения
+    \param [in, out] ptr_count_fail указатель на счетчик неверных тестов
+    \return Функция ничего не возвращает
+*/
 void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr_count_fail)
 {
     assert (ptr_count_fail != NULL);
@@ -88,6 +108,12 @@ void print_failed(TestCase test, float x1, float x2, int quality_local, int* ptr
     (*ptr_count_fail)++;
 }
 //---------------------------------------------------------------------------------------------
+/**
+    \brief Функция дефолтных тестов
+    \details Данная функция имеет дефолтные значения для тестов. Она запускает функцию с одинарным тестом, передавая в нее эти значения
+    @RunOneTest()
+    \return count_fail количество неуспешных тестов
+*/
 int RunTests()
 {
     sleep(1);
@@ -126,6 +152,13 @@ int RunTests()
     return count_fail;
 }
 //---------------------------------------------------------------------------------------------
+/**
+    \brief Функция тестов из файла
+    \details Данная функция открывает файл со значениями для тестов. Она запускает функцию 
+    с одинарным тестом, передавая в нее эти значения
+    @RunOneTest()
+    \return count_fail количество неуспешных тестов
+*/
 int RunTests_from_file()
 {
     FILE* fp = fopen("test_values.txt", "r");

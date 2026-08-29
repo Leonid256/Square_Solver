@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('square__graphi
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a125423afc09023c1a7785f0813bb1dc1" id="r_a125423afc09023c1a7785f0813bb1dc1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a125423afc09023c1a7785f0813bb1dc1">square_function_graphic</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double x1, double x2, <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> quantity)</td></tr>
+<tr class="memdesc:a125423afc09023c1a7785f0813bb1dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постройка графика  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a125423afc09023c1a7785f0813bb1dc1" name="a125423afc09023c1a7785f0813bb1dc1"></a>
@@ -149,6 +150,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Постройка графика </p>
+<p>Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и - </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">coeffs</td><td>коэффициенты уравнения </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1,x2</td><td>корни уравнения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>В случае одного решения у уравнения, корень x2 = NAN </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">quantity</td><td>количество корней </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 в случае успешного завершения </dd></dl>
 
 </div>
 </div>

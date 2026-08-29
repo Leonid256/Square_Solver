@@ -8,7 +8,7 @@
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{square__graphic_8cpp_a125423afc09023c1a7785f0813bb1dc1}{square\+\_\+function\+\_\+graphic}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double x1, double x2, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Постройка графика \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{square__graphic_8cpp_doc-func-members}
@@ -20,3 +20,25 @@ int \doxymbox{\hyperlink{square__graphic_8cpp_a125423afc09023c1a7785f0813bb1dc1}
 {\footnotesize\ttfamily \label{square__graphic_8cpp_a125423afc09023c1a7785f0813bb1dc1} 
 int square\+\_\+function\+\_\+graphic (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double}]{x1}{, }\item[{double}]{x2}{, }\item[{\doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}]{quantity}{}\end{DoxyParamCaption})}
 
+
+
+Постройка графика 
+
+Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и -\/ 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты уравнения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em x1,x2} & корни уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+В случае одного решения у уравнения, корень x2 = NAN 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em quantity} & количество корней \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 в случае успешного завершения 
+\end{DoxyReturn}

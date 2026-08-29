@@ -4,9 +4,9 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}
-\item 
+\begin{DoxyCompactList}\small\item\em Структура для тестов \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{structcoefficients}{coefficients}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Структура с коэффициентами \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,7 +15,7 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 , \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}}
 , \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}{INFINITE}}
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Корни уравнения \end{DoxyCompactList}\item 
 enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \{ \newline
 \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}{STOP}}
 , \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}{GO}}
@@ -24,7 +24,7 @@ enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\
 , \newline
 \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}{TEST}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Выбор пользователя \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,17 +59,17 @@ bool \doxymbox{\hyperlink{function_8hpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}{is\+\
 bool \doxymbox{\hyperlink{function_8hpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}{is\+\_\+zero}} (double x)
 \begin{DoxyCompactList}\small\item\em Функция проверяющая double на равенство нулю \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{function_8hpp_a125423afc09023c1a7785f0813bb1dc1}{square\+\_\+function\+\_\+graphic}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double x1, double x2, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity)
-\item 
+\begin{DoxyCompactList}\small\item\em Постройка графика \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}{Run\+Tests}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Функция дефолтных тестов \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{function_8hpp_a88830315c271a48e42cb5e44e3bf51ef}{Run\+One\+Test}} (struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+fail, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+success)
-\item 
+\begin{DoxyCompactList}\small\item\em Функция с запуском одного теста \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{function_8hpp_a8931d9d6150c9ac79676231a7e501425}{print\+\_\+failed}} (\doxymbox{\hyperlink{struct_test_case}{Test\+Case}} test, float x1, float x2, int quality\+\_\+local, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+fail)
-\item 
+\begin{DoxyCompactList}\small\item\em Печать неуспешного теста \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{function_8hpp_a17f9fd83d4b6bc4282de56e2635171d1}{check\+\_\+test\+\_\+password}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, проверяющая пароль для раздела тестирования \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d}{Run\+Tests\+\_\+from\+\_\+file}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Функция тестов из файла \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{function_8hpp_acc6efad115158ec6c22da916ee4f6b85}{choose\+\_\+test}} ()
 \begin{DoxyCompactList}\small\item\em Функция для выбора режима тестирования \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{function_8hpp_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
@@ -85,29 +85,33 @@ void \doxymbox{\hyperlink{function_8hpp_abb2d5d88a388d973362772065e6ed105}{clean
 {\footnotesize\ttfamily \label{function_8hpp_a927a7a1c548cf274784f841511c283b6} 
 enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}
 
-\begin{DoxyEnumFields}[2]{Enumerator}
+
+
+Корни уравнения 
+
+Значения количества корней у уравнения: 0 корней, 1 корень, 2 корня или бесконечное количество корней \begin{DoxyEnumFields}[2]{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ROOTS@{NO\_ROOTS}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!NO\_ROOTS@{NO\_ROOTS}}
 }\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c} 
-NO\+\_\+\+ROOTS&\\
+NO\+\_\+\+ROOTS&нет корней \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOT@{ONE\_ROOT}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!ONE\_ROOT@{ONE\_ROOT}}
 }\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf} 
-ONE\+\_\+\+ROOT&\\
+ONE\+\_\+\+ROOT&1 корень \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!TWO\_ROOTS@{TWO\_ROOTS}}
 }\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81} 
-TWO\+\_\+\+ROOTS&\\
+TWO\+\_\+\+ROOTS&2 корня \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE@{INFINITE}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!INFINITE@{INFINITE}}
 }\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb} 
-INFINITE&\\
+INFINITE&бесконечное количество корней \\
 \hline
 
 \end{DoxyEnumFields}
@@ -117,35 +121,39 @@ INFINITE&\\
 {\footnotesize\ttfamily \label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17} 
 enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}}}
 
-\begin{DoxyEnumFields}[2]{Enumerator}
+
+
+Выбор пользователя 
+
+Константные выражения, которые может вернуть функция, запрашивающая у пользователя дальнейшие действия \begin{DoxyEnumFields}[2]{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{STOP@{STOP}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!STOP@{STOP}}
 }\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8} 
-STOP&\\
+STOP&остановка программы \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{GO@{GO}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!GO@{GO}}
 }\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985} 
-GO&\\
+GO&продолжение решения уравнений \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{STAT@{STAT}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!STAT@{STAT}}
 }\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457} 
-STAT&\\
+STAT&открытие статистики \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE@{CONTINUE}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!CONTINUE@{CONTINUE}}
 }\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374} 
-CONTINUE&\\
+CONTINUE&неверный ввод(новый запрос пользователя) \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!function.hpp@{function.hpp}}
 \index{function.hpp@{function.hpp}!TEST@{TEST}}
 }\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8} 
-TEST&\\
+TEST&открытие раздела тестов \\
 \hline
 
 \end{DoxyEnumFields}
@@ -528,6 +536,24 @@ void print\+\_\+cat (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCapt
 {\footnotesize\ttfamily \label{function_8hpp_a8931d9d6150c9ac79676231a7e501425} 
 void print\+\_\+failed (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case}{Test\+Case}}}]{test}{, }\item[{float}]{x1}{, }\item[{float}]{x2}{, }\item[{int}]{quality\+\_\+local}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+fail}{}\end{DoxyParamCaption})}
 
+
+
+Печать неуспешного теста 
+
+При неуспешного тестировании, вызывается данная функция, выводящая полученные и ожидаемые значения решения уравнения @\+Run\+One\+Test() 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em test} & структура с ожидаемыми значениеми \\
+\hline
+\doxymbox{\texttt{in}}  & {\em x1,x2} & полученные корни уравнения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em quality\+\_\+local} & полученное количество корней уравнения \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+fail} & указатель на счетчик неверных тестов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
 \Hypertarget{function_8hpp_a73eb533269566775275da2ac91350562}\index{function.hpp@{function.hpp}!print\_logo@{print\_logo}}
 \index{print\_logo@{print\_logo}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{print\_logo()}{print\_logo()}}
@@ -570,23 +596,75 @@ void print\+\_\+typewriter (\begin{DoxyParamCaption}\item[{const char \texorpdfs
 \index{RunOneTest@{RunOneTest}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{RunOneTest()}{RunOneTest()}}
 {\footnotesize\ttfamily \label{function_8hpp_a88830315c271a48e42cb5e44e3bf51ef} 
-void Run\+One\+Test (\begin{DoxyParamCaption}\item[{struct \doxymbox{\hyperlink{struct_test_case}{Test\+Case}}}]{test}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+fail}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+success}{}\end{DoxyParamCaption})}
+void Run\+One\+Test (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_test_case}{Test\+Case}}}]{test}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+fail}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+success}{}\end{DoxyParamCaption})}
 
+
+
+Функция с запуском одного теста 
+
+Данная функция проводит один тест функции решения уравнения. Вызывается другими функциями. В случае неуспешного теста вызывает функцию печати этого, при успехе самостоятельно печатает это @decide\+\_\+equation(), \doxylink{test__square_8cpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}{Run\+Tests()}, \doxylink{test__square_8cpp_aba6cf25fbd4ba60c5e896fa69d75c53d}{Run\+Tests\+\_\+from\+\_\+file()}, \doxylink{test__square_8cpp_a8931d9d6150c9ac79676231a7e501425}{print\+\_\+failed()} 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em test} & струтура со всеми данными об уравнении \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+fail} & указатель на счетчик неуспешных тестов \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em ptr\+\_\+count\+\_\+success} & указатель на счетчик успешных тестов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возращает 
+\end{DoxyReturn}
 \Hypertarget{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc}\index{function.hpp@{function.hpp}!RunTests@{RunTests}}
 \index{RunTests@{RunTests}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{RunTests()}{RunTests()}}
 {\footnotesize\ttfamily \label{function_8hpp_af9c5993e7b7b9793cb5df95ef9ec0bcc} 
 int Run\+Tests (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Функция дефолтных тестов 
+
+Данная функция имеет дефолтные значения для тестов. Она запускает функцию с одинарным тестом, передавая в нее эти значения @\+Run\+One\+Test() \begin{DoxyReturn}{Returns}
+count\+\_\+fail количество неуспешных тестов 
+\end{DoxyReturn}
 \Hypertarget{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d}\index{function.hpp@{function.hpp}!RunTests\_from\_file@{RunTests\_from\_file}}
 \index{RunTests\_from\_file@{RunTests\_from\_file}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{RunTests\_from\_file()}{RunTests\_from\_file()}}
 {\footnotesize\ttfamily \label{function_8hpp_aba6cf25fbd4ba60c5e896fa69d75c53d} 
 int Run\+Tests\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Функция тестов из файла 
+
+Данная функция открывает файл со значениями для тестов. Она запускает функцию с одинарным тестом, передавая в нее эти значения @\+Run\+One\+Test() \begin{DoxyReturn}{Returns}
+count\+\_\+fail количество неуспешных тестов 
+\end{DoxyReturn}
 \Hypertarget{function_8hpp_a125423afc09023c1a7785f0813bb1dc1}\index{function.hpp@{function.hpp}!square\_function\_graphic@{square\_function\_graphic}}
 \index{square\_function\_graphic@{square\_function\_graphic}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{square\_function\_graphic()}{square\_function\_graphic()}}
 {\footnotesize\ttfamily \label{function_8hpp_a125423afc09023c1a7785f0813bb1dc1} 
 int square\+\_\+function\+\_\+graphic (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double}]{x1}{, }\item[{double}]{x2}{, }\item[{\doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}]{quantity}{}\end{DoxyParamCaption})}
 
+
+
+Постройка графика 
+
+Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и -\/ 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em coeffs} & коэффициенты уравнения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em x1,x2} & корни уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+В случае одного решения у уравнения, корень x2 = NAN 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em quantity} & количество корней \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 в случае успешного завершения 
+\end{DoxyReturn}
