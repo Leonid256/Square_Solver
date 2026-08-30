@@ -127,8 +127,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция main.  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция main.  <br /></td></tr>
 <tr class="memitem:ab9b65caeaf434e3a4cd7f65cf5db2e59" id="r_ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab9b65caeaf434e3a4cd7f65cf5db2e59">is_zero</a> (double x)</td></tr>
 <tr class="memdesc:ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция проверяющая double на равенство нулю  <br /></td></tr>
 <tr class="memitem:ae4ae92e0a38ff7d1e9d50c43b044dfc2" id="r_ae4ae92e0a38ff7d1e9d50c43b044dfc2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4ae92e0a38ff7d1e9d50c43b044dfc2">is_equal</a> (double x1, double x2)</td></tr>
@@ -192,7 +192,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:ab33eefd5cc152fdb876903e92f234ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор дефолтного ввода  <br /></td></tr>
 <tr class="memitem:a358b44201241ed6b50786b6ba468fba7" id="r_a358b44201241ed6b50786b6ba468fba7"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a358b44201241ed6b50786b6ba468fba7">CUSTOM_ENTER</a> = &quot;cus&quot;</td></tr>
 <tr class="memdesc:a358b44201241ed6b50786b6ba468fba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор ввода полного уравнения  <br /></td></tr>
-<tr class="memitem:aa9e9a13d853e4999458828dabe893ad9" id="r_aa9e9a13d853e4999458828dabe893ad9"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa9e9a13d853e4999458828dabe893ad9">DEBUG_MODE</a> = 1</td></tr>
+<tr class="memitem:aa9e9a13d853e4999458828dabe893ad9" id="r_aa9e9a13d853e4999458828dabe893ad9"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa9e9a13d853e4999458828dabe893ad9">DEBUG_MODE</a> = 0</td></tr>
 <tr class="memdesc:aa9e9a13d853e4999458828dabe893ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Режим дебага  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -349,7 +349,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция, позволяющая пользователю выбрать способ ввода уравнения </p>
-<p>Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs()</a>, <a class="el" href="custom__input_8cpp.html#a79b0844a11842ac4941ee258fb83be64">custom_input()</a> </dd></dl>
+<p>Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs()</a>, <a class="el" href="custom__input_8cpp.html#a79b0844a11842ac4941ee258fb83be64" title="Функция для ввода целого уравнения">custom_input()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">ptr_coeffs</td><td>указатель на коэффициенты уравнения, передаваемый функциям, считывающим сами коэффициенты </td></tr>
@@ -668,8 +668,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,7 +879,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int DEBUG_MODE = 1</td>
+          <td class="memname">const int DEBUG_MODE = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

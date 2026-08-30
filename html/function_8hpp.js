@@ -3,17 +3,17 @@ var function_8hpp =
     [ "TestCase", "struct_test_case.html", "struct_test_case" ],
     [ "coefficients", "structcoefficients.html", "structcoefficients" ],
     [ "enum_decisions", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6", [
-      [ "NO_ROOTS", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c", null ],
-      [ "ONE_ROOT", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf", null ],
-      [ "TWO_ROOTS", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81", null ],
-      [ "INFINITE", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb", null ]
+      [ "DECISION_NO_ROOTS", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb", null ],
+      [ "DECISION_ONE_ROOT", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959", null ],
+      [ "DECISION_TWO_ROOTS", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7", null ],
+      [ "DECISION_INFINITE_ROOTS", "function_8hpp.html#a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1", null ]
     ] ],
     [ "enum_opportunity_user", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17", [
-      [ "STOP", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8", null ],
-      [ "GO", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985", null ],
-      [ "STAT", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457", null ],
-      [ "CONTINUE", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374", null ],
-      [ "TEST", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8", null ]
+      [ "MODE_STOP", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555", null ],
+      [ "MODE_GO", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e", null ],
+      [ "MODE_STAT", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec", null ],
+      [ "MODE_TEST", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9", null ],
+      [ "MODE_CONTINUE", "function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4", null ]
     ] ],
     [ "ask_user", "function_8hpp.html#a6be70220f0cda5fc7cdcec12631fdfad", null ],
     [ "calculate_statics", "function_8hpp.html#afe9a5f95f6d5822c713f95f1eb1cac92", null ],

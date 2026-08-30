@@ -1,5 +1,5 @@
-\doxysection{square.\+cpp File Reference}
-\hypertarget{square_8cpp}{}\label{square_8cpp}\index{square.cpp@{square.cpp}}
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
 {\ttfamily \+\#include $<$stdio.\+h$>$}\newline
 {\ttfamily \+\#include $<$math.\+h$>$}\newline
 {\ttfamily \+\#include $<$assert.\+h$>$}\newline
@@ -11,87 +11,87 @@
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\+\#define \doxymbox{\hyperlink{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32}{sleep\+\_\+ms}}(ms)
+\+\#define \doxymbox{\hyperlink{main_8cpp_abbfe5149f45ec05c139066cdd89f9f32}{sleep\+\_\+ms}}(ms)
 \begin{DoxyCompactList}\small\item\em Замена микросекунд на миллисекунды \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \doxymbox{\hyperlink{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \begin{DoxyCompactList}\small\item\em Основная функция main. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}{is\+\_\+zero}} (double x)
+bool \doxymbox{\hyperlink{main_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}{is\+\_\+zero}} (double x)
 \begin{DoxyCompactList}\small\item\em Функция проверяющая double на равенство нулю \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}{is\+\_\+equal}} (double x1, double x2)
+bool \doxymbox{\hyperlink{main_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}{is\+\_\+equal}} (double x1, double x2)
 \begin{DoxyCompactList}\small\item\em Функция сравнения двух чисел double. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
+void \doxymbox{\hyperlink{main_8cpp_abb2d5d88a388d973362772065e6ed105}{clean\+\_\+stdin}} ()
 \begin{DoxyCompactList}\small\item\em Функция очистки ввода \end{DoxyCompactList}\item 
-enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}x1\+\_\+ptr, double \texorpdfstring{$\ast$}{*}x2\+\_\+ptr)
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{main_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}x1\+\_\+ptr, double \texorpdfstring{$\ast$}{*}x2\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Функция, решающая квадратное уравнение \end{DoxyCompactList}\item 
-enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x)
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \doxymbox{\hyperlink{main_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x)
 \begin{DoxyCompactList}\small\item\em Функция, решающая линейное уравнение \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}{decide\+\_\+equation}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \texorpdfstring{$\ast$}{*}ptr\+\_\+quantity)
+void \doxymbox{\hyperlink{main_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}{decide\+\_\+equation}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \texorpdfstring{$\ast$}{*}ptr\+\_\+quantity)
 \begin{DoxyCompactList}\small\item\em Функция, решающая любое уравнение 2 степени \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+void \doxymbox{\hyperlink{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция для ввода коэффициентов уравнения 2 степени \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff}} (double \texorpdfstring{$\ast$}{*}ptr\+\_\+1coeff, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+void \doxymbox{\hyperlink{main_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff}} (double \texorpdfstring{$\ast$}{*}ptr\+\_\+1coeff, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, запрашивающая у пользователя один коэффициент \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_ab18d544643859379bd8f6f03edd046d0}{print\+\_\+answer}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions)
+void \doxymbox{\hyperlink{main_8cpp_ab18d544643859379bd8f6f03edd046d0}{print\+\_\+answer}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x1, double \texorpdfstring{$\ast$}{*}ptr\+\_\+x2, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions)
 \begin{DoxyCompactList}\small\item\em Функция печатает результат решения уравнения 2 степени \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_afde878832e2525a0544e54780161b9ef}{calculate\+\_\+statics}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit)
+void \doxymbox{\hyperlink{main_8cpp_afde878832e2525a0544e54780161b9ef}{calculate\+\_\+statics}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+solutions, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit)
 \begin{DoxyCompactList}\small\item\em Функция, отвечающая за статистику в программе \end{DoxyCompactList}\item 
-enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \doxymbox{\hyperlink{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}{ask\+\_\+user}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+stat, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \doxymbox{\hyperlink{main_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}{ask\+\_\+user}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+stat, int \texorpdfstring{$\ast$}{*}ptr\+\_\+flag\+\_\+exit, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, запрашивающая дальнейшие действия у пользователя \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}{check\+\_\+test\+\_\+password}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+bool \doxymbox{\hyperlink{main_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}{check\+\_\+test\+\_\+password}} (int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, проверяющая пароль для раздела тестирования \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{square_8cpp_acc6efad115158ec6c22da916ee4f6b85}{choose\+\_\+test}} ()
+int \doxymbox{\hyperlink{main_8cpp_acc6efad115158ec6c22da916ee4f6b85}{choose\+\_\+test}} ()
 \begin{DoxyCompactList}\small\item\em Функция для выбора режима тестирования \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{square_8cpp_a6ccadcadfcad5193e74681b2ce675577}{choose\+\_\+enter}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
+int \doxymbox{\hyperlink{main_8cpp_a6ccadcadfcad5193e74681b2ce675577}{choose\+\_\+enter}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, позволяющая пользователю выбрать способ ввода уравнения \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}{print\+\_\+typewriter}} (const char \texorpdfstring{$\ast$}{*}text, int delay\+\_\+ms)
+void \doxymbox{\hyperlink{main_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}{print\+\_\+typewriter}} (const char \texorpdfstring{$\ast$}{*}text, int delay\+\_\+ms)
 \begin{DoxyCompactList}\small\item\em Функция плавного вывода \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_a2c1234a2e169329b975a6541cc561e81}{print\+\_\+cat}} (void)
+void \doxymbox{\hyperlink{main_8cpp_a2c1234a2e169329b975a6541cc561e81}{print\+\_\+cat}} (void)
 \begin{DoxyCompactList}\small\item\em Вывод кошечки :). \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{square_8cpp_a73eb533269566775275da2ac91350562}{print\+\_\+logo}} (void)
+void \doxymbox{\hyperlink{main_8cpp_a73eb533269566775275da2ac91350562}{print\+\_\+logo}} (void)
 \begin{DoxyCompactList}\small\item\em Вывод названия программы \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const double \doxymbox{\hyperlink{square_8cpp_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/3
+const double \doxymbox{\hyperlink{main_8cpp_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 1e-\/3
 \begin{DoxyCompactList}\small\item\em Погрешность double. \end{DoxyCompactList}\item 
-const int \doxymbox{\hyperlink{square_8cpp_a91f806c1bc7c1f4f402a627773840252}{BUFFER\+\_\+\+SIZE}} = 10
+const int \doxymbox{\hyperlink{main_8cpp_a91f806c1bc7c1f4f402a627773840252}{BUFFER\+\_\+\+SIZE}} = 10
 \begin{DoxyCompactList}\small\item\em Размер буфера \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50}{EXIT\+\_\+\+CYCLE}} = "{}stop"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a4e372ec7906bfb51be8d025f6c706b50}{EXIT\+\_\+\+CYCLE}} = "{}stop"{}
 \begin{DoxyCompactList}\small\item\em Завершение программы \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a62c799705ade295291e9127bcab6a31c}{CONTINUE\+\_\+\+CYCLE}} = "{}go"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a62c799705ade295291e9127bcab6a31c}{CONTINUE\+\_\+\+CYCLE}} = "{}go"{}
 \begin{DoxyCompactList}\small\item\em Продолжение программы \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_abe8246e4917267c8243deabf468ed151}{STATISTIC}} = "{}stat"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_abe8246e4917267c8243deabf468ed151}{STATISTIC}} = "{}stat"{}
 \begin{DoxyCompactList}\small\item\em Открытие статистики \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}{TESTING}} = "{}test"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}{TESTING}} = "{}test"{}
 \begin{DoxyCompactList}\small\item\em Открытие раздела тестирования \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}{RESTART\+\_\+\+STAT}} = "{}restart"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}{RESTART\+\_\+\+STAT}} = "{}restart"{}
 \begin{DoxyCompactList}\small\item\em Обнуление статистики \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}{EXIT\+\_\+\+STAT}} = "{}exit"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}{EXIT\+\_\+\+STAT}} = "{}exit"{}
 \begin{DoxyCompactList}\small\item\em Выход из статистики \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27}{PASSWORD}} = "{}5267"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_af83abf406808bc5d2465c2a1d48b7d27}{PASSWORD}} = "{}5267"{}
 \begin{DoxyCompactList}\small\item\em Пароль от раздела тестирования \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a197a7c576ca789117c70b644e804c78d}{FILE\+\_\+\+TEST}} = "{}file"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a197a7c576ca789117c70b644e804c78d}{FILE\+\_\+\+TEST}} = "{}file"{}
 \begin{DoxyCompactList}\small\item\em Выбор тестирования из файла \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a0352bf2781fcf67b049d80da9ee00224}{DEFAULT\+\_\+\+TEST}} = "{}default"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a0352bf2781fcf67b049d80da9ee00224}{DEFAULT\+\_\+\+TEST}} = "{}default"{}
 \begin{DoxyCompactList}\small\item\em Выбор дефолтного тестирования \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9}{DEFAULT\+\_\+\+ENTER}} = "{}def"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_ab33eefd5cc152fdb876903e92f234ea9}{DEFAULT\+\_\+\+ENTER}} = "{}def"{}
 \begin{DoxyCompactList}\small\item\em Выбор дефолтного ввода \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{square_8cpp_a358b44201241ed6b50786b6ba468fba7}{CUSTOM\+\_\+\+ENTER}} = "{}cus"{}
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a358b44201241ed6b50786b6ba468fba7}{CUSTOM\+\_\+\+ENTER}} = "{}cus"{}
 \begin{DoxyCompactList}\small\item\em Выбор ввода полного уравнения \end{DoxyCompactList}\item 
-const int \doxymbox{\hyperlink{square_8cpp_aa9e9a13d853e4999458828dabe893ad9}{DEBUG\+\_\+\+MODE}} = 0
+const int \doxymbox{\hyperlink{main_8cpp_aa9e9a13d853e4999458828dabe893ad9}{DEBUG\+\_\+\+MODE}} = 0
 \begin{DoxyCompactList}\small\item\em Режим дебага \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\label{square_8cpp_doc-define-members}
-\Hypertarget{square_8cpp_doc-define-members}
+\label{main_8cpp_doc-define-members}
+\Hypertarget{main_8cpp_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32}\index{square.cpp@{square.cpp}!sleep\_ms@{sleep\_ms}}
-\index{sleep\_ms@{sleep\_ms}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_abbfe5149f45ec05c139066cdd89f9f32}\index{main.cpp@{main.cpp}!sleep\_ms@{sleep\_ms}}
+\index{sleep\_ms@{sleep\_ms}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{sleep\_ms}{sleep\_ms}}
-{\footnotesize\ttfamily \label{square_8cpp_abbfe5149f45ec05c139066cdd89f9f32} 
+{\footnotesize\ttfamily \label{main_8cpp_abbfe5149f45ec05c139066cdd89f9f32} 
 \+\#define sleep\+\_\+ms(\begin{DoxyParamCaption}\item[{}]{ms}{}\end{DoxyParamCaption})}
 
 {\bfseries Value:}
@@ -105,13 +105,13 @@ const int \doxymbox{\hyperlink{square_8cpp_aa9e9a13d853e4999458828dabe893ad9}{DE
 
 
 
-\label{square_8cpp_doc-func-members}
-\Hypertarget{square_8cpp_doc-func-members}
+\label{main_8cpp_doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}\index{square.cpp@{square.cpp}!ask\_user@{ask\_user}}
-\index{ask\_user@{ask\_user}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd}\index{main.cpp@{main.cpp}!ask\_user@{ask\_user}}
+\index{ask\_user@{ask\_user}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{ask\_user()}{ask\_user()}}
-{\footnotesize\ttfamily \label{square_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd} 
+{\footnotesize\ttfamily \label{main_8cpp_a6620ecb3de025e3ecf56e4d48a9c4dcd} 
 enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} ask\+\_\+user (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+stat}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
 
 
@@ -131,20 +131,20 @@ enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+GO"{} в случае выбора пользователем продолжения решения уравнений 
+"{}\+MODE\+\_\+\+GO"{} в случае выбора пользователем продолжения решения уравнений 
 
-"{}\+STOP"{} в случае выбора пользователем остановки программы 
+"{}\+MODE\+\_\+\+STOP"{} в случае выбора пользователем остановки программы 
 
-"{}\+STAT"{} в случае выбора пользователем открытия статистики 
+"{}\+MODE\+\_\+\+STAT"{} в случае выбора пользователем открытия статистики 
 
-"{}\+TEST"{} в случае выбора пользователем открытия раздела тестирования 
+"{}\+MODE\+\_\+\+TEST"{} в случае выбора пользователем открытия раздела тестирования 
 
-"{}\+CONTINUE"{} в случае неверного ввода 
+"{}\+MODE\+\_\+\+CONTINUE"{} в случае неверного ввода 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_afde878832e2525a0544e54780161b9ef}\index{square.cpp@{square.cpp}!calculate\_statics@{calculate\_statics}}
-\index{calculate\_statics@{calculate\_statics}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_afde878832e2525a0544e54780161b9ef}\index{main.cpp@{main.cpp}!calculate\_statics@{calculate\_statics}}
+\index{calculate\_statics@{calculate\_statics}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{calculate\_statics()}{calculate\_statics()}}
-{\footnotesize\ttfamily \label{square_8cpp_afde878832e2525a0544e54780161b9ef} 
+{\footnotesize\ttfamily \label{main_8cpp_afde878832e2525a0544e54780161b9ef} 
 void calculate\+\_\+statics (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+flag\+\_\+exit}{}\end{DoxyParamCaption})}
 
 
@@ -163,10 +163,10 @@ void calculate\+\_\+statics (\begin{DoxyParamCaption}\item[{int \texorpdfstring{
 \begin{DoxyReturn}{Returns}
 Функция ничего не возращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}\index{square.cpp@{square.cpp}!check\_test\_password@{check\_test\_password}}
-\index{check\_test\_password@{check\_test\_password}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a17f9fd83d4b6bc4282de56e2635171d1}\index{main.cpp@{main.cpp}!check\_test\_password@{check\_test\_password}}
+\index{check\_test\_password@{check\_test\_password}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{check\_test\_password()}{check\_test\_password()}}
-{\footnotesize\ttfamily \label{square_8cpp_a17f9fd83d4b6bc4282de56e2635171d1} 
+{\footnotesize\ttfamily \label{main_8cpp_a17f9fd83d4b6bc4282de56e2635171d1} 
 bool check\+\_\+test\+\_\+password (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
 
 
@@ -186,10 +186,10 @@ bool check\+\_\+test\+\_\+password (\begin{DoxyParamCaption}\item[{int \texorpdf
 
 "{}false"{} в случае неверного пароля 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a6ccadcadfcad5193e74681b2ce675577}\index{square.cpp@{square.cpp}!choose\_enter@{choose\_enter}}
-\index{choose\_enter@{choose\_enter}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a6ccadcadfcad5193e74681b2ce675577}\index{main.cpp@{main.cpp}!choose\_enter@{choose\_enter}}
+\index{choose\_enter@{choose\_enter}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{choose\_enter()}{choose\_enter()}}
-{\footnotesize\ttfamily \label{square_8cpp_a6ccadcadfcad5193e74681b2ce675577} 
+{\footnotesize\ttfamily \label{main_8cpp_a6ccadcadfcad5193e74681b2ce675577} 
 int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
 
 
@@ -197,7 +197,7 @@ int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struc
 Функция, позволяющая пользователю выбрать способ ввода уравнения 
 
 Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs()}, \doxylink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input()} 
+\doxylink{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs()}, \doxylink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input()} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -211,10 +211,10 @@ int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struc
 
 1 в ином случае 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_acc6efad115158ec6c22da916ee4f6b85}\index{square.cpp@{square.cpp}!choose\_test@{choose\_test}}
-\index{choose\_test@{choose\_test}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_acc6efad115158ec6c22da916ee4f6b85}\index{main.cpp@{main.cpp}!choose\_test@{choose\_test}}
+\index{choose\_test@{choose\_test}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{choose\_test()}{choose\_test()}}
-{\footnotesize\ttfamily \label{square_8cpp_acc6efad115158ec6c22da916ee4f6b85} 
+{\footnotesize\ttfamily \label{main_8cpp_acc6efad115158ec6c22da916ee4f6b85} 
 int choose\+\_\+test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
@@ -232,10 +232,10 @@ int choose\+\_\+test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 0 в случае неверного ввода пользователем 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_abb2d5d88a388d973362772065e6ed105}\index{square.cpp@{square.cpp}!clean\_stdin@{clean\_stdin}}
-\index{clean\_stdin@{clean\_stdin}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_abb2d5d88a388d973362772065e6ed105}\index{main.cpp@{main.cpp}!clean\_stdin@{clean\_stdin}}
+\index{clean\_stdin@{clean\_stdin}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{clean\_stdin()}{clean\_stdin()}}
-{\footnotesize\ttfamily \label{square_8cpp_abb2d5d88a388d973362772065e6ed105} 
+{\footnotesize\ttfamily \label{main_8cpp_abb2d5d88a388d973362772065e6ed105} 
 void clean\+\_\+stdin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
@@ -248,10 +248,10 @@ void clean\+\_\+stdin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 \begin{DoxyReturn}{Returns}
 Функция ничего не возвращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}\index{square.cpp@{square.cpp}!decide\_equation@{decide\_equation}}
-\index{decide\_equation@{decide\_equation}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3}\index{main.cpp@{main.cpp}!decide\_equation@{decide\_equation}}
+\index{decide\_equation@{decide\_equation}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{decide\_equation()}{decide\_equation()}}
-{\footnotesize\ttfamily \label{square_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3} 
+{\footnotesize\ttfamily \label{main_8cpp_a990d0fec3b9db0d05de216f7fa4fd9b3} 
 void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+quantity}{}\end{DoxyParamCaption})}
 
 
@@ -259,7 +259,7 @@ void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{s
 Функция, решающая любое уравнение 2 степени 
 
 Данная функция получает коэффициенты уравнения и, исходя из них, вызывает либо функцию, решающую линейное уравнение, либо функцию, решающую квадратное уравнение \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}, \doxylink{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line} 
+\doxylink{main_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}, \doxylink{main_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -279,10 +279,10 @@ void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{s
 \begin{DoxyReturn}{Returns}
 Функция ничего не возвращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}\index{square.cpp@{square.cpp}!decide\_line@{decide\_line}}
-\index{decide\_line@{decide\_line}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}\index{main.cpp@{main.cpp}!decide\_line@{decide\_line}}
+\index{decide\_line@{decide\_line}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{decide\_line()}{decide\_line()}}
-{\footnotesize\ttfamily \label{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806} 
+{\footnotesize\ttfamily \label{main_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806} 
 enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} decide\+\_\+line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x}{}\end{DoxyParamCaption})}
 
 
@@ -303,16 +303,16 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+INFINITE"{} в случае, когда корней уравнения бесконечное количество (тождество 0 = 0) 
+"{}\+DECISION\+\_\+\+INFINITE\+\_\+\+ROOTS"{} в случае, когда корней уравнения бесконечное количество (тождество 0 = 0) 
 
-"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия корней уравнения 
+"{}\+DECISION\+\_\+\+NO\+\_\+\+ROOTS"{} в случае отсутствия корней уравнения 
 
-"{}\+ONE\+\_\+\+ROOT"{} в случае обычного линейного уравнения с одним корнем 
+"{}\+DECISION\+\_\+\+ONE\+\_\+\+ROOT"{} в случае обычного линейного уравнения с одним корнем 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}\index{square.cpp@{square.cpp}!decide\_square@{decide\_square}}
-\index{decide\_square@{decide\_square}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}\index{main.cpp@{main.cpp}!decide\_square@{decide\_square}}
+\index{decide\_square@{decide\_square}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{decide\_square()}{decide\_square()}}
-{\footnotesize\ttfamily \label{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df} 
+{\footnotesize\ttfamily \label{main_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df} 
 enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} decide\+\_\+square (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1\+\_\+ptr}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2\+\_\+ptr}{}\end{DoxyParamCaption})}
 
 
@@ -333,16 +333,16 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+ONE\+\_\+\+ROOT"{} в случае единственного решения (дискриминант d = 0) 
+"{}\+DECISION\+\_\+\+ONE\+\_\+\+ROOT"{} в случае единственного решения (дискриминант d = 0) 
 
-"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия решений (дискриминант d \texorpdfstring{$<$}{<} 0) 
+"{}\+DECISION\+\_\+\+NO\+\_\+\+ROOTS"{} в случае отсутствия решений (дискриминант d \texorpdfstring{$<$}{<} 0) 
 
-"{}\+TWO\+\_\+\+ROOTS"{} в случае двух решений (дискриминант \texorpdfstring{$>$}{>} 0) 
+"{}\+DECISION\+\_\+\+TWO\+\_\+\+ROOTS"{} в случае двух решений (дискриминант \texorpdfstring{$>$}{>} 0) 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}\index{square.cpp@{square.cpp}!input\_coeffs@{input\_coeffs}}
-\index{input\_coeffs@{input\_coeffs}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}\index{main.cpp@{main.cpp}!input\_coeffs@{input\_coeffs}}
+\index{input\_coeffs@{input\_coeffs}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{input\_coeffs()}{input\_coeffs()}}
-{\footnotesize\ttfamily \label{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b} 
+{\footnotesize\ttfamily \label{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b} 
 void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
 
 
@@ -350,7 +350,7 @@ void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 Функция для ввода коэффициентов уравнения 2 степени 
 
 Данная функция запрашивает у пользователя 3 коэффициента уравнения, вызывая функцию, считывающую 1 коэффициент. Записывает ввод в значения переданных ей указателей. В конце печатает введенные пользователем коэффициенты \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff} 
+\doxylink{main_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -362,10 +362,10 @@ void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 \begin{DoxyReturn}{Returns}
 Функция ничего не возвращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}\index{square.cpp@{square.cpp}!input\_one\_coeff@{input\_one\_coeff}}
-\index{input\_one\_coeff@{input\_one\_coeff}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a664396f3f8957b88c1c89c59495e7d04}\index{main.cpp@{main.cpp}!input\_one\_coeff@{input\_one\_coeff}}
+\index{input\_one\_coeff@{input\_one\_coeff}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{input\_one\_coeff()}{input\_one\_coeff()}}
-{\footnotesize\ttfamily \label{square_8cpp_a664396f3f8957b88c1c89c59495e7d04} 
+{\footnotesize\ttfamily \label{main_8cpp_a664396f3f8957b88c1c89c59495e7d04} 
 void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+1coeff}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+bad\+\_\+enter}{}\end{DoxyParamCaption})}
 
 
@@ -373,7 +373,7 @@ void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfs
 Функция, запрашивающая у пользователя один коэффициент 
 
 Данная функция считывает один введеднный коэффициент уравнения и проверяет его на верность (тип double). В случае верного ввода, функция записывает коэффициент по указателю, переданному ей, иначе запрашивает повторно ввод коэффициента(увеличивая количество неверных вводов в программе). Вызывается функцией ввода трех коэффициентов уравнения (input\+\_\+coeffs) \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs} 
+\doxylink{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -385,10 +385,10 @@ void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfs
 \begin{DoxyReturn}{Returns}
 Функция ничего не возращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}\index{square.cpp@{square.cpp}!is\_equal@{is\_equal}}
-\index{is\_equal@{is\_equal}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2}\index{main.cpp@{main.cpp}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
-{\footnotesize\ttfamily \label{square_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2} 
+{\footnotesize\ttfamily \label{main_8cpp_ae4ae92e0a38ff7d1e9d50c43b044dfc2} 
 bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
 
 
@@ -405,10 +405,10 @@ bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double
 
 "{}false"{} в противном случае 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}\index{square.cpp@{square.cpp}!is\_zero@{is\_zero}}
-\index{is\_zero@{is\_zero}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59}\index{main.cpp@{main.cpp}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
-{\footnotesize\ttfamily \label{square_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59} 
+{\footnotesize\ttfamily \label{main_8cpp_ab9b65caeaf434e3a4cd7f65cf5db2e59} 
 bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})}
 
 
@@ -425,23 +425,23 @@ bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCap
 
 "{}false"{} если число не равно нулю 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{square.cpp@{square.cpp}!main@{main}}
-\index{main@{main}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily \label{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
-int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Основная функция main. 
 
-Основная функция в программе. Вызываются функции вывода названия программы и кошечки. Далее вызывается функция запроса пользователя о дальнейших действиях. Программа либо останавливается(команда STOP), либо открывается раздел статистики(команда STAT), либо вызываются функции запроса коэффициентов и решения уравнения(команда GO), либо запрашивается пароль для тестирования, и в случае успеха открывается этот раздел(команда TEST), а в случае неверной команды от пользователя это указывается и запрос повторяется \begin{DoxyReturn}{Returns}
+Основная функция в программе. Вызываются функции вывода названия программы и кошечки. Далее вызывается функция запроса пользователя о дальнейших действиях. Программа либо останавливается(команда MODE\+\_\+\+STOP), либо открывается раздел статистики(команда MODE\+\_\+\+STAT), либо вызываются функции запроса коэффициентов и решения уравнения(команда MODE\+\_\+\+GO), либо запрашивается пароль для тестирования, и в случае успеха открывается этот раздел(команда MODE\+\_\+\+TEST), а в случае неверной команды от пользователя это указывается и запрос повторяется \begin{DoxyReturn}{Returns}
 0 в случае успешного завершения 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ab18d544643859379bd8f6f03edd046d0}\index{square.cpp@{square.cpp}!print\_answer@{print\_answer}}
-\index{print\_answer@{print\_answer}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ab18d544643859379bd8f6f03edd046d0}\index{main.cpp@{main.cpp}!print\_answer@{print\_answer}}
+\index{print\_answer@{print\_answer}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{print\_answer()}{print\_answer()}}
-{\footnotesize\ttfamily \label{square_8cpp_ab18d544643859379bd8f6f03edd046d0} 
+{\footnotesize\ttfamily \label{main_8cpp_ab18d544643859379bd8f6f03edd046d0} 
 void print\+\_\+answer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}}}]{coeffs}{, }\item[{\doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}}}]{quantity}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+x2}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+count\+\_\+solutions}{}\end{DoxyParamCaption})}
 
 
@@ -465,10 +465,10 @@ void print\+\_\+answer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 \begin{DoxyReturn}{Returns}
 Функция ничего не возращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a2c1234a2e169329b975a6541cc561e81}\index{square.cpp@{square.cpp}!print\_cat@{print\_cat}}
-\index{print\_cat@{print\_cat}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a2c1234a2e169329b975a6541cc561e81}\index{main.cpp@{main.cpp}!print\_cat@{print\_cat}}
+\index{print\_cat@{print\_cat}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{print\_cat()}{print\_cat()}}
-{\footnotesize\ttfamily \label{square_8cpp_a2c1234a2e169329b975a6541cc561e81} 
+{\footnotesize\ttfamily \label{main_8cpp_a2c1234a2e169329b975a6541cc561e81} 
 void print\+\_\+cat (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
@@ -483,10 +483,10 @@ void print\+\_\+cat (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCapt
 \begin{DoxyReturn}{Returns}
 функция ничего не возвращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_a73eb533269566775275da2ac91350562}\index{square.cpp@{square.cpp}!print\_logo@{print\_logo}}
-\index{print\_logo@{print\_logo}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a73eb533269566775275da2ac91350562}\index{main.cpp@{main.cpp}!print\_logo@{print\_logo}}
+\index{print\_logo@{print\_logo}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{print\_logo()}{print\_logo()}}
-{\footnotesize\ttfamily \label{square_8cpp_a73eb533269566775275da2ac91350562} 
+{\footnotesize\ttfamily \label{main_8cpp_a73eb533269566775275da2ac91350562} 
 void print\+\_\+logo (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
@@ -501,10 +501,10 @@ void print\+\_\+logo (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCap
 \begin{DoxyReturn}{Returns}
 функция ничего не возвращает 
 \end{DoxyReturn}
-\Hypertarget{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}\index{square.cpp@{square.cpp}!print\_typewriter@{print\_typewriter}}
-\index{print\_typewriter@{print\_typewriter}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db}\index{main.cpp@{main.cpp}!print\_typewriter@{print\_typewriter}}
+\index{print\_typewriter@{print\_typewriter}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{print\_typewriter()}{print\_typewriter()}}
-{\footnotesize\ttfamily \label{square_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db} 
+{\footnotesize\ttfamily \label{main_8cpp_ac8a9bff796f173ee3f9d4fb4d5d096db} 
 void print\+\_\+typewriter (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{int}]{delay\+\_\+ms}{}\end{DoxyParamCaption})}
 
 
@@ -523,33 +523,33 @@ void print\+\_\+typewriter (\begin{DoxyParamCaption}\item[{const char \texorpdfs
 \end{DoxyReturn}
 
 
-\label{square_8cpp_doc-var-members}
-\Hypertarget{square_8cpp_doc-var-members}
+\label{main_8cpp_doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
-\Hypertarget{square_8cpp_a91f806c1bc7c1f4f402a627773840252}\index{square.cpp@{square.cpp}!BUFFER\_SIZE@{BUFFER\_SIZE}}
-\index{BUFFER\_SIZE@{BUFFER\_SIZE}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a91f806c1bc7c1f4f402a627773840252}\index{main.cpp@{main.cpp}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
-{\footnotesize\ttfamily \label{square_8cpp_a91f806c1bc7c1f4f402a627773840252} 
+{\footnotesize\ttfamily \label{main_8cpp_a91f806c1bc7c1f4f402a627773840252} 
 const int BUFFER\+\_\+\+SIZE = 10}
 
 
 
 Размер буфера 
 
-Размер буфера, в который записываются введенные команды(все команды имеют меньшую длину) \Hypertarget{square_8cpp_a62c799705ade295291e9127bcab6a31c}\index{square.cpp@{square.cpp}!CONTINUE\_CYCLE@{CONTINUE\_CYCLE}}
-\index{CONTINUE\_CYCLE@{CONTINUE\_CYCLE}!square.cpp@{square.cpp}}
+Размер буфера, в который записываются введенные команды(все команды имеют меньшую длину) \Hypertarget{main_8cpp_a62c799705ade295291e9127bcab6a31c}\index{main.cpp@{main.cpp}!CONTINUE\_CYCLE@{CONTINUE\_CYCLE}}
+\index{CONTINUE\_CYCLE@{CONTINUE\_CYCLE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{CONTINUE\_CYCLE}{CONTINUE\_CYCLE}}
-{\footnotesize\ttfamily \label{square_8cpp_a62c799705ade295291e9127bcab6a31c} 
+{\footnotesize\ttfamily \label{main_8cpp_a62c799705ade295291e9127bcab6a31c} 
 const char\texorpdfstring{$\ast$}{*} CONTINUE\+\_\+\+CYCLE = "{}go"{}}
 
 
 
 Продолжение программы 
 
-Команда, при вводе которой пользователем программа продолжается(дальнейшее решение уравнений) \Hypertarget{square_8cpp_a358b44201241ed6b50786b6ba468fba7}\index{square.cpp@{square.cpp}!CUSTOM\_ENTER@{CUSTOM\_ENTER}}
-\index{CUSTOM\_ENTER@{CUSTOM\_ENTER}!square.cpp@{square.cpp}}
+Команда, при вводе которой пользователем программа продолжается(дальнейшее решение уравнений) \Hypertarget{main_8cpp_a358b44201241ed6b50786b6ba468fba7}\index{main.cpp@{main.cpp}!CUSTOM\_ENTER@{CUSTOM\_ENTER}}
+\index{CUSTOM\_ENTER@{CUSTOM\_ENTER}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{CUSTOM\_ENTER}{CUSTOM\_ENTER}}
-{\footnotesize\ttfamily \label{square_8cpp_a358b44201241ed6b50786b6ba468fba7} 
+{\footnotesize\ttfamily \label{main_8cpp_a358b44201241ed6b50786b6ba468fba7} 
 const char\texorpdfstring{$\ast$}{*} CUSTOM\+\_\+\+ENTER = "{}cus"{}}
 
 
@@ -559,10 +559,10 @@ const char\texorpdfstring{$\ast$}{*} CUSTOM\+\_\+\+ENTER = "{}cus"{}}
 Команда, при вводе которой пользователем в разделе ввода уравнения, запускается ввод полного уравнения \begin{DoxyNote}{Note}
 Команда предназначена только для раздела ввода уравнения 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_aa9e9a13d853e4999458828dabe893ad9}\index{square.cpp@{square.cpp}!DEBUG\_MODE@{DEBUG\_MODE}}
-\index{DEBUG\_MODE@{DEBUG\_MODE}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_aa9e9a13d853e4999458828dabe893ad9}\index{main.cpp@{main.cpp}!DEBUG\_MODE@{DEBUG\_MODE}}
+\index{DEBUG\_MODE@{DEBUG\_MODE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{DEBUG\_MODE}{DEBUG\_MODE}}
-{\footnotesize\ttfamily \label{square_8cpp_aa9e9a13d853e4999458828dabe893ad9} 
+{\footnotesize\ttfamily \label{main_8cpp_aa9e9a13d853e4999458828dabe893ad9} 
 const int DEBUG\+\_\+\+MODE = 0}
 
 
@@ -572,10 +572,10 @@ const int DEBUG\+\_\+\+MODE = 0}
 Данный режим предполагает уменьшенное количество выводов(только необходимые для понимания места программы) \begin{DoxyNote}{Note}
 Данный режим выбирается только через код, запроса на него нет у пользователя. Может иметь значение 0 и 1. 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9}\index{square.cpp@{square.cpp}!DEFAULT\_ENTER@{DEFAULT\_ENTER}}
-\index{DEFAULT\_ENTER@{DEFAULT\_ENTER}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_ab33eefd5cc152fdb876903e92f234ea9}\index{main.cpp@{main.cpp}!DEFAULT\_ENTER@{DEFAULT\_ENTER}}
+\index{DEFAULT\_ENTER@{DEFAULT\_ENTER}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_ENTER}{DEFAULT\_ENTER}}
-{\footnotesize\ttfamily \label{square_8cpp_ab33eefd5cc152fdb876903e92f234ea9} 
+{\footnotesize\ttfamily \label{main_8cpp_ab33eefd5cc152fdb876903e92f234ea9} 
 const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+ENTER = "{}def"{}}
 
 
@@ -585,10 +585,10 @@ const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+ENTER = "{}def"{}}
 Команда, при вводе которой пользователем в разделе ввода уравнения, запускается ввод по 1 коэффициенту \begin{DoxyNote}{Note}
 Команда предназначена только для раздела ввода уравнения 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_a0352bf2781fcf67b049d80da9ee00224}\index{square.cpp@{square.cpp}!DEFAULT\_TEST@{DEFAULT\_TEST}}
-\index{DEFAULT\_TEST@{DEFAULT\_TEST}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a0352bf2781fcf67b049d80da9ee00224}\index{main.cpp@{main.cpp}!DEFAULT\_TEST@{DEFAULT\_TEST}}
+\index{DEFAULT\_TEST@{DEFAULT\_TEST}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_TEST}{DEFAULT\_TEST}}
-{\footnotesize\ttfamily \label{square_8cpp_a0352bf2781fcf67b049d80da9ee00224} 
+{\footnotesize\ttfamily \label{main_8cpp_a0352bf2781fcf67b049d80da9ee00224} 
 const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+TEST = "{}default"{}}
 
 
@@ -598,30 +598,30 @@ const char\texorpdfstring{$\ast$}{*} DEFAULT\+\_\+\+TEST = "{}default"{}}
 Команда, при вводе которой пользователем в разделе тестирования, запускается тестирование с дефолтными значениями \begin{DoxyNote}{Note}
 Команда предназначена только для раздела тестирования 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_a596344e5a2992d2beec43b76a6294de0}\index{square.cpp@{square.cpp}!EPSILON@{EPSILON}}
-\index{EPSILON@{EPSILON}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a596344e5a2992d2beec43b76a6294de0}\index{main.cpp@{main.cpp}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
-{\footnotesize\ttfamily \label{square_8cpp_a596344e5a2992d2beec43b76a6294de0} 
+{\footnotesize\ttfamily \label{main_8cpp_a596344e5a2992d2beec43b76a6294de0} 
 const double EPSILON = 1e-\/3}
 
 
 
 Погрешность double. 
 
-Данная константа отвечает за погрешность у чисел типа double, при которой число(или разность чисел) считается равным нулю \Hypertarget{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50}\index{square.cpp@{square.cpp}!EXIT\_CYCLE@{EXIT\_CYCLE}}
-\index{EXIT\_CYCLE@{EXIT\_CYCLE}!square.cpp@{square.cpp}}
+Данная константа отвечает за погрешность у чисел типа double, при которой число(или разность чисел) считается равным нулю \Hypertarget{main_8cpp_a4e372ec7906bfb51be8d025f6c706b50}\index{main.cpp@{main.cpp}!EXIT\_CYCLE@{EXIT\_CYCLE}}
+\index{EXIT\_CYCLE@{EXIT\_CYCLE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{EXIT\_CYCLE}{EXIT\_CYCLE}}
-{\footnotesize\ttfamily \label{square_8cpp_a4e372ec7906bfb51be8d025f6c706b50} 
+{\footnotesize\ttfamily \label{main_8cpp_a4e372ec7906bfb51be8d025f6c706b50} 
 const char\texorpdfstring{$\ast$}{*} EXIT\+\_\+\+CYCLE = "{}stop"{}}
 
 
 
 Завершение программы 
 
-Команда, при вводе которой пользователем программа завершается \Hypertarget{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}\index{square.cpp@{square.cpp}!EXIT\_STAT@{EXIT\_STAT}}
-\index{EXIT\_STAT@{EXIT\_STAT}!square.cpp@{square.cpp}}
+Команда, при вводе которой пользователем программа завершается \Hypertarget{main_8cpp_a891081cf8f2fcc36f2498b32e0bb3054}\index{main.cpp@{main.cpp}!EXIT\_STAT@{EXIT\_STAT}}
+\index{EXIT\_STAT@{EXIT\_STAT}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{EXIT\_STAT}{EXIT\_STAT}}
-{\footnotesize\ttfamily \label{square_8cpp_a891081cf8f2fcc36f2498b32e0bb3054} 
+{\footnotesize\ttfamily \label{main_8cpp_a891081cf8f2fcc36f2498b32e0bb3054} 
 const char\texorpdfstring{$\ast$}{*} EXIT\+\_\+\+STAT = "{}exit"{}}
 
 
@@ -631,10 +631,10 @@ const char\texorpdfstring{$\ast$}{*} EXIT\+\_\+\+STAT = "{}exit"{}}
 Команда, при вводе которой пользователем в разделе статистики, осуществляется выход из этого раздела \begin{DoxyNote}{Note}
 Команда предназначена только для раздела статистики 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_a197a7c576ca789117c70b644e804c78d}\index{square.cpp@{square.cpp}!FILE\_TEST@{FILE\_TEST}}
-\index{FILE\_TEST@{FILE\_TEST}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a197a7c576ca789117c70b644e804c78d}\index{main.cpp@{main.cpp}!FILE\_TEST@{FILE\_TEST}}
+\index{FILE\_TEST@{FILE\_TEST}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{FILE\_TEST}{FILE\_TEST}}
-{\footnotesize\ttfamily \label{square_8cpp_a197a7c576ca789117c70b644e804c78d} 
+{\footnotesize\ttfamily \label{main_8cpp_a197a7c576ca789117c70b644e804c78d} 
 const char\texorpdfstring{$\ast$}{*} FILE\+\_\+\+TEST = "{}file"{}}
 
 
@@ -644,10 +644,10 @@ const char\texorpdfstring{$\ast$}{*} FILE\+\_\+\+TEST = "{}file"{}}
 Команда, при вводе которой пользователем в разделе тестирования, запускается тестирование со значениями из файла \begin{DoxyNote}{Note}
 Команда предназначена только для раздела тестирования 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27}\index{square.cpp@{square.cpp}!PASSWORD@{PASSWORD}}
-\index{PASSWORD@{PASSWORD}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_af83abf406808bc5d2465c2a1d48b7d27}\index{main.cpp@{main.cpp}!PASSWORD@{PASSWORD}}
+\index{PASSWORD@{PASSWORD}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{PASSWORD}{PASSWORD}}
-{\footnotesize\ttfamily \label{square_8cpp_af83abf406808bc5d2465c2a1d48b7d27} 
+{\footnotesize\ttfamily \label{main_8cpp_af83abf406808bc5d2465c2a1d48b7d27} 
 const char\texorpdfstring{$\ast$}{*} PASSWORD = "{}5267"{}}
 
 
@@ -657,10 +657,10 @@ const char\texorpdfstring{$\ast$}{*} PASSWORD = "{}5267"{}}
 \begin{DoxyNote}{Note}
 Команда предназначена только для входа в раздел тестирования 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}\index{square.cpp@{square.cpp}!RESTART\_STAT@{RESTART\_STAT}}
-\index{RESTART\_STAT@{RESTART\_STAT}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_a7ca129c14e8aa9c4a0c100846c1af150}\index{main.cpp@{main.cpp}!RESTART\_STAT@{RESTART\_STAT}}
+\index{RESTART\_STAT@{RESTART\_STAT}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{RESTART\_STAT}{RESTART\_STAT}}
-{\footnotesize\ttfamily \label{square_8cpp_a7ca129c14e8aa9c4a0c100846c1af150} 
+{\footnotesize\ttfamily \label{main_8cpp_a7ca129c14e8aa9c4a0c100846c1af150} 
 const char\texorpdfstring{$\ast$}{*} RESTART\+\_\+\+STAT = "{}restart"{}}
 
 
@@ -670,20 +670,20 @@ const char\texorpdfstring{$\ast$}{*} RESTART\+\_\+\+STAT = "{}restart"{}}
 Команда, при вводе которой пользователем в разделе статистики, статистика обнуляется \begin{DoxyNote}{Note}
 Команда предназначена только для раздела статистики 
 \end{DoxyNote}
-\Hypertarget{square_8cpp_abe8246e4917267c8243deabf468ed151}\index{square.cpp@{square.cpp}!STATISTIC@{STATISTIC}}
-\index{STATISTIC@{STATISTIC}!square.cpp@{square.cpp}}
+\Hypertarget{main_8cpp_abe8246e4917267c8243deabf468ed151}\index{main.cpp@{main.cpp}!STATISTIC@{STATISTIC}}
+\index{STATISTIC@{STATISTIC}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{STATISTIC}{STATISTIC}}
-{\footnotesize\ttfamily \label{square_8cpp_abe8246e4917267c8243deabf468ed151} 
+{\footnotesize\ttfamily \label{main_8cpp_abe8246e4917267c8243deabf468ed151} 
 const char\texorpdfstring{$\ast$}{*} STATISTIC = "{}stat"{}}
 
 
 
 Открытие статистики 
 
-Команда, при вводе которой пользователем открывается раздел статистики \Hypertarget{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}\index{square.cpp@{square.cpp}!TESTING@{TESTING}}
-\index{TESTING@{TESTING}!square.cpp@{square.cpp}}
+Команда, при вводе которой пользователем открывается раздел статистики \Hypertarget{main_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761}\index{main.cpp@{main.cpp}!TESTING@{TESTING}}
+\index{TESTING@{TESTING}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{TESTING}{TESTING}}
-{\footnotesize\ttfamily \label{square_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761} 
+{\footnotesize\ttfamily \label{main_8cpp_ac006a1290bcd916fe8ec1e7a5c5d3761} 
 const char\texorpdfstring{$\ast$}{*} TESTING = "{}test"{}}
 
 

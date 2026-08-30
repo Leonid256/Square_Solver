@@ -22,7 +22,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
     assert (ptr_count_success != NULL);
 
     double x1 = NAN, x2 = NAN;
-    enum_decisions quality_local = NO_ROOTS;
+    enum_decisions quality_local = DECISION_NO_ROOTS;
 
     coefficients coeffs_test = {.a = NAN, .b = NAN, .c = NAN};
 
@@ -36,7 +36,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
     {
         switch (quality_local)
         {
-            case (NO_ROOTS):
+            case (DECISION_NO_ROOTS):
                 if (isnan(x1) && isnan(x2))
                 {
                     printf(GRN);
@@ -49,8 +49,8 @@ void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
                     x2, quality_local, ptr_count_fail);
                 break;
 
-            case (ONE_ROOT):
-            case (INFINITE):
+            case (DECISION_ONE_ROOT):
+            case (DECISION_INFINITE_ROOTS):
                 if ((is_equal(x1, test.x1ref) && is_equal(x2, test.x2ref)))
                 {
                     printf(GRN);
@@ -63,7 +63,7 @@ void RunOneTest(TestCase test, int* ptr_count_fail, int* ptr_count_success)
                     x2, quality_local, ptr_count_fail);
                 break;
 
-            case (TWO_ROOTS):
+            case (DECISION_TWO_ROOTS):
                 if ((is_equal(x1, test.x1ref) && is_equal(x2, test.x2ref)) ||
                         (is_equal(x1, test.x2ref) && is_equal(x2, test.x1ref)))
                 {
@@ -124,7 +124,7 @@ int RunTests()
     int count_success = 0;
 
     TestCase testsStreet[] =
-    {{.a = 0, .b = 0, .c = 0, .nRootsRef = INFINITE, .x1ref = NAN, .x2ref = NAN},
+    {{.a = 0, .b = 0, .c = 0, .nRootsRef = DECISION_INFINITE_ROOTS, .x1ref = NAN, .x2ref = NAN},
     {.a = 1, .b = 0, .c = 0, .nRootsRef = 1, .x1ref = 0, .x2ref = 1},    //error
     {.a = 0, .b = 1, .c = 0, .nRootsRef = 1, .x1ref = 0, .x2ref = NAN},
     {.a = 0, .b = 0, .c = 1, .nRootsRef = 0, .x1ref = NAN, .x2ref = NAN},

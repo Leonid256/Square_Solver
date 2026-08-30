@@ -21,7 +21,7 @@ var searchData=
   ['bluhb_18',['BLUHB',['../visual_8hpp.html#aaf3a6b1d1acbdd2d9efdb841efda0fe3',1,'visual.hpp']]],
   ['bmag_19',['BMAG',['../visual_8hpp.html#af1bdc3f8928aa1589ef44e3578a09464',1,'visual.hpp']]],
   ['bred_20',['BRED',['../visual_8hpp.html#a2adb4c9e293ac446897ccfac5a52d6c2',1,'visual.hpp']]],
-  ['buffer_5fsize_21',['BUFFER_SIZE',['../square_8cpp.html#a91f806c1bc7c1f4f402a627773840252',1,'square.cpp']]],
+  ['buffer_5fsize_21',['BUFFER_SIZE',['../main_8cpp.html#a91f806c1bc7c1f4f402a627773840252',1,'main.cpp']]],
   ['bwht_22',['BWHT',['../visual_8hpp.html#ae528cad0e6c76be71eb66776599ec5d9',1,'visual.hpp']]],
   ['byel_23',['BYEL',['../visual_8hpp.html#a9b526756196d7c0efa31bc8fe4e5f138',1,'visual.hpp']]]
 ];

@@ -10,19 +10,19 @@ struct \doxymbox{\hyperlink{structcoefficients}{coefficients}}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \{ \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c}{NO\+\_\+\+ROOTS}}
-, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}}
-, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}}
-, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}{INFINITE}}
+enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} \{ \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb}{DECISION\+\_\+\+NO\+\_\+\+ROOTS}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959}{DECISION\+\_\+\+ONE\+\_\+\+ROOT}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7}{DECISION\+\_\+\+TWO\+\_\+\+ROOTS}}
+, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1}{DECISION\+\_\+\+INFINITE\+\_\+\+ROOTS}}
  \}
 \begin{DoxyCompactList}\small\item\em Корни уравнения \end{DoxyCompactList}\item 
 enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\+\_\+opportunity\+\_\+user}} \{ \newline
-\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}{STOP}}
-, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}{GO}}
-, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457}{STAT}}
-, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374}{CONTINUE}}
+\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555}{MODE\+\_\+\+STOP}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e}{MODE\+\_\+\+GO}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec}{MODE\+\_\+\+STAT}}
+, \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9}{MODE\+\_\+\+TEST}}
 , \newline
-\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}{TEST}}
+\doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4}{MODE\+\_\+\+CONTINUE}}
  \}
 \begin{DoxyCompactList}\small\item\em Выбор пользователя \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
@@ -37,7 +37,7 @@ void \doxymbox{\hyperlink{function_8hpp_adc7bc98a6d8df416eecb031bd38a7299}{input
 void \doxymbox{\hyperlink{function_8hpp_a83f7b0f8c72c9e27e50e91227612e0ab}{input\+\_\+one\+\_\+coeff}} (double \texorpdfstring{$\ast$}{*}ptr\+\_\+1coeff, int \texorpdfstring{$\ast$}{*})
 \begin{DoxyCompactList}\small\item\em Функция, запрашивающая у пользователя один коэффициент \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{function_8hpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs)
-\item 
+\begin{DoxyCompactList}\small\item\em Функция для ввода целого уравнения \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{function_8hpp_a6ccadcadfcad5193e74681b2ce675577}{choose\+\_\+enter}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs, int \texorpdfstring{$\ast$}{*}ptr\+\_\+count\+\_\+bad\+\_\+enter)
 \begin{DoxyCompactList}\small\item\em Функция, позволяющая пользователю выбрать способ ввода уравнения \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{function_8hpp_adefc6786c62015506c41569c1597bf43}{print\+\_\+answer}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} coeffs, \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\+\_\+decisions}} quantity, double \texorpdfstring{$\ast$}{*}, double \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
@@ -90,28 +90,28 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 Корни уравнения 
 
 Значения количества корней у уравнения: 0 корней, 1 корень, 2 корня или бесконечное количество корней \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ROOTS@{NO\_ROOTS}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!NO\_ROOTS@{NO\_ROOTS}}
-}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6ab9a321da349ac1355b717745736ad90c} 
-NO\+\_\+\+ROOTS&нет корней \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECISION\_NO\_ROOTS@{DECISION\_NO\_ROOTS}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!DECISION\_NO\_ROOTS@{DECISION\_NO\_ROOTS}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb} 
+DECISION\+\_\+\+NO\+\_\+\+ROOTS&нет корней \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOT@{ONE\_ROOT}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!ONE\_ROOT@{ONE\_ROOT}}
-}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6700c0f6efd23571cb22aefd2510b1cf} 
-ONE\+\_\+\+ROOT&1 корень \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECISION\_ONE\_ROOT@{DECISION\_ONE\_ROOT}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!DECISION\_ONE\_ROOT@{DECISION\_ONE\_ROOT}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959} 
+DECISION\+\_\+\+ONE\+\_\+\+ROOT&1 корень \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!TWO\_ROOTS@{TWO\_ROOTS}}
-}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a876622d3c0b008da13a3685c64714e81} 
-TWO\+\_\+\+ROOTS&2 корня \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECISION\_TWO\_ROOTS@{DECISION\_TWO\_ROOTS}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!DECISION\_TWO\_ROOTS@{DECISION\_TWO\_ROOTS}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7} 
+DECISION\+\_\+\+TWO\+\_\+\+ROOTS&2 корня \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE@{INFINITE}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!INFINITE@{INFINITE}}
-}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6a6a1459101774b7f68e084098fa8bacbb} 
-INFINITE&бесконечное количество корней \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECISION\_INFINITE\_ROOTS@{DECISION\_INFINITE\_ROOTS}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!DECISION\_INFINITE\_ROOTS@{DECISION\_INFINITE\_ROOTS}}
+}\Hypertarget{function_8hpp_a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1}\label{function_8hpp_a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1} 
+DECISION\+\_\+\+INFINITE\+\_\+\+ROOTS&бесконечное количество корней \\
 \hline
 
 \end{DoxyEnumFields}
@@ -126,34 +126,34 @@ enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\
 Выбор пользователя 
 
 Константные выражения, которые может вернуть функция, запрашивающая у пользователя дальнейшие действия \begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP@{STOP}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!STOP@{STOP}}
-}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a679ee5320d66c8322e310daeb2ee99b8} 
-STOP&остановка программы \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_STOP@{MODE\_STOP}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!MODE\_STOP@{MODE\_STOP}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555} 
+MODE\+\_\+\+STOP&остановка программы \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{GO@{GO}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!GO@{GO}}
-}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a50d8e53aac4e002d0fd296c5033ce985} 
-GO&продолжение решения уравнений \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_GO@{MODE\_GO}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!MODE\_GO@{MODE\_GO}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e} 
+MODE\+\_\+\+GO&продолжение решения уравнений \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{STAT@{STAT}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!STAT@{STAT}}
-}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ace7da58f17f29e67dcc1cb799bccd457} 
-STAT&открытие статистики \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_STAT@{MODE\_STAT}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!MODE\_STAT@{MODE\_STAT}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec} 
+MODE\+\_\+\+STAT&открытие статистики \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE@{CONTINUE}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!CONTINUE@{CONTINUE}}
-}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a49959dd441dcda75d6898cf2c68fb374} 
-CONTINUE&неверный ввод(новый запрос пользователя) \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_TEST@{MODE\_TEST}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!MODE\_TEST@{MODE\_TEST}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9} 
+MODE\+\_\+\+TEST&открытие раздела тестов \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST@{TEST}!function.hpp@{function.hpp}}
-\index{function.hpp@{function.hpp}!TEST@{TEST}}
-}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17ab2f0cd22b1963becef8b91d29d567fe8} 
-TEST&открытие раздела тестов \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_CONTINUE@{MODE\_CONTINUE}!function.hpp@{function.hpp}}
+\index{function.hpp@{function.hpp}!MODE\_CONTINUE@{MODE\_CONTINUE}}
+}\Hypertarget{function_8hpp_a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4}\label{function_8hpp_a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4} 
+MODE\+\_\+\+CONTINUE&неверный ввод(новый запрос пользователя) \\
 \hline
 
 \end{DoxyEnumFields}
@@ -185,15 +185,15 @@ enum \doxymbox{\hyperlink{function_8hpp_a4e398e62f1c9815749f314bffcd66b17}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+GO"{} в случае выбора пользователем продолжения решения уравнений 
+"{}\+MODE\+\_\+\+GO"{} в случае выбора пользователем продолжения решения уравнений 
 
-"{}\+STOP"{} в случае выбора пользователем остановки программы 
+"{}\+MODE\+\_\+\+STOP"{} в случае выбора пользователем остановки программы 
 
-"{}\+STAT"{} в случае выбора пользователем открытия статистики 
+"{}\+MODE\+\_\+\+STAT"{} в случае выбора пользователем открытия статистики 
 
-"{}\+TEST"{} в случае выбора пользователем открытия раздела тестирования 
+"{}\+MODE\+\_\+\+TEST"{} в случае выбора пользователем открытия раздела тестирования 
 
-"{}\+CONTINUE"{} в случае неверного ввода 
+"{}\+MODE\+\_\+\+CONTINUE"{} в случае неверного ввода 
 \end{DoxyReturn}
 \Hypertarget{function_8hpp_afe9a5f95f6d5822c713f95f1eb1cac92}\index{function.hpp@{function.hpp}!calculate\_statics@{calculate\_statics}}
 \index{calculate\_statics@{calculate\_statics}!function.hpp@{function.hpp}}
@@ -251,7 +251,7 @@ int choose\+\_\+enter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struc
 Функция, позволяющая пользователю выбрать способ ввода уравнения 
 
 Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs()}, \doxylink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input()} 
+\doxylink{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs()}, \doxylink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input()} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -308,6 +308,18 @@ void clean\+\_\+stdin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{function_8hpp_a79b0844a11842ac4941ee258fb83be64} 
 void custom\+\_\+input (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}}]{ptr\+\_\+coeffs}{}\end{DoxyParamCaption})}
 
+
+
+Функция для ввода целого уравнения 
+
+Данная функция считывает введенное пользователем уравнение в любом формате, из любого количества слагаемых. Допустимы символы х, \texorpdfstring{$\ast$}{*}, +, -\/, =, а также цифры. Остальные символы(а также \texorpdfstring{$\ast$}{*}) удаляются. 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+coeffs} & указатель на коэффициенты уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+функция ничего не возращает 
+\end{DoxyReturn}
 \Hypertarget{function_8hpp_ae0acfc90c431d37832980342c50f2468}\index{function.hpp@{function.hpp}!decide\_equation@{decide\_equation}}
 \index{decide\_equation@{decide\_equation}!function.hpp@{function.hpp}}
 \doxysubsubsection{\texorpdfstring{decide\_equation()}{decide\_equation()}}
@@ -319,7 +331,7 @@ void decide\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{s
 Функция, решающая любое уравнение 2 степени 
 
 Данная функция получает коэффициенты уравнения и, исходя из них, вызывает либо функцию, решающую линейное уравнение, либо функцию, решающую квадратное уравнение \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}, \doxylink{square_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line} 
+\doxylink{main_8cpp_a1c037c12a4cbfb7f6f8a0c599c7917df}{decide\+\_\+square}, \doxylink{main_8cpp_ad1a4fab57a1a3b3e2b9de4bc03ce8806}{decide\+\_\+line} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -363,11 +375,11 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+INFINITE"{} в случае, когда корней уравнения бесконечное количество (тождество 0 = 0) 
+"{}\+DECISION\+\_\+\+INFINITE\+\_\+\+ROOTS"{} в случае, когда корней уравнения бесконечное количество (тождество 0 = 0) 
 
-"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия корней уравнения 
+"{}\+DECISION\+\_\+\+NO\+\_\+\+ROOTS"{} в случае отсутствия корней уравнения 
 
-"{}\+ONE\+\_\+\+ROOT"{} в случае обычного линейного уравнения с одним корнем 
+"{}\+DECISION\+\_\+\+ONE\+\_\+\+ROOT"{} в случае обычного линейного уравнения с одним корнем 
 \end{DoxyReturn}
 \Hypertarget{function_8hpp_a1c037c12a4cbfb7f6f8a0c599c7917df}\index{function.hpp@{function.hpp}!decide\_square@{decide\_square}}
 \index{decide\_square@{decide\_square}!function.hpp@{function.hpp}}
@@ -393,11 +405,11 @@ enum \doxymbox{\hyperlink{function_8hpp_a927a7a1c548cf274784f841511c283b6}{enum\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-"{}\+ONE\+\_\+\+ROOT"{} в случае единственного решения (дискриминант d = 0) 
+"{}\+DECISION\+\_\+\+ONE\+\_\+\+ROOT"{} в случае единственного решения (дискриминант d = 0) 
 
-"{}\+NO\+\_\+\+ROOTS"{} в случае отсутствия решений (дискриминант d \texorpdfstring{$<$}{<} 0) 
+"{}\+DECISION\+\_\+\+NO\+\_\+\+ROOTS"{} в случае отсутствия решений (дискриминант d \texorpdfstring{$<$}{<} 0) 
 
-"{}\+TWO\+\_\+\+ROOTS"{} в случае двух решений (дискриминант \texorpdfstring{$>$}{>} 0) 
+"{}\+DECISION\+\_\+\+TWO\+\_\+\+ROOTS"{} в случае двух решений (дискриминант \texorpdfstring{$>$}{>} 0) 
 \end{DoxyReturn}
 \Hypertarget{function_8hpp_adc7bc98a6d8df416eecb031bd38a7299}\index{function.hpp@{function.hpp}!input\_coeffs@{input\_coeffs}}
 \index{input\_coeffs@{input\_coeffs}!function.hpp@{function.hpp}}
@@ -410,7 +422,7 @@ void input\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 Функция для ввода коэффициентов уравнения 2 степени 
 
 Данная функция запрашивает у пользователя 3 коэффициента уравнения, вызывая функцию, считывающую 1 коэффициент. Записывает ввод в значения переданных ей указателей. В конце печатает введенные пользователем коэффициенты \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff} 
+\doxylink{main_8cpp_a664396f3f8957b88c1c89c59495e7d04}{input\+\_\+one\+\_\+coeff} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}
@@ -433,7 +445,7 @@ void input\+\_\+one\+\_\+coeff (\begin{DoxyParamCaption}\item[{double \texorpdfs
 Функция, запрашивающая у пользователя один коэффициент 
 
 Данная функция считывает один введеднный коэффициент уравнения и проверяет его на верность (тип double). В случае верного ввода, функция записывает коэффициент по указателю, переданному ей, иначе запрашивает повторно ввод коэффициента(увеличивая количество неверных вводов в программе). Вызывается функцией ввода трех коэффициентов уравнения (input\+\_\+coeffs) \begin{DoxySeeAlso}{See also}
-\doxylink{square_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs} 
+\doxylink{main_8cpp_a1fe611fa264c7f8c09bdf78c34cd170b}{input\+\_\+coeffs} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}[1]{Parameters}

@@ -10,12 +10,12 @@
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{custom__input_8cpp_a79b0844a11842ac4941ee258fb83be64}{custom\+\_\+input}} (\doxymbox{\hyperlink{structcoefficients}{coefficients}} \texorpdfstring{$\ast$}{*}ptr\+\_\+coeffs)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Функция для ввода целого уравнения \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 const int \doxymbox{\hyperlink{custom__input_8cpp_aae161fefd8372000ff3a37bbb0d0012a}{ENTER\+\_\+\+LIMIT}} = 1000
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Максимальная длина вводимого уравнения \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{custom__input_8cpp_doc-func-members}
@@ -29,6 +29,18 @@ void custom\+\_\+input (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 
 
 
+Функция для ввода целого уравнения 
+
+Данная функция считывает введенное пользователем уравнение в любом формате, из любого количества слагаемых. Допустимы символы х, \texorpdfstring{$\ast$}{*}, +, -\/, =, а также цифры. Остальные символы(а также \texorpdfstring{$\ast$}{*}) удаляются. 
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{out}}  & {\em ptr\+\_\+coeffs} & указатель на коэффициенты уравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+функция ничего не возращает 
+\end{DoxyReturn}
+
+
 \label{custom__input_8cpp_doc-var-members}
 \Hypertarget{custom__input_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
@@ -37,4 +49,8 @@ void custom\+\_\+input (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 \doxysubsubsection{\texorpdfstring{ENTER\_LIMIT}{ENTER\_LIMIT}}
 {\footnotesize\ttfamily \label{custom__input_8cpp_aae161fefd8372000ff3a37bbb0d0012a} 
 const int ENTER\+\_\+\+LIMIT = 1000}
+
+
+
+Максимальная длина вводимого уравнения 
 

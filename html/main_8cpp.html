@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square Solver: function.hpp File Reference</title>
+<title>Square Solver: main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('function_8hpp.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('main_8cpp.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -108,153 +108,123 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('function_8hpp.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">function.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="function_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:TestCase" id="r_TestCase"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_test_case.html">TestCase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура для тестов  <a href="struct_test_case.html#details">More...</a><br /></td></tr>
-<tr class="memitem:coefficients" id="r_coefficients"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcoefficients.html">coefficients</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура с коэффициентами  <a href="structcoefficients.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a927a7a1c548cf274784f841511c283b6" id="r_a927a7a1c548cf274784f841511c283b6"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> { <a class="el" href="#a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb">DECISION_NO_ROOTS</a>
-, <a class="el" href="#a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959">DECISION_ONE_ROOT</a>
-, <a class="el" href="#a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7">DECISION_TWO_ROOTS</a>
-, <a class="el" href="#a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1">DECISION_INFINITE_ROOTS</a>
- }</td></tr>
-<tr class="memdesc:a927a7a1c548cf274784f841511c283b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Корни уравнения  <a href="#a927a7a1c548cf274784f841511c283b6">More...</a><br /></td></tr>
-<tr class="memitem:a4e398e62f1c9815749f314bffcd66b17" id="r_a4e398e62f1c9815749f314bffcd66b17"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a> { <br />
-&#160;&#160;<a class="el" href="#a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555">MODE_STOP</a>
-, <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e">MODE_GO</a>
-, <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec">MODE_STAT</a>
-, <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9">MODE_TEST</a>
-, <br />
-&#160;&#160;<a class="el" href="#a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4">MODE_CONTINUE</a>
-<br />
- }</td></tr>
-<tr class="memdesc:a4e398e62f1c9815749f314bffcd66b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор пользователя  <a href="#a4e398e62f1c9815749f314bffcd66b17">More...</a><br /></td></tr>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="function_8hpp_source.html">function.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="visual_8hpp_source.html">visual.hpp</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abbfe5149f45ec05c139066cdd89f9f32" id="r_abbfe5149f45ec05c139066cdd89f9f32"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abbfe5149f45ec05c139066cdd89f9f32">sleep_ms</a>(ms)</td></tr>
+<tr class="memdesc:abbfe5149f45ec05c139066cdd89f9f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Замена микросекунд на миллисекунды  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6be70220f0cda5fc7cdcec12631fdfad" id="r_a6be70220f0cda5fc7cdcec12631fdfad"><td class="memItemLeft">enum <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6be70220f0cda5fc7cdcec12631fdfad">ask_user</a> (int *, int *, int *)</td></tr>
-<tr class="memdesc:a6be70220f0cda5fc7cdcec12631fdfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, запрашивающая дальнейшие действия у пользователя  <br /></td></tr>
-<tr class="memitem:afe9a5f95f6d5822c713f95f1eb1cac92" id="r_afe9a5f95f6d5822c713f95f1eb1cac92"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe9a5f95f6d5822c713f95f1eb1cac92">calculate_statics</a> (int *, int *, int *)</td></tr>
-<tr class="memdesc:afe9a5f95f6d5822c713f95f1eb1cac92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, отвечающая за статистику в программе  <br /></td></tr>
-<tr class="memitem:adc7bc98a6d8df416eecb031bd38a7299" id="r_adc7bc98a6d8df416eecb031bd38a7299"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adc7bc98a6d8df416eecb031bd38a7299">input_coeffs</a> (<a class="el" href="structcoefficients.html">coefficients</a> *coeffs, int *)</td></tr>
-<tr class="memdesc:adc7bc98a6d8df416eecb031bd38a7299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для ввода коэффициентов уравнения 2 степени  <br /></td></tr>
-<tr class="memitem:a83f7b0f8c72c9e27e50e91227612e0ab" id="r_a83f7b0f8c72c9e27e50e91227612e0ab"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83f7b0f8c72c9e27e50e91227612e0ab">input_one_coeff</a> (double *ptr_1coeff, int *)</td></tr>
-<tr class="memdesc:a83f7b0f8c72c9e27e50e91227612e0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, запрашивающая у пользователя один коэффициент  <br /></td></tr>
-<tr class="memitem:a79b0844a11842ac4941ee258fb83be64" id="r_a79b0844a11842ac4941ee258fb83be64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a79b0844a11842ac4941ee258fb83be64">custom_input</a> (<a class="el" href="structcoefficients.html">coefficients</a> *ptr_coeffs)</td></tr>
-<tr class="memdesc:a79b0844a11842ac4941ee258fb83be64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для ввода целого уравнения  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основная функция main.  <br /></td></tr>
+<tr class="memitem:ab9b65caeaf434e3a4cd7f65cf5db2e59" id="r_ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab9b65caeaf434e3a4cd7f65cf5db2e59">is_zero</a> (double x)</td></tr>
+<tr class="memdesc:ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция проверяющая double на равенство нулю  <br /></td></tr>
+<tr class="memitem:ae4ae92e0a38ff7d1e9d50c43b044dfc2" id="r_ae4ae92e0a38ff7d1e9d50c43b044dfc2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4ae92e0a38ff7d1e9d50c43b044dfc2">is_equal</a> (double x1, double x2)</td></tr>
+<tr class="memdesc:ae4ae92e0a38ff7d1e9d50c43b044dfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция сравнения двух чисел double.  <br /></td></tr>
+<tr class="memitem:abb2d5d88a388d973362772065e6ed105" id="r_abb2d5d88a388d973362772065e6ed105"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abb2d5d88a388d973362772065e6ed105">clean_stdin</a> ()</td></tr>
+<tr class="memdesc:abb2d5d88a388d973362772065e6ed105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция очистки ввода  <br /></td></tr>
+<tr class="memitem:a1c037c12a4cbfb7f6f8a0c599c7917df" id="r_a1c037c12a4cbfb7f6f8a0c599c7917df"><td class="memItemLeft">enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1c037c12a4cbfb7f6f8a0c599c7917df">decide_square</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *x1_ptr, double *x2_ptr)</td></tr>
+<tr class="memdesc:a1c037c12a4cbfb7f6f8a0c599c7917df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая квадратное уравнение  <br /></td></tr>
+<tr class="memitem:ad1a4fab57a1a3b3e2b9de4bc03ce8806" id="r_ad1a4fab57a1a3b3e2b9de4bc03ce8806"><td class="memItemLeft">enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad1a4fab57a1a3b3e2b9de4bc03ce8806">decide_line</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *ptr_x)</td></tr>
+<tr class="memdesc:ad1a4fab57a1a3b3e2b9de4bc03ce8806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая линейное уравнение  <br /></td></tr>
+<tr class="memitem:a990d0fec3b9db0d05de216f7fa4fd9b3" id="r_a990d0fec3b9db0d05de216f7fa4fd9b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a990d0fec3b9db0d05de216f7fa4fd9b3">decide_equation</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *ptr_x1, double *ptr_x2, enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> *ptr_quantity)</td></tr>
+<tr class="memdesc:a990d0fec3b9db0d05de216f7fa4fd9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая любое уравнение 2 степени  <br /></td></tr>
+<tr class="memitem:a1fe611fa264c7f8c09bdf78c34cd170b" id="r_a1fe611fa264c7f8c09bdf78c34cd170b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1fe611fa264c7f8c09bdf78c34cd170b">input_coeffs</a> (<a class="el" href="structcoefficients.html">coefficients</a> *ptr_coeffs, int *ptr_count_bad_enter)</td></tr>
+<tr class="memdesc:a1fe611fa264c7f8c09bdf78c34cd170b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для ввода коэффициентов уравнения 2 степени  <br /></td></tr>
+<tr class="memitem:a664396f3f8957b88c1c89c59495e7d04" id="r_a664396f3f8957b88c1c89c59495e7d04"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a664396f3f8957b88c1c89c59495e7d04">input_one_coeff</a> (double *ptr_1coeff, int *ptr_count_bad_enter)</td></tr>
+<tr class="memdesc:a664396f3f8957b88c1c89c59495e7d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, запрашивающая у пользователя один коэффициент  <br /></td></tr>
+<tr class="memitem:ab18d544643859379bd8f6f03edd046d0" id="r_ab18d544643859379bd8f6f03edd046d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab18d544643859379bd8f6f03edd046d0">print_answer</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> quantity, double *ptr_x1, double *ptr_x2, int *ptr_count_solutions)</td></tr>
+<tr class="memdesc:ab18d544643859379bd8f6f03edd046d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция печатает результат решения уравнения 2 степени  <br /></td></tr>
+<tr class="memitem:afde878832e2525a0544e54780161b9ef" id="r_afde878832e2525a0544e54780161b9ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afde878832e2525a0544e54780161b9ef">calculate_statics</a> (int *ptr_count_solutions, int *ptr_count_bad_enter, int *ptr_flag_exit)</td></tr>
+<tr class="memdesc:afde878832e2525a0544e54780161b9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, отвечающая за статистику в программе  <br /></td></tr>
+<tr class="memitem:a6620ecb3de025e3ecf56e4d48a9c4dcd" id="r_a6620ecb3de025e3ecf56e4d48a9c4dcd"><td class="memItemLeft">enum <a class="el" href="function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6620ecb3de025e3ecf56e4d48a9c4dcd">ask_user</a> (int *ptr_flag_stat, int *ptr_flag_exit, int *ptr_count_bad_enter)</td></tr>
+<tr class="memdesc:a6620ecb3de025e3ecf56e4d48a9c4dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, запрашивающая дальнейшие действия у пользователя  <br /></td></tr>
+<tr class="memitem:a17f9fd83d4b6bc4282de56e2635171d1" id="r_a17f9fd83d4b6bc4282de56e2635171d1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a17f9fd83d4b6bc4282de56e2635171d1">check_test_password</a> (int *ptr_count_bad_enter)</td></tr>
+<tr class="memdesc:a17f9fd83d4b6bc4282de56e2635171d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, проверяющая пароль для раздела тестирования  <br /></td></tr>
+<tr class="memitem:acc6efad115158ec6c22da916ee4f6b85" id="r_acc6efad115158ec6c22da916ee4f6b85"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acc6efad115158ec6c22da916ee4f6b85">choose_test</a> ()</td></tr>
+<tr class="memdesc:acc6efad115158ec6c22da916ee4f6b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для выбора режима тестирования  <br /></td></tr>
 <tr class="memitem:a6ccadcadfcad5193e74681b2ce675577" id="r_a6ccadcadfcad5193e74681b2ce675577"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6ccadcadfcad5193e74681b2ce675577">choose_enter</a> (<a class="el" href="structcoefficients.html">coefficients</a> *ptr_coeffs, int *ptr_count_bad_enter)</td></tr>
 <tr class="memdesc:a6ccadcadfcad5193e74681b2ce675577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, позволяющая пользователю выбрать способ ввода уравнения  <br /></td></tr>
-<tr class="memitem:adefc6786c62015506c41569c1597bf43" id="r_adefc6786c62015506c41569c1597bf43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adefc6786c62015506c41569c1597bf43">print_answer</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> quantity, double *, double *, int *)</td></tr>
-<tr class="memdesc:adefc6786c62015506c41569c1597bf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция печатает результат решения уравнения 2 степени  <br /></td></tr>
 <tr class="memitem:ac8a9bff796f173ee3f9d4fb4d5d096db" id="r_ac8a9bff796f173ee3f9d4fb4d5d096db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8a9bff796f173ee3f9d4fb4d5d096db">print_typewriter</a> (const char *text, int delay_ms)</td></tr>
 <tr class="memdesc:ac8a9bff796f173ee3f9d4fb4d5d096db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция плавного вывода  <br /></td></tr>
 <tr class="memitem:a2c1234a2e169329b975a6541cc561e81" id="r_a2c1234a2e169329b975a6541cc561e81"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c1234a2e169329b975a6541cc561e81">print_cat</a> (void)</td></tr>
 <tr class="memdesc:a2c1234a2e169329b975a6541cc561e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод кошечки :).  <br /></td></tr>
 <tr class="memitem:a73eb533269566775275da2ac91350562" id="r_a73eb533269566775275da2ac91350562"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73eb533269566775275da2ac91350562">print_logo</a> (void)</td></tr>
 <tr class="memdesc:a73eb533269566775275da2ac91350562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод названия программы  <br /></td></tr>
-<tr class="memitem:ae0acfc90c431d37832980342c50f2468" id="r_ae0acfc90c431d37832980342c50f2468"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae0acfc90c431d37832980342c50f2468">decide_equation</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *, double *, enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> *)</td></tr>
-<tr class="memdesc:ae0acfc90c431d37832980342c50f2468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая любое уравнение 2 степени  <br /></td></tr>
-<tr class="memitem:a1c037c12a4cbfb7f6f8a0c599c7917df" id="r_a1c037c12a4cbfb7f6f8a0c599c7917df"><td class="memItemLeft">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1c037c12a4cbfb7f6f8a0c599c7917df">decide_square</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *x1_ptr, double *x2_ptr)</td></tr>
-<tr class="memdesc:a1c037c12a4cbfb7f6f8a0c599c7917df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая квадратное уравнение  <br /></td></tr>
-<tr class="memitem:a43ca83245092576bcb3d31cde4bf61dd" id="r_a43ca83245092576bcb3d31cde4bf61dd"><td class="memItemLeft">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a>&#160;</td><td class="memItemRight"><a class="el" href="#a43ca83245092576bcb3d31cde4bf61dd">decide_line</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double *px1)</td></tr>
-<tr class="memdesc:a43ca83245092576bcb3d31cde4bf61dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, решающая линейное уравнение  <br /></td></tr>
-<tr class="memitem:ae4ae92e0a38ff7d1e9d50c43b044dfc2" id="r_ae4ae92e0a38ff7d1e9d50c43b044dfc2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4ae92e0a38ff7d1e9d50c43b044dfc2">is_equal</a> (double x1, double x2)</td></tr>
-<tr class="memdesc:ae4ae92e0a38ff7d1e9d50c43b044dfc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция сравнения двух чисел double.  <br /></td></tr>
-<tr class="memitem:ab9b65caeaf434e3a4cd7f65cf5db2e59" id="r_ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab9b65caeaf434e3a4cd7f65cf5db2e59">is_zero</a> (double x)</td></tr>
-<tr class="memdesc:ab9b65caeaf434e3a4cd7f65cf5db2e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция проверяющая double на равенство нулю  <br /></td></tr>
-<tr class="memitem:a125423afc09023c1a7785f0813bb1dc1" id="r_a125423afc09023c1a7785f0813bb1dc1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a125423afc09023c1a7785f0813bb1dc1">square_function_graphic</a> (<a class="el" href="structcoefficients.html">coefficients</a> coeffs, double x1, double x2, <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> quantity)</td></tr>
-<tr class="memdesc:a125423afc09023c1a7785f0813bb1dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постройка графика  <br /></td></tr>
-<tr class="memitem:af9c5993e7b7b9793cb5df95ef9ec0bcc" id="r_af9c5993e7b7b9793cb5df95ef9ec0bcc"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af9c5993e7b7b9793cb5df95ef9ec0bcc">RunTests</a> ()</td></tr>
-<tr class="memdesc:af9c5993e7b7b9793cb5df95ef9ec0bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция дефолтных тестов  <br /></td></tr>
-<tr class="memitem:a88830315c271a48e42cb5e44e3bf51ef" id="r_a88830315c271a48e42cb5e44e3bf51ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a88830315c271a48e42cb5e44e3bf51ef">RunOneTest</a> (struct <a class="el" href="struct_test_case.html">TestCase</a>, int *ptr_count_fail, int *ptr_count_success)</td></tr>
-<tr class="memdesc:a88830315c271a48e42cb5e44e3bf51ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция с запуском одного теста  <br /></td></tr>
-<tr class="memitem:a8931d9d6150c9ac79676231a7e501425" id="r_a8931d9d6150c9ac79676231a7e501425"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8931d9d6150c9ac79676231a7e501425">print_failed</a> (<a class="el" href="struct_test_case.html">TestCase</a> test, float x1, float x2, int quality_local, int *ptr_count_fail)</td></tr>
-<tr class="memdesc:a8931d9d6150c9ac79676231a7e501425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать неуспешного теста  <br /></td></tr>
-<tr class="memitem:a17f9fd83d4b6bc4282de56e2635171d1" id="r_a17f9fd83d4b6bc4282de56e2635171d1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a17f9fd83d4b6bc4282de56e2635171d1">check_test_password</a> (int *ptr_count_bad_enter)</td></tr>
-<tr class="memdesc:a17f9fd83d4b6bc4282de56e2635171d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, проверяющая пароль для раздела тестирования  <br /></td></tr>
-<tr class="memitem:aba6cf25fbd4ba60c5e896fa69d75c53d" id="r_aba6cf25fbd4ba60c5e896fa69d75c53d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aba6cf25fbd4ba60c5e896fa69d75c53d">RunTests_from_file</a> ()</td></tr>
-<tr class="memdesc:aba6cf25fbd4ba60c5e896fa69d75c53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция тестов из файла  <br /></td></tr>
-<tr class="memitem:acc6efad115158ec6c22da916ee4f6b85" id="r_acc6efad115158ec6c22da916ee4f6b85"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acc6efad115158ec6c22da916ee4f6b85">choose_test</a> ()</td></tr>
-<tr class="memdesc:acc6efad115158ec6c22da916ee4f6b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для выбора режима тестирования  <br /></td></tr>
-<tr class="memitem:abb2d5d88a388d973362772065e6ed105" id="r_abb2d5d88a388d973362772065e6ed105"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abb2d5d88a388d973362772065e6ed105">clean_stdin</a> ()</td></tr>
-<tr class="memdesc:abb2d5d88a388d973362772065e6ed105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция очистки ввода  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a596344e5a2992d2beec43b76a6294de0" id="r_a596344e5a2992d2beec43b76a6294de0"><td class="memItemLeft">const double&#160;</td><td class="memItemRight"><a class="el" href="#a596344e5a2992d2beec43b76a6294de0">EPSILON</a> = 1e-3</td></tr>
+<tr class="memdesc:a596344e5a2992d2beec43b76a6294de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Погрешность double.  <br /></td></tr>
+<tr class="memitem:a91f806c1bc7c1f4f402a627773840252" id="r_a91f806c1bc7c1f4f402a627773840252"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a91f806c1bc7c1f4f402a627773840252">BUFFER_SIZE</a> = 10</td></tr>
+<tr class="memdesc:a91f806c1bc7c1f4f402a627773840252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер буфера  <br /></td></tr>
+<tr class="memitem:a4e372ec7906bfb51be8d025f6c706b50" id="r_a4e372ec7906bfb51be8d025f6c706b50"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a4e372ec7906bfb51be8d025f6c706b50">EXIT_CYCLE</a> = &quot;stop&quot;</td></tr>
+<tr class="memdesc:a4e372ec7906bfb51be8d025f6c706b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершение программы  <br /></td></tr>
+<tr class="memitem:a62c799705ade295291e9127bcab6a31c" id="r_a62c799705ade295291e9127bcab6a31c"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a62c799705ade295291e9127bcab6a31c">CONTINUE_CYCLE</a> = &quot;go&quot;</td></tr>
+<tr class="memdesc:a62c799705ade295291e9127bcab6a31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Продолжение программы  <br /></td></tr>
+<tr class="memitem:abe8246e4917267c8243deabf468ed151" id="r_abe8246e4917267c8243deabf468ed151"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#abe8246e4917267c8243deabf468ed151">STATISTIC</a> = &quot;stat&quot;</td></tr>
+<tr class="memdesc:abe8246e4917267c8243deabf468ed151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие статистики  <br /></td></tr>
+<tr class="memitem:ac006a1290bcd916fe8ec1e7a5c5d3761" id="r_ac006a1290bcd916fe8ec1e7a5c5d3761"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ac006a1290bcd916fe8ec1e7a5c5d3761">TESTING</a> = &quot;test&quot;</td></tr>
+<tr class="memdesc:ac006a1290bcd916fe8ec1e7a5c5d3761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие раздела тестирования  <br /></td></tr>
+<tr class="memitem:a7ca129c14e8aa9c4a0c100846c1af150" id="r_a7ca129c14e8aa9c4a0c100846c1af150"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a7ca129c14e8aa9c4a0c100846c1af150">RESTART_STAT</a> = &quot;restart&quot;</td></tr>
+<tr class="memdesc:a7ca129c14e8aa9c4a0c100846c1af150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обнуление статистики  <br /></td></tr>
+<tr class="memitem:a891081cf8f2fcc36f2498b32e0bb3054" id="r_a891081cf8f2fcc36f2498b32e0bb3054"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a891081cf8f2fcc36f2498b32e0bb3054">EXIT_STAT</a> = &quot;exit&quot;</td></tr>
+<tr class="memdesc:a891081cf8f2fcc36f2498b32e0bb3054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выход из статистики  <br /></td></tr>
+<tr class="memitem:af83abf406808bc5d2465c2a1d48b7d27" id="r_af83abf406808bc5d2465c2a1d48b7d27"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#af83abf406808bc5d2465c2a1d48b7d27">PASSWORD</a> = &quot;5267&quot;</td></tr>
+<tr class="memdesc:af83abf406808bc5d2465c2a1d48b7d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пароль от раздела тестирования  <br /></td></tr>
+<tr class="memitem:a197a7c576ca789117c70b644e804c78d" id="r_a197a7c576ca789117c70b644e804c78d"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a197a7c576ca789117c70b644e804c78d">FILE_TEST</a> = &quot;file&quot;</td></tr>
+<tr class="memdesc:a197a7c576ca789117c70b644e804c78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор тестирования из файла  <br /></td></tr>
+<tr class="memitem:a0352bf2781fcf67b049d80da9ee00224" id="r_a0352bf2781fcf67b049d80da9ee00224"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a0352bf2781fcf67b049d80da9ee00224">DEFAULT_TEST</a> = &quot;default&quot;</td></tr>
+<tr class="memdesc:a0352bf2781fcf67b049d80da9ee00224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор дефолтного тестирования  <br /></td></tr>
+<tr class="memitem:ab33eefd5cc152fdb876903e92f234ea9" id="r_ab33eefd5cc152fdb876903e92f234ea9"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ab33eefd5cc152fdb876903e92f234ea9">DEFAULT_ENTER</a> = &quot;def&quot;</td></tr>
+<tr class="memdesc:ab33eefd5cc152fdb876903e92f234ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор дефолтного ввода  <br /></td></tr>
+<tr class="memitem:a358b44201241ed6b50786b6ba468fba7" id="r_a358b44201241ed6b50786b6ba468fba7"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a358b44201241ed6b50786b6ba468fba7">CUSTOM_ENTER</a> = &quot;cus&quot;</td></tr>
+<tr class="memdesc:a358b44201241ed6b50786b6ba468fba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор ввода полного уравнения  <br /></td></tr>
+<tr class="memitem:aa9e9a13d853e4999458828dabe893ad9" id="r_aa9e9a13d853e4999458828dabe893ad9"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa9e9a13d853e4999458828dabe893ad9">DEBUG_MODE</a> = 0</td></tr>
+<tr class="memdesc:aa9e9a13d853e4999458828dabe893ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Режим дебага  <br /></td></tr>
 </table>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
-<a id="a927a7a1c548cf274784f841511c283b6" name="a927a7a1c548cf274784f841511c283b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927a7a1c548cf274784f841511c283b6">&#9670;&#160;</a></span>enum_decisions</h2>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="abbfe5149f45ec05c139066cdd89f9f32" name="abbfe5149f45ec05c139066cdd89f9f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbfe5149f45ec05c139066cdd89f9f32">&#9670;&#160;</a></span>sleep_ms</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a></td>
+          <td class="memname">#define sleep_ms</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Корни уравнения </p>
-<p>Значения количества корней у уравнения: 0 корней, 1 корень, 2 корня или бесконечное количество корней </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb" name="a927a7a1c548cf274784f841511c283b6add97ffc8dceb8e067a02a5c911d365eb"></a>DECISION_NO_ROOTS&#160;</td><td class="fielddoc"><p>нет корней </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959" name="a927a7a1c548cf274784f841511c283b6a1cde350c039b46e4ac06174bde27d959"></a>DECISION_ONE_ROOT&#160;</td><td class="fielddoc"><p>1 корень </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7" name="a927a7a1c548cf274784f841511c283b6a5f858a4f4647804ab617c018d0af9ce7"></a>DECISION_TWO_ROOTS&#160;</td><td class="fielddoc"><p>2 корня </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1" name="a927a7a1c548cf274784f841511c283b6abfb6b03ffbba4b7052b526b46140f0a1"></a>DECISION_INFINITE_ROOTS&#160;</td><td class="fielddoc"><p>бесконечное количество корней </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a4e398e62f1c9815749f314bffcd66b17" name="a4e398e62f1c9815749f314bffcd66b17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e398e62f1c9815749f314bffcd66b17">&#9670;&#160;</a></span>enum_opportunity_user</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Выбор пользователя </p>
-<p>Константные выражения, которые может вернуть функция, запрашивающая у пользователя дальнейшие действия </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555" name="a4e398e62f1c9815749f314bffcd66b17a63a55fd1d45d18720be318f87e39b555"></a>MODE_STOP&#160;</td><td class="fielddoc"><p>остановка программы </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e" name="a4e398e62f1c9815749f314bffcd66b17ac69d82bdb6e3f673041e5c5aa231ac7e"></a>MODE_GO&#160;</td><td class="fielddoc"><p>продолжение решения уравнений </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec" name="a4e398e62f1c9815749f314bffcd66b17ab1e841a9a76c66cc98134afec674f4ec"></a>MODE_STAT&#160;</td><td class="fielddoc"><p>открытие статистики </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9" name="a4e398e62f1c9815749f314bffcd66b17a96be62bb9ef166ead858e679940175a9"></a>MODE_TEST&#160;</td><td class="fielddoc"><p>открытие раздела тестов </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4" name="a4e398e62f1c9815749f314bffcd66b17aed9a5db5006414c440f5092b7cb325e4"></a>MODE_CONTINUE&#160;</td><td class="fielddoc"><p>неверный ввод(новый запрос пользователя) </p>
-</td></tr>
-</table>
+<b>Value:</b><div class="fragment"><div class="line">usleep((ms) * 1000)</div>
+</div><!-- fragment -->
+<p>Замена микросекунд на миллисекунды </p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a6be70220f0cda5fc7cdcec12631fdfad" name="a6be70220f0cda5fc7cdcec12631fdfad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6be70220f0cda5fc7cdcec12631fdfad">&#9670;&#160;</a></span>ask_user()</h2>
+<a id="a6620ecb3de025e3ecf56e4d48a9c4dcd" name="a6620ecb3de025e3ecf56e4d48a9c4dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6620ecb3de025e3ecf56e4d48a9c4dcd">&#9670;&#160;</a></span>ask_user()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a> ask_user </td>
+          <td class="memname">enum <a class="el" href="function_8hpp.html#a4e398e62f1c9815749f314bffcd66b17">enum_opportunity_user</a> ask_user </td>
           <td>(</td>
           <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ptr_flag_stat</em></span>, </td>
         </tr>
@@ -293,8 +263,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afe9a5f95f6d5822c713f95f1eb1cac92" name="afe9a5f95f6d5822c713f95f1eb1cac92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe9a5f95f6d5822c713f95f1eb1cac92">&#9670;&#160;</a></span>calculate_statics()</h2>
+<a id="afde878832e2525a0544e54780161b9ef" name="afde878832e2525a0544e54780161b9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde878832e2525a0544e54780161b9ef">&#9670;&#160;</a></span>calculate_statics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +349,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция, позволяющая пользователю выбрать способ ввода уравнения </p>
-<p>Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="main_8cpp.html#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs()</a>, <a class="el" href="custom__input_8cpp.html#a79b0844a11842ac4941ee258fb83be64" title="Функция для ввода целого уравнения">custom_input()</a> </dd></dl>
+<p>Данная функция запрашивает у пользователя формат ввода уравнения(по одному коэффициенту или же целое уравнение), а также проверяет введенный текст на корректность. В случае неверного ввода, запрос повторяется(и увеличивается счетчик неверных вводов). После успешного ввода запускается выбранный пользователем способ ввода уравнения </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs()</a>, <a class="el" href="custom__input_8cpp.html#a79b0844a11842ac4941ee258fb83be64" title="Функция для ввода целого уравнения">custom_input()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">ptr_coeffs</td><td>указатель на коэффициенты уравнения, передаваемый функциям, считывающим сами коэффициенты </td></tr>
@@ -409,7 +379,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция для выбора режима тестирования </p>
-<p>Данная функция позволяет пользователю выбрать режим тестирования(значениями из файла, либо значениями указанными в программе дефолтно). В случае верного ввода функция вызывает функции тестирования </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#aba6cf25fbd4ba60c5e896fa69d75c53d" title="Функция тестов из файла">RunTests_from_file()</a>, <a class="el" href="#af9c5993e7b7b9793cb5df95ef9ec0bcc" title="Функция дефолтных тестов">RunTests()</a> </dd></dl>
+<p>Данная функция позволяет пользователю выбрать режим тестирования(значениями из файла, либо значениями указанными в программе дефолтно). В случае верного ввода функция вызывает функции тестирования </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="function_8hpp.html#aba6cf25fbd4ba60c5e896fa69d75c53d" title="Функция тестов из файла">RunTests_from_file()</a>, <a class="el" href="function_8hpp.html#af9c5993e7b7b9793cb5df95ef9ec0bcc" title="Функция дефолтных тестов">RunTests()</a> </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>В случае неверного ввода режима раздел тестирования закрывается </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>1 в случае успешного запуска тестирования(любого) </dd>
 <dd>
@@ -438,34 +408,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a79b0844a11842ac4941ee258fb83be64" name="a79b0844a11842ac4941ee258fb83be64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79b0844a11842ac4941ee258fb83be64">&#9670;&#160;</a></span>custom_input()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void custom_input </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr_coeffs</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция для ввода целого уравнения </p>
-<p>Данная функция считывает введенное пользователем уравнение в любом формате, из любого количества слагаемых. Допустимы символы х, *, +, -, =, а также цифры. Остальные символы(а также *) удаляются. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">ptr_coeffs</td><td>указатель на коэффициенты уравнения </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>функция ничего не возращает </dd></dl>
-
-</div>
-</div>
-<a id="ae0acfc90c431d37832980342c50f2468" name="ae0acfc90c431d37832980342c50f2468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0acfc90c431d37832980342c50f2468">&#9670;&#160;</a></span>decide_equation()</h2>
+<a id="a990d0fec3b9db0d05de216f7fa4fd9b3" name="a990d0fec3b9db0d05de216f7fa4fd9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990d0fec3b9db0d05de216f7fa4fd9b3">&#9670;&#160;</a></span>decide_equation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -488,13 +432,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr_quantity</em></span>&#160;)</td>
+          <td class="paramtype">enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr_quantity</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Функция, решающая любое уравнение 2 степени </p>
-<p>Данная функция получает коэффициенты уравнения и, исходя из них, вызывает либо функцию, решающую линейное уравнение, либо функцию, решающую квадратное уравнение </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="main_8cpp.html#a1c037c12a4cbfb7f6f8a0c599c7917df" title="Функция, решающая квадратное уравнение">decide_square</a>, <a class="el" href="main_8cpp.html#ad1a4fab57a1a3b3e2b9de4bc03ce8806" title="Функция, решающая линейное уравнение">decide_line</a> </dd></dl>
+<p>Данная функция получает коэффициенты уравнения и, исходя из них, вызывает либо функцию, решающую линейное уравнение, либо функцию, решающую квадратное уравнение </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1c037c12a4cbfb7f6f8a0c599c7917df" title="Функция, решающая квадратное уравнение">decide_square</a>, <a class="el" href="#ad1a4fab57a1a3b3e2b9de4bc03ce8806" title="Функция, решающая линейное уравнение">decide_line</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coeffs</td><td>коэффициенты уравнения 2 степени </td></tr>
@@ -513,14 +457,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a43ca83245092576bcb3d31cde4bf61dd" name="a43ca83245092576bcb3d31cde4bf61dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43ca83245092576bcb3d31cde4bf61dd">&#9670;&#160;</a></span>decide_line()</h2>
+<a id="ad1a4fab57a1a3b3e2b9de4bc03ce8806" name="ad1a4fab57a1a3b3e2b9de4bc03ce8806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a4fab57a1a3b3e2b9de4bc03ce8806">&#9670;&#160;</a></span>decide_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> decide_line </td>
+          <td class="memname">enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> decide_line </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>, </td>
         </tr>
@@ -561,7 +505,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> decide_square </td>
+          <td class="memname">enum <a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a> decide_square </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>, </td>
         </tr>
@@ -600,8 +544,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adc7bc98a6d8df416eecb031bd38a7299" name="adc7bc98a6d8df416eecb031bd38a7299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc7bc98a6d8df416eecb031bd38a7299">&#9670;&#160;</a></span>input_coeffs()</h2>
+<a id="a1fe611fa264c7f8c09bdf78c34cd170b" name="a1fe611fa264c7f8c09bdf78c34cd170b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe611fa264c7f8c09bdf78c34cd170b">&#9670;&#160;</a></span>input_coeffs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +564,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция для ввода коэффициентов уравнения 2 степени </p>
-<p>Данная функция запрашивает у пользователя 3 коэффициента уравнения, вызывая функцию, считывающую 1 коэффициент. Записывает ввод в значения переданных ей указателей. В конце печатает введенные пользователем коэффициенты </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="main_8cpp.html#a664396f3f8957b88c1c89c59495e7d04" title="Функция, запрашивающая у пользователя один коэффициент">input_one_coeff</a> </dd></dl>
+<p>Данная функция запрашивает у пользователя 3 коэффициента уравнения, вызывая функцию, считывающую 1 коэффициент. Записывает ввод в значения переданных ей указателей. В конце печатает введенные пользователем коэффициенты </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a664396f3f8957b88c1c89c59495e7d04" title="Функция, запрашивающая у пользователя один коэффициент">input_one_coeff</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">ptr_coeffs</td><td>указатель для записи введенных коэффициентов уравнения </td></tr>
@@ -632,8 +576,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a83f7b0f8c72c9e27e50e91227612e0ab" name="a83f7b0f8c72c9e27e50e91227612e0ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83f7b0f8c72c9e27e50e91227612e0ab">&#9670;&#160;</a></span>input_one_coeff()</h2>
+<a id="a664396f3f8957b88c1c89c59495e7d04" name="a664396f3f8957b88c1c89c59495e7d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664396f3f8957b88c1c89c59495e7d04">&#9670;&#160;</a></span>input_one_coeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +596,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция, запрашивающая у пользователя один коэффициент </p>
-<p>Данная функция считывает один введеднный коэффициент уравнения и проверяет его на верность (тип double). В случае верного ввода, функция записывает коэффициент по указателю, переданному ей, иначе запрашивает повторно ввод коэффициента(увеличивая количество неверных вводов в программе). Вызывается функцией ввода трех коэффициентов уравнения (input_coeffs) </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="main_8cpp.html#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs</a> </dd></dl>
+<p>Данная функция считывает один введеднный коэффициент уравнения и проверяет его на верность (тип double). В случае верного ввода, функция записывает коэффициент по указателю, переданному ей, иначе запрашивает повторно ввод коэффициента(увеличивая количество неверных вводов в программе). Вызывается функцией ввода трех коэффициентов уравнения (input_coeffs) </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a1fe611fa264c7f8c09bdf78c34cd170b" title="Функция для ввода коэффициентов уравнения 2 степени">input_coeffs</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">ptr_1coeff</td><td>указатель на адрес, куда записывается введенный коэффициент </td></tr>
@@ -724,8 +668,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adefc6786c62015506c41569c1597bf43" name="adefc6786c62015506c41569c1597bf43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adefc6786c62015506c41569c1597bf43">&#9670;&#160;</a></span>print_answer()</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Основная функция main. </p>
+<p>Основная функция в программе. Вызываются функции вывода названия программы и кошечки. Далее вызывается функция запроса пользователя о дальнейших действиях. Программа либо останавливается(команда MODE_STOP), либо открывается раздел статистики(команда MODE_STAT), либо вызываются функции запроса коэффициентов и решения уравнения(команда MODE_GO), либо запрашивается пароль для тестирования, и в случае успеха открывается этот раздел(команда MODE_TEST), а в случае неверной команды от пользователя это указывается и запрос повторяется </p><dl class="section return"><dt>Returns</dt><dd>0 в случае успешного завершения </dd></dl>
+
+</div>
+</div>
+<a id="ab18d544643859379bd8f6f03edd046d0" name="ab18d544643859379bd8f6f03edd046d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18d544643859379bd8f6f03edd046d0">&#9670;&#160;</a></span>print_answer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -738,7 +702,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a></td>          <td class="paramname"><span class="paramname"><em>quantity</em></span>, </td>
+          <td class="paramtype"><a class="el" href="function_8hpp.html#a927a7a1c548cf274784f841511c283b6">enum_decisions</a></td>          <td class="paramname"><span class="paramname"><em>quantity</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -759,7 +723,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Функция печатает результат решения уравнения 2 степени </p>
-<p>Данная функция печатает количество корней уравнения, а также сами корни в случае их наличия. При одном или двух решениях данная функция строит график уравнения, вызывая square_function_graphic. Также функция увеличивает счетчик количества решенных уравнений </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a125423afc09023c1a7785f0813bb1dc1" title="Постройка графика">square_function_graphic</a> </dd></dl>
+<p>Данная функция печатает количество корней уравнения, а также сами корни в случае их наличия. При одном или двух решениях данная функция строит график уравнения, вызывая square_function_graphic. Также функция увеличивает счетчик количества решенных уравнений </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="function_8hpp.html#a125423afc09023c1a7785f0813bb1dc1" title="Постройка графика">square_function_graphic</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coeffs</td><td>коэффициенты решенного уравнения(нужны для передачи в качестве параметров функции построения графиков) </td></tr>
@@ -796,54 +760,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>функция ничего не возвращает </dd></dl>
-
-</div>
-</div>
-<a id="a8931d9d6150c9ac79676231a7e501425" name="a8931d9d6150c9ac79676231a7e501425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8931d9d6150c9ac79676231a7e501425">&#9670;&#160;</a></span>print_failed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void print_failed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_test_case.html">TestCase</a></td>          <td class="paramname"><span class="paramname"><em>test</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>quality_local</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ptr_count_fail</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Печать неуспешного теста </p>
-<p>При неуспешного тестировании, вызывается данная функция, выводящая полученные и ожидаемые значения решения уравнения @RunOneTest() </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">test</td><td>структура с ожидаемыми значениеми </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x1,x2</td><td>полученные корни уравнения </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">quality_local</td><td>полученное количество корней уравнения </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ptr_count_fail</td><td>указатель на счетчик неверных тестов </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Функция ничего не возвращает </dd></dl>
 
 </div>
 </div>
@@ -904,128 +820,242 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a88830315c271a48e42cb5e44e3bf51ef" name="a88830315c271a48e42cb5e44e3bf51ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88830315c271a48e42cb5e44e3bf51ef">&#9670;&#160;</a></span>RunOneTest()</h2>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a91f806c1bc7c1f4f402a627773840252" name="a91f806c1bc7c1f4f402a627773840252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f806c1bc7c1f4f402a627773840252">&#9670;&#160;</a></span>BUFFER_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RunOneTest </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_test_case.html">TestCase</a></td>          <td class="paramname"><span class="paramname"><em>test</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ptr_count_fail</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>ptr_count_success</em></span>&#160;)</td>
+          <td class="memname">const int BUFFER_SIZE = 10</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Функция с запуском одного теста </p>
-<p>Данная функция проводит один тест функции решения уравнения. Вызывается другими функциями. В случае неуспешного теста вызывает функцию печати этого, при успехе самостоятельно печатает это @decide_equation(), <a class="el" href="test__square_8cpp.html#af9c5993e7b7b9793cb5df95ef9ec0bcc" title="Функция дефолтных тестов">RunTests()</a>, <a class="el" href="test__square_8cpp.html#aba6cf25fbd4ba60c5e896fa69d75c53d" title="Функция тестов из файла">RunTests_from_file()</a>, <a class="el" href="test__square_8cpp.html#a8931d9d6150c9ac79676231a7e501425" title="Печать неуспешного теста">print_failed()</a> </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">test</td><td>струтура со всеми данными об уравнении </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ptr_count_fail</td><td>указатель на счетчик неуспешных тестов </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ptr_count_success</td><td>указатель на счетчик успешных тестов </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Функция ничего не возращает </dd></dl>
+<p>Размер буфера </p>
+<p>Размер буфера, в который записываются введенные команды(все команды имеют меньшую длину) </p>
 
 </div>
 </div>
-<a id="af9c5993e7b7b9793cb5df95ef9ec0bcc" name="af9c5993e7b7b9793cb5df95ef9ec0bcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9c5993e7b7b9793cb5df95ef9ec0bcc">&#9670;&#160;</a></span>RunTests()</h2>
+<a id="a62c799705ade295291e9127bcab6a31c" name="a62c799705ade295291e9127bcab6a31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c799705ade295291e9127bcab6a31c">&#9670;&#160;</a></span>CONTINUE_CYCLE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RunTests </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">const char* CONTINUE_CYCLE = &quot;go&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Функция дефолтных тестов </p>
-<p>Данная функция имеет дефолтные значения для тестов. Она запускает функцию с одинарным тестом, передавая в нее эти значения @RunOneTest() </p><dl class="section return"><dt>Returns</dt><dd>count_fail количество неуспешных тестов </dd></dl>
+<p>Продолжение программы </p>
+<p>Команда, при вводе которой пользователем программа продолжается(дальнейшее решение уравнений) </p>
 
 </div>
 </div>
-<a id="aba6cf25fbd4ba60c5e896fa69d75c53d" name="aba6cf25fbd4ba60c5e896fa69d75c53d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba6cf25fbd4ba60c5e896fa69d75c53d">&#9670;&#160;</a></span>RunTests_from_file()</h2>
+<a id="a358b44201241ed6b50786b6ba468fba7" name="a358b44201241ed6b50786b6ba468fba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358b44201241ed6b50786b6ba468fba7">&#9670;&#160;</a></span>CUSTOM_ENTER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int RunTests_from_file </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">const char* CUSTOM_ENTER = &quot;cus&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Функция тестов из файла </p>
-<p>Данная функция открывает файл со значениями для тестов. Она запускает функцию с одинарным тестом, передавая в нее эти значения @RunOneTest() </p><dl class="section return"><dt>Returns</dt><dd>count_fail количество неуспешных тестов </dd></dl>
+<p>Выбор ввода полного уравнения </p>
+<p>Команда, при вводе которой пользователем в разделе ввода уравнения, запускается ввод полного уравнения </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела ввода уравнения </dd></dl>
 
 </div>
 </div>
-<a id="a125423afc09023c1a7785f0813bb1dc1" name="a125423afc09023c1a7785f0813bb1dc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a125423afc09023c1a7785f0813bb1dc1">&#9670;&#160;</a></span>square_function_graphic()</h2>
+<a id="aa9e9a13d853e4999458828dabe893ad9" name="aa9e9a13d853e4999458828dabe893ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e9a13d853e4999458828dabe893ad9">&#9670;&#160;</a></span>DEBUG_MODE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int square_function_graphic </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a927a7a1c548cf274784f841511c283b6">enum_decisions</a></td>          <td class="paramname"><span class="paramname"><em>quantity</em></span>&#160;)</td>
+          <td class="memname">const int DEBUG_MODE = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Постройка графика </p>
-<p>Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и - </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">coeffs</td><td>коэффициенты уравнения </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x1,x2</td><td>корни уравнения </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>В случае одного решения у уравнения, корень x2 = NAN </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">quantity</td><td>количество корней </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 в случае успешного завершения </dd></dl>
+<p>Режим дебага </p>
+<p>Данный режим предполагает уменьшенное количество выводов(только необходимые для понимания места программы) </p><dl class="section note"><dt>Note</dt><dd>Данный режим выбирается только через код, запроса на него нет у пользователя. Может иметь значение 0 и 1. </dd></dl>
+
+</div>
+</div>
+<a id="ab33eefd5cc152fdb876903e92f234ea9" name="ab33eefd5cc152fdb876903e92f234ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33eefd5cc152fdb876903e92f234ea9">&#9670;&#160;</a></span>DEFAULT_ENTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* DEFAULT_ENTER = &quot;def&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выбор дефолтного ввода </p>
+<p>Команда, при вводе которой пользователем в разделе ввода уравнения, запускается ввод по 1 коэффициенту </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела ввода уравнения </dd></dl>
+
+</div>
+</div>
+<a id="a0352bf2781fcf67b049d80da9ee00224" name="a0352bf2781fcf67b049d80da9ee00224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0352bf2781fcf67b049d80da9ee00224">&#9670;&#160;</a></span>DEFAULT_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* DEFAULT_TEST = &quot;default&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выбор дефолтного тестирования </p>
+<p>Команда, при вводе которой пользователем в разделе тестирования, запускается тестирование с дефолтными значениями </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела тестирования </dd></dl>
+
+</div>
+</div>
+<a id="a596344e5a2992d2beec43b76a6294de0" name="a596344e5a2992d2beec43b76a6294de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596344e5a2992d2beec43b76a6294de0">&#9670;&#160;</a></span>EPSILON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double EPSILON = 1e-3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Погрешность double. </p>
+<p>Данная константа отвечает за погрешность у чисел типа double, при которой число(или разность чисел) считается равным нулю </p>
+
+</div>
+</div>
+<a id="a4e372ec7906bfb51be8d025f6c706b50" name="a4e372ec7906bfb51be8d025f6c706b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e372ec7906bfb51be8d025f6c706b50">&#9670;&#160;</a></span>EXIT_CYCLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* EXIT_CYCLE = &quot;stop&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завершение программы </p>
+<p>Команда, при вводе которой пользователем программа завершается </p>
+
+</div>
+</div>
+<a id="a891081cf8f2fcc36f2498b32e0bb3054" name="a891081cf8f2fcc36f2498b32e0bb3054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891081cf8f2fcc36f2498b32e0bb3054">&#9670;&#160;</a></span>EXIT_STAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* EXIT_STAT = &quot;exit&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выход из статистики </p>
+<p>Команда, при вводе которой пользователем в разделе статистики, осуществляется выход из этого раздела </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела статистики </dd></dl>
+
+</div>
+</div>
+<a id="a197a7c576ca789117c70b644e804c78d" name="a197a7c576ca789117c70b644e804c78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a197a7c576ca789117c70b644e804c78d">&#9670;&#160;</a></span>FILE_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* FILE_TEST = &quot;file&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выбор тестирования из файла </p>
+<p>Команда, при вводе которой пользователем в разделе тестирования, запускается тестирование со значениями из файла </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела тестирования </dd></dl>
+
+</div>
+</div>
+<a id="af83abf406808bc5d2465c2a1d48b7d27" name="af83abf406808bc5d2465c2a1d48b7d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83abf406808bc5d2465c2a1d48b7d27">&#9670;&#160;</a></span>PASSWORD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* PASSWORD = &quot;5267&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Пароль от раздела тестирования </p>
+<dl class="section note"><dt>Note</dt><dd>Команда предназначена только для входа в раздел тестирования </dd></dl>
+
+</div>
+</div>
+<a id="a7ca129c14e8aa9c4a0c100846c1af150" name="a7ca129c14e8aa9c4a0c100846c1af150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca129c14e8aa9c4a0c100846c1af150">&#9670;&#160;</a></span>RESTART_STAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* RESTART_STAT = &quot;restart&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обнуление статистики </p>
+<p>Команда, при вводе которой пользователем в разделе статистики, статистика обнуляется </p><dl class="section note"><dt>Note</dt><dd>Команда предназначена только для раздела статистики </dd></dl>
+
+</div>
+</div>
+<a id="abe8246e4917267c8243deabf468ed151" name="abe8246e4917267c8243deabf468ed151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8246e4917267c8243deabf468ed151">&#9670;&#160;</a></span>STATISTIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* STATISTIC = &quot;stat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открытие статистики </p>
+<p>Команда, при вводе которой пользователем открывается раздел статистики </p>
+
+</div>
+</div>
+<a id="ac006a1290bcd916fe8ec1e7a5c5d3761" name="ac006a1290bcd916fe8ec1e7a5c5d3761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac006a1290bcd916fe8ec1e7a5c5d3761">&#9670;&#160;</a></span>TESTING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* TESTING = &quot;test&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открытие раздела тестирования </p>
+<p>Команда, при вводе которой пользователем открывается раздел тестирования </p>
 
 </div>
 </div>
@@ -1042,7 +1072,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="function_8hpp.html">function.hpp</a></li>
+    <li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

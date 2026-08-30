@@ -121,10 +121,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('custom__input_
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a79b0844a11842ac4941ee258fb83be64" id="r_a79b0844a11842ac4941ee258fb83be64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a79b0844a11842ac4941ee258fb83be64">custom_input</a> (<a class="el" href="structcoefficients.html">coefficients</a> *ptr_coeffs)</td></tr>
+<tr class="memdesc:a79b0844a11842ac4941ee258fb83be64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для ввода целого уравнения  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aae161fefd8372000ff3a37bbb0d0012a" id="r_aae161fefd8372000ff3a37bbb0d0012a"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aae161fefd8372000ff3a37bbb0d0012a">ENTER_LIMIT</a> = 1000</td></tr>
+<tr class="memdesc:aae161fefd8372000ff3a37bbb0d0012a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальная длина вводимого уравнения  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a79b0844a11842ac4941ee258fb83be64" name="a79b0844a11842ac4941ee258fb83be64"></a>
@@ -142,6 +144,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Функция для ввода целого уравнения </p>
+<p>Данная функция считывает введенное пользователем уравнение в любом формате, из любого количества слагаемых. Допустимы символы х, *, +, -, =, а также цифры. Остальные символы(а также *) удаляются. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ptr_coeffs</td><td>указатель на коэффициенты уравнения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>функция ничего не возращает </dd></dl>
+
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
@@ -156,6 +167,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Максимальная длина вводимого уравнения </p>
 
 </div>
 </div>

@@ -1,3 +1,4 @@
+#include "raylib.h"
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
@@ -107,19 +108,19 @@ const int    DEBUG_MODE       = 1;
 /**
     \brief Основная функция main
     \details Основная функция в программе. Вызываются функции вывода названия программы и кошечки. Далее вызывается функция запроса 
-    пользователя о дальнейших действиях. Программа либо останавливается(команда STOP), либо открывается раздел статистики(команда STAT), 
-    либо вызываются функции запроса коэффициентов и решения уравнения(команда GO), либо запрашивается пароль для тестирования, и 
-    в случае успеха открывается этот раздел(команда TEST), а в случае неверной команды от пользователя это указывается и запрос повторяется
+    пользователя о дальнейших действиях. Программа либо останавливается(команда MODE_STOP), либо открывается раздел статистики(команда MODE_STAT), 
+    либо вызываются функции запроса коэффициентов и решения уравнения(команда MODE_GO), либо запрашивается пароль для тестирования, и 
+    в случае успеха открывается этот раздел(команда MODE_TEST), а в случае неверной команды от пользователя это указывается и запрос повторяется
     \return 0 в случае успешного завершения
 */
-int main(void)
+int main()
 {
     double x1 = NAN, x2 = NAN;
 
     int count_solutions = 0, count_bad_enter = 0, flag_stat = 1, flag_exit = 1;
     int flag_stop_program = 0;
-
-    enum_decisions quantity = NO_ROOTS;
+    
+    enum_decisions quantity = DECISION_NO_ROOTS;
     coefficients coeffs = {.a = NAN, .b = NAN, .c = NAN};
 
     if (!DEBUG_MODE)
@@ -132,20 +133,20 @@ int main(void)
     {
         switch (ask_user(&flag_stat, &flag_exit, &count_bad_enter))
         {
-            case STOP:
+            case MODE_STOP:
                 flag_stop_program = 1;
                 [[fallthrough]];
-            case STAT:
+            case MODE_STAT:
                 calculate_statics(&count_solutions, &count_bad_enter, &flag_exit);
                 break;
-            case GO:
+            case MODE_GO:
                 choose_enter(&coeffs, &count_bad_enter);
                 decide_equation(coeffs, &x1, &x2, &quantity);
                 print_answer(coeffs, quantity, &x1, &x2, &count_solutions);
                 break;
-            case CONTINUE:
+            case MODE_CONTINUE:
                 break;
-            case TEST:
+            case MODE_TEST:
                 if (check_test_password(&count_bad_enter))
                     choose_test();
                 break;
@@ -206,9 +207,9 @@ void clean_stdin() //очистка ввода
     \param [in] coeffs коэффициенты квадратного уравнения
     \note Функция выдает ошибку через assert, если в нее передать коэфициент уравнения a = 0
     \param [out] x1_ptr,  x2_ptr указатели, для записи в их значения результатов решения
-    \return "ONE_ROOT" в случае единственного решения (дискриминант d = 0)
-    \return "NO_ROOTS" в случае отсутствия решений (дискриминант d < 0)
-    \return "TWO_ROOTS" в случае двух решений (дискриминант > 0)
+    \return "DECISION_ONE_ROOT" в случае единственного решения (дискриминант d = 0)
+    \return "DECISION_NO_ROOTS" в случае отсутствия решений (дискриминант d < 0)
+    \return "DECISION_TWO_ROOTS" в случае двух решений (дискриминант > 0)
 */
 enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x2_ptr) // ф-ия решение квадратного уравнения
 {
@@ -223,16 +224,16 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
     if (is_zero(d))
     {
         *x1_ptr = -coeffs.b / (2 * coeffs.a);
-        return ONE_ROOT;
+        return DECISION_ONE_ROOT;
     }
     else if (d < 0)
-        return NO_ROOTS;
+        return DECISION_NO_ROOTS;
     else
     {
         *x1_ptr = (-coeffs.b + sqrt(d)) / (2 * coeffs.a);
         *x2_ptr = (-coeffs.b - sqrt(d)) / (2 * coeffs.a);
         //square_function_graphic(coeffs);
-        return TWO_ROOTS;
+        return DECISION_TWO_ROOTS;
     }
 }
 //---------------------------------------------------------------------------------------------
@@ -242,9 +243,9 @@ enum enum_decisions decide_square(coefficients coeffs, double* x1_ptr, double* x
     \param [in] coeffs коэффициенты уравнения, где a = 0
     \note Функция выдает ошибку через assert, если в нее передать коэфициент уравнения a != 0
     \param [out] ptr_x указатель для записи результата решения уравнения
-    \return "INFINITE" в случае, когда корней уравнения бесконечное количество (тождество 0 = 0)
-    \return "NO_ROOTS" в случае отсутствия корней уравнения
-    \return "ONE_ROOT" в случае обычного линейного уравнения с одним корнем
+    \return "DECISION_INFINITE_ROOTS" в случае, когда корней уравнения бесконечное количество (тождество 0 = 0)
+    \return "DECISION_NO_ROOTS" в случае отсутствия корней уравнения
+    \return "DECISION_ONE_ROOT" в случае обычного линейного уравнения с одним корнем
 */
 enum enum_decisions decide_line(coefficients coeffs, double* ptr_x) // ф-ия решение линейного уравнения
 {
@@ -254,13 +255,13 @@ enum enum_decisions decide_line(coefficients coeffs, double* ptr_x) // ф-ия �
     if (is_zero(coeffs.b))
     {
         if (is_zero(coeffs.c))
-            return INFINITE;
+            return DECISION_INFINITE_ROOTS;
         else
-            return NO_ROOTS;
+            return DECISION_NO_ROOTS;
     }
 
     *ptr_x = (-coeffs.c) / coeffs.b;
-    return ONE_ROOT;
+    return DECISION_ONE_ROOT;
 }
 //---------------------------------------------------------------------------------------------
 /**
@@ -379,27 +380,29 @@ void print_answer(coefficients coeffs, enum_decisions quantity, double* ptr_x1, 
 
     switch (quantity)
     {
-        case NO_ROOTS:
+        case DECISION_NO_ROOTS:
             print_typewriter("Уравнение не имеет решений\n\n", 15);
             break;
-        case ONE_ROOT:
+        case DECISION_ONE_ROOT:
             print_typewriter("Уравнение имеет одно решение:\n", 15);
             printf("x1 = x2 = %lg\n\n", *ptr_x1);
 
+            SetTraceLogLevel(LOG_NONE);
             square_function_graphic(coeffs, *ptr_x1, *ptr_x2, quantity);
 
             break;
-        case TWO_ROOTS:
+        case DECISION_TWO_ROOTS:
             print_typewriter("Уравнение имеет два решения:\n", 15);
             print_typewriter("x1 = ", 10);
             printf("%lg\n", *ptr_x1);
             print_typewriter("x2 = ", 10);
             printf("%lg\n\n",*ptr_x2);
 
+            SetTraceLogLevel(LOG_NONE);
             square_function_graphic(coeffs, *ptr_x1, *ptr_x2, quantity);
 
             break;
-        case INFINITE:
+        case DECISION_INFINITE_ROOTS:
             print_typewriter("Уравнение имеет вид: 0 = 0\n", 15);
             print_typewriter("infinite roots\n\n", 15);
             break;
@@ -486,11 +489,11 @@ void calculate_statics(int* ptr_count_solutions, int* ptr_count_bad_enter, int* 
     \param [in, out] ptr_flag_stat Указатель на флаг возможности открытия раздела статистики(дважды подряд открытие невозможно)
     \param [out] ptr_flag_exit Указатель на флаг закрытия программы(для отсутствия запроса пользователя в разделе статистики)
     \param [in, out] ptr_count_bad_enter Указатель на счетчик неверных вводов в программе
-    \return "GO" в случае выбора пользователем продолжения решения уравнений
-    \return "STOP" в случае выбора пользователем остановки программы
-    \return "STAT" в случае выбора пользователем открытия статистики
-    \return "TEST" в случае выбора пользователем открытия раздела тестирования
-    \return "CONTINUE" в случае неверного ввода
+    \return "MODE_GO" в случае выбора пользователем продолжения решения уравнений
+    \return "MODE_STOP" в случае выбора пользователем остановки программы
+    \return "MODE_STAT" в случае выбора пользователем открытия статистики
+    \return "MODE_TEST" в случае выбора пользователем открытия раздела тестирования
+    \return "MODE_CONTINUE" в случае неверного ввода
 */
 enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int* ptr_count_bad_enter) //запрос юзера
 {
@@ -527,24 +530,24 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
     {
         *ptr_flag_stat = 1;
         clean_stdin();
-        return GO;
+        return MODE_GO;
     }
     else if (!strcmp(EXIT_CYCLE, mode))     //завершение программы
     {
         print_typewriter("The end(\n", 15);
 
         *ptr_flag_exit = 0;
-        return STOP;
+        return MODE_STOP;
     }
     else if (!strcmp(STATISTIC, mode) && *ptr_flag_stat)     //открытие статистики
     {
         *ptr_flag_stat = 0;
-        return STAT;
+        return MODE_STAT;
     }
     else if (!strcmp(TESTING, mode))          //начало тестирования
     {
         *ptr_flag_stat = 1;
-        return TEST;
+        return MODE_TEST;
     }
     else
     {
@@ -555,7 +558,7 @@ enum enum_opportunity_user ask_user(int* ptr_flag_stat, int* ptr_flag_exit, int*
         clean_stdin();
         (*ptr_count_bad_enter)++;
 
-        return CONTINUE;
+        return MODE_CONTINUE;
     }
 }
 

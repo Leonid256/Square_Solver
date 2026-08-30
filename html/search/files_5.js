@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['test_2ecpp_0',['test.cpp',['../test_8cpp.html',1,'']]],
-  ['test_5fsquare_2ecpp_1',['test_square.cpp',['../test__square_8cpp.html',1,'']]]
+  ['square_5fgraphic_2ecpp_0',['square_graphic.cpp',['../square__graphic_8cpp.html',1,'']]],
+  ['square_5finput_2ecpp_1',['square_input.cpp',['../square__input_8cpp.html',1,'']]]
 ];

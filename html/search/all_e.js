@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['raylib_5fexample_2ecpp_0',['raylib_example.cpp',['../raylib__example_8cpp.html',1,'']]],
-  ['red_1',['RED',['../visual_8hpp.html#a8d23feea868a983c8c2b661e1e16972f',1,'visual.hpp']]],
-  ['redb_2',['REDB',['../visual_8hpp.html#aabdfa23d5dfa28e4b4183c61aa84440c',1,'visual.hpp']]],
-  ['redhb_3',['REDHB',['../visual_8hpp.html#a24688c0b2f50e0f2b7ce64aa5814cf0c',1,'visual.hpp']]],
-  ['restart_5fstat_4',['RESTART_STAT',['../square_8cpp.html#a7ca129c14e8aa9c4a0c100846c1af150',1,'square.cpp']]],
-  ['rubbage_2ecpp_5',['rubbage.cpp',['../rubbage_8cpp.html',1,'']]],
-  ['runonetest_6',['RunOneTest',['../function_8hpp.html#a88830315c271a48e42cb5e44e3bf51ef',1,'RunOneTest(struct TestCase, int *ptr_count_fail, int *ptr_count_success):&#160;test_square.cpp'],['../test__square_8cpp.html#a3529436a27fa84f17ee4e3a33b4e5a71',1,'RunOneTest(TestCase test, int *ptr_count_fail, int *ptr_count_success):&#160;test_square.cpp']]],
-  ['runtests_7',['RunTests',['../function_8hpp.html#af9c5993e7b7b9793cb5df95ef9ec0bcc',1,'RunTests():&#160;test_square.cpp'],['../test__square_8cpp.html#af9c5993e7b7b9793cb5df95ef9ec0bcc',1,'RunTests():&#160;test_square.cpp']]],
-  ['runtests_5ffrom_5ffile_8',['RunTests_from_file',['../function_8hpp.html#aba6cf25fbd4ba60c5e896fa69d75c53d',1,'RunTests_from_file():&#160;test_square.cpp'],['../test__square_8cpp.html#aba6cf25fbd4ba60c5e896fa69d75c53d',1,'RunTests_from_file():&#160;test_square.cpp']]]
+  ['sign_0',['sign',['../rubbage_8cpp.html#abbeb8ae63622a7fef0b5a56bb91a1682',1,'rubbage.cpp']]],
+  ['sleep_5fms_1',['sleep_ms',['../main_8cpp.html#abbfe5149f45ec05c139066cdd89f9f32',1,'main.cpp']]],
+  ['square_5ffunction_5fgraphic_2',['square_function_graphic',['../function_8hpp.html#a125423afc09023c1a7785f0813bb1dc1',1,'square_function_graphic(coefficients coeffs, double x1, double x2, enum_decisions quantity):&#160;square_graphic.cpp'],['../rubbage_8cpp.html#a271ef5d859cbda2d91aeeddb4dd2f2e1',1,'square_function_graphic(coefficients coeffs):&#160;rubbage.cpp'],['../square__graphic_8cpp.html#a125423afc09023c1a7785f0813bb1dc1',1,'square_function_graphic(coefficients coeffs, double x1, double x2, enum_decisions quantity):&#160;square_graphic.cpp']]],
+  ['square_5fgraphic_2ecpp_3',['square_graphic.cpp',['../square__graphic_8cpp.html',1,'']]],
+  ['square_5finput_2ecpp_4',['square_input.cpp',['../square__input_8cpp.html',1,'']]],
+  ['statistic_5',['STATISTIC',['../main_8cpp.html#abe8246e4917267c8243deabf468ed151',1,'main.cpp']]],
+  ['switch_6',['switch',['../rubbage_8cpp.html#a99986947b4a666c3929114d178f27f24',1,'rubbage.cpp']]]
 ];

@@ -14,7 +14,7 @@ var square_8cpp =
     [ "input_one_coeff", "square_8cpp.html#a664396f3f8957b88c1c89c59495e7d04", null ],
     [ "is_equal", "square_8cpp.html#ae4ae92e0a38ff7d1e9d50c43b044dfc2", null ],
     [ "is_zero", "square_8cpp.html#ab9b65caeaf434e3a4cd7f65cf5db2e59", null ],
-    [ "main", "square_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe", null ],
+    [ "main", "square_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
     [ "print_answer", "square_8cpp.html#ab18d544643859379bd8f6f03edd046d0", null ],
     [ "print_cat", "square_8cpp.html#a2c1234a2e169329b975a6541cc561e81", null ],
     [ "print_logo", "square_8cpp.html#a73eb533269566775275da2ac91350562", null ],

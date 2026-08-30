@@ -18,6 +18,8 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
     const int screenWidth = 800;
     const int screenHeight = 450;
     const float step_camera = 5.0;
+    const float zoom_max = 3.0;
+    const float zoom_min = 0.5;
 
     float x_up_arrow_start = screenWidth / 2;           //up arrow (oY)
     float x_up_arrow_end_left = screenWidth / 2 - 10;
@@ -47,8 +49,8 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
     {
         cameraPosition.zoom = zoom_camera;
 
-        float x_max = screenWidth * 3;
-        float y_max = screenHeight * 3;
+        float x_max = screenWidth * 2;
+        float y_max = screenHeight * 2.5;
     
         float scale_x = 5;
         float scale_y = 5;
@@ -63,7 +65,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         */
 
         //сдвиг области видимости
-        if (cameraPosition.target.x < (screenWidth * 3 - 15.0))
+        if (cameraPosition.target.x < (x_max - 15.0))
         {
             if (IsKeyDown(KEY_RIGHT)) 
             {
@@ -74,7 +76,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
                 x_up_arrow_end_left -= step_camera;
             }
         }
-        if (cameraPosition.target.x > (-screenWidth * 3 + 15.0))
+        if (cameraPosition.target.x > (-x_max + 15.0))
         {
             if (IsKeyDown(KEY_LEFT)) 
             {
@@ -86,7 +88,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
             }
         }
 
-        if (cameraPosition.target.y < (screenHeight * 3 - 15.0))
+        if (cameraPosition.target.y < (y_max - 15.0))
         {
             if (IsKeyDown(KEY_DOWN)) 
             {
@@ -98,7 +100,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
             }
 
         }
-        if (cameraPosition.target.y > (-screenHeight * 3 + 15.0))
+        if (cameraPosition.target.y > (-y_max + 15.0))
         {
             if (IsKeyDown(KEY_UP)) 
             {
@@ -110,53 +112,34 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
             }
         }
 
+        if (IsKeyDown(KEY_ESCAPE))
+            break;
+
         //изменение зума
-        if (IsKeyDown(KEY_EQUAL))
+        if (IsKeyDown(KEY_EQUAL) && (zoom_camera < zoom_max))
             zoom_camera += 0.25;
-        if (IsKeyDown(KEY_MINUS))
+        if (IsKeyDown(KEY_MINUS) && (zoom_camera > zoom_min))
             zoom_camera -= 0.25;
 
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        
+
         BeginMode2D(cameraPosition);
 
         //отрисовка сетки графика
         rlPushMatrix();
-        rlTranslatef(0, 450, 0);
+        rlTranslatef(0, 2000, 0);
         rlRotatef(90, 1, 0, 0);
-        DrawGrid(1000, 5);
+        DrawGrid(4000, 5);
         rlPopMatrix();
-        DrawGrid(1000, 10);  
-
-        //Легенда на графике + корни на оси
-        switch (quantity)
-        {
-            case ONE_ROOT:
-                DrawText("The equation has 1 solution", 10, 10, 20, BLACK);
-                DrawText(TextFormat("x1 = x2 = %lg", x1), 10, 30, 20, BLACK);
-
-                DrawCircle(x1 * scale_x, 0, 2, RED);
-                break;
-            case TWO_ROOTS:
-                DrawText("The equation has two solutions", 10, 10, 20, BLACK);
-                DrawText(TextFormat("x1 =  %lg", x1), 10, 30, 20, BLACK);
-                DrawText(TextFormat("x2 =  %lg", x2), 10, 50, 20, BLACK);
-
-                DrawCircle(x1 * scale_x, 0, 2, RED);
-                DrawCircle(x2 * scale_x, 0, 2, RED);
-
-                break;
-            default:
-                break;
-        }
+        DrawGrid(2000, 10);  
 
         //отрисовка координатных осей
-        DrawLine(-screenWidth * 4, 0, screenWidth * 4, 0, DARKGRAY);
-        DrawLine(0, -screenHeight * 4, 0, screenHeight * 4, DARKGRAY);
+        DrawLine(-x_max * 2, 0, x_max * 2, 0, DARKGRAY);
+        DrawLine(0, -y_max * 2, 0, y_max * 2, DARKGRAY);
 
         //отрисовка графика
-        for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 0.002)
+        for (double x = - x_max; x <= x_max; x += 0.002)
         {
             double y = (x) * (x) * coeffs.a + (x) * coeffs.b + coeffs.c;
 
@@ -164,18 +147,57 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         }
         
         //отрисовка разметки оси оХ
-        for (double x = - screenWidth * 3; x <= screenWidth * 3; x += 5)
+        for (double x = - x_max; x <= x_max; x += 5)
         {
             DrawCircle(x, 0, 1, DARKGRAY);
         }
 
         //отрисовка разметки оси oY
-        for (double y = - screenWidth * 3; y <= screenWidth * 3; y += 5)
+        for (double y = - y_max; y <= y_max; y += 5)
         {
             DrawCircle(0, y, 1, DARKGRAY);
         }
 
+        //корни на оси
+        switch (quantity)
+        {
+            case DECISION_ONE_ROOT:
+                DrawCircle(x1 * scale_x, 0, 3, PINK);
+
+                break;
+            case DECISION_TWO_ROOTS:
+                DrawCircle(x1 * scale_x, 0, 3, PINK);
+                DrawCircle(x2 * scale_x, 0, 3, PINK);
+
+                break;
+            default:
+                break;
+        }
+
         EndMode2D();
+
+        //фон для легенды графика
+        DrawRectangle(0, 0, 340, 70, WHITE);
+        DrawLine(0, 70, 340, 70, BLACK);
+        DrawLine(340, 0, 340, 70, BLACK);
+
+        //Легенда графика
+        switch (quantity)
+        {
+            case DECISION_ONE_ROOT:
+                DrawText("The equation has 1 solution", 10, 10, 20, BLACK);
+                DrawText(TextFormat("x1 = x2 = %lg", x1), 10, 30, 20, BLACK);
+
+                break;
+            case DECISION_TWO_ROOTS:
+                DrawText("The equation has two solutions", 10, 10, 20, BLACK);
+                DrawText(TextFormat("x1 =  %lg", x1), 10, 30, 20, BLACK);
+                DrawText(TextFormat("x2 =  %lg", x2), 10, 50, 20, BLACK);
+
+                break;
+            default:
+                break;
+        }
 
         EndDrawing();
     }

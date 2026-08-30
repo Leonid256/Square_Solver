@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['wht_0',['WHT',['../visual_8hpp.html#aeaf3a04d5bf63b204689a714718ea930',1,'visual.hpp']]],
-  ['whtb_1',['WHTB',['../visual_8hpp.html#a39e6bb20617768ab8c74ef019d91cdd9',1,'visual.hpp']]],
-  ['whthb_2',['WHTHB',['../visual_8hpp.html#aa31c004776e31df569bffb18564ea31e',1,'visual.hpp']]]
+  ['x1ref_0',['x1ref',['../struct_test_case.html#a1ff6a531e7c5dd032e33d4a89a92bab5',1,'TestCase']]],
+  ['x2ref_1',['x2ref',['../struct_test_case.html#aed2b4e1268a6f5723521ddcefa03cd85',1,'TestCase']]]
 ];
