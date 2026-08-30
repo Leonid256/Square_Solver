@@ -6,10 +6,11 @@
 /**
     \brief Постройка графика
     \details Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, 
-    а также изменение зума клавишами + и - 
+    а также изменение зума клавишами + и - . И то, и то ограничено в пределах с помощью констант
     \param [in] coeffs коэффициенты уравнения
     \param [in] x1, x2 корни уравнения
     \note В случае одного решения у уравнения, корень x2 = NAN
+    \note При отсутствии ограничения на зум, при переходе его в отрицательную область, график переворачивается. Поэтому ограничение обязательно
     \param [in] quantity количество корней
     \return 0 в случае успешного завершения
 */
@@ -21,23 +22,13 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
     const float zoom_max = 3.0;
     const float zoom_min = 0.5;
 
-    float x_up_arrow_start = screenWidth / 2;           //up arrow (oY)
-    float x_up_arrow_end_left = screenWidth / 2 - 10;
-    float x_up_arrow_end_right = screenWidth / 2 + 10;
-    float y_up_arrow_start = 0;
-    float y_up_arrow_end = 10;
-
-    float x_right_arrow_start = screenWidth;            //right arrow (oX)
-    float x_right_arrow_end = screenWidth - 10;
-    float y_right_arrow_start = screenHeight / 2;
-    float y_right_arrow_end_up = screenHeight / 2 - 10;
-    float y_right_arrow_end_down = screenHeight / 2 + 10;
-
     float zoom_camera = 1.0;
+    float x_top = -coeffs.b / (2 * coeffs.a);
+    float y_top = x_top * x_top * coeffs.a + x_top * coeffs.b + coeffs.c;
 
     InitWindow(screenWidth, screenHeight, "Square_function_graphic");
 
-    SetTargetFPS(90);
+    SetTargetFPS(60);
     
 
     Camera2D cameraPosition = {};
@@ -55,61 +46,27 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         float scale_x = 5;
         float scale_y = 5;
 
-        /*
-        //стрелки для осей
-        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_left, y_up_arrow_end, DARKGRAY);  //oY arrow
-        DrawLine(x_up_arrow_start, y_up_arrow_start, x_up_arrow_end_right, y_up_arrow_end, DARKGRAY);
-
-        DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_up, DARKGRAY);  //oX arrow
-        DrawLine(x_right_arrow_start, y_right_arrow_start, x_right_arrow_end, y_right_arrow_end_down, DARKGRAY);
-        */
-
         //сдвиг области видимости
         if (cameraPosition.target.x < (x_max - 15.0))
         {
             if (IsKeyDown(KEY_RIGHT)) 
-            {
                 cameraPosition.target.x += step_camera;
-
-                x_up_arrow_start -= step_camera;
-                x_up_arrow_end_right -= step_camera;
-                x_up_arrow_end_left -= step_camera;
-            }
         }
         if (cameraPosition.target.x > (-x_max + 15.0))
         {
             if (IsKeyDown(KEY_LEFT)) 
-            {
                 cameraPosition.target.x -= step_camera;
-
-                x_up_arrow_start += step_camera;
-                x_up_arrow_end_right += step_camera;
-                x_up_arrow_end_left += step_camera;
-            }
         }
 
         if (cameraPosition.target.y < (y_max - 15.0))
         {
             if (IsKeyDown(KEY_DOWN)) 
-            {
                 cameraPosition.target.y += step_camera;
-
-                y_right_arrow_start -= step_camera;
-                y_right_arrow_end_up -= step_camera;
-                y_right_arrow_end_down -= step_camera;
-            }
-
         }
         if (cameraPosition.target.y > (-y_max + 15.0))
         {
             if (IsKeyDown(KEY_UP)) 
-            {
                 cameraPosition.target.y -= step_camera;
-
-                y_right_arrow_start += step_camera;
-                y_right_arrow_end_up += step_camera;
-                y_right_arrow_end_down += step_camera;
-            }
         }
 
         if (IsKeyDown(KEY_ESCAPE))
@@ -123,7 +80,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
 
         BeginDrawing();
         ClearBackground(RAYWHITE);
-
+//----------------------------------
         BeginMode2D(cameraPosition);
 
         //отрисовка сетки графика
@@ -137,6 +94,28 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         //отрисовка координатных осей
         DrawLine(-x_max * 2, 0, x_max * 2, 0, DARKGRAY);
         DrawLine(0, -y_max * 2, 0, y_max * 2, DARKGRAY);
+
+        //отрисовка нуля
+        if (y_top < 0)  
+        {
+            if (x_top < 0)
+                DrawText("0", 3, -10, 5, BLACK);
+            else if (x_top > 0)
+                DrawText("0", 3, -10, 5, BLACK);
+            else
+                ;
+        }
+        else if (y_top > 0)
+        {
+            if (x_top < 0)
+                DrawText("0", -8, -10, 5, BLACK);
+            else if (x_top > 0)
+                DrawText("0", -8, 3, 5, BLACK);
+            else
+                ;
+        }
+        else
+            ;
 
         //отрисовка графика
         for (double x = - x_max; x <= x_max; x += 0.002)
@@ -159,6 +138,10 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         }
 
         //корни на оси
+        DrawText(TextFormat("%lg", x_top), x_top * scale_x, 1, 2, BLACK);
+        DrawText(TextFormat("%lg", y_top), 1, -y_top * scale_y, 2, BLACK);
+
+        //отметка корней на осях
         switch (quantity)
         {
             case DECISION_ONE_ROOT:
@@ -174,8 +157,16 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
                 break;
         }
 
-        EndMode2D();
+        //пунктиры к вершине
+        Vector2 top_on_x = {x_top * scale_x, 0.0};
+        Vector2 top_graphic = {x_top * scale_x, -y_top * scale_y};
+        Vector2 top_on_y = {0, -y_top * scale_y};
 
+        DrawLineDashed(top_on_x, top_graphic, 4, 3, BLACK);
+        DrawLineDashed(top_graphic, top_on_y, 4, 3, BLACK);
+
+        EndMode2D();
+//----------------------------------
         //фон для легенды графика
         DrawRectangle(0, 0, 340, 70, WHITE);
         DrawLine(0, 70, 340, 70, BLACK);

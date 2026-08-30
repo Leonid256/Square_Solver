@@ -118,8 +118,6 @@ int RunTests()
 {
     sleep(1);
 
-    // TODO: think about macro-function (особенно про # в теле макроса)
-
     int count_fail = 0;
     int count_success = 0;
 

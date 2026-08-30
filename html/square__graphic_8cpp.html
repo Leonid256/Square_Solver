@@ -152,14 +152,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Постройка графика </p>
-<p>Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и - </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Данная функция строит график уравнения в случае 1 или 2 корней. На графике возможно передвижение с помощью стрелок, а также изменение зума клавишами + и - . И то, и то ограничено в пределах с помощью констант </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coeffs</td><td>коэффициенты уравнения </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x1,x2</td><td>корни уравнения </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>В случае одного решения у уравнения, корень x2 = NAN </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>В случае одного решения у уравнения, корень x2 = NAN </dd>
+<dd>
+При отсутствии ограничения на зум, при переходе его в отрицательную область, график переворачивается. Поэтому ограничение обязательно </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">quantity</td><td>количество корней </td></tr>
