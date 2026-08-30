@@ -70,7 +70,7 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         }
 
         if (IsKeyDown(KEY_ESCAPE))
-            break;
+            CloseWindow();
 
         //изменение зума
         if (IsKeyDown(KEY_EQUAL) && (zoom_camera < zoom_max))
@@ -162,8 +162,8 @@ int square_function_graphic(coefficients coeffs, double x1, double x2, enum_deci
         Vector2 top_graphic = {x_top * scale_x, -y_top * scale_y};
         Vector2 top_on_y = {0, -y_top * scale_y};
 
-        DrawLineDashed(top_on_x, top_graphic, 4, 3, BLACK);
-        DrawLineDashed(top_graphic, top_on_y, 4, 3, BLACK);
+        DrawLineEx(top_on_x, top_graphic, 1, PURPLE);
+        DrawLineEx(top_graphic, top_on_y, 1, PURPLE);
 
         EndMode2D();
 //----------------------------------

@@ -629,7 +629,6 @@ int choose_test()
 
     if (!strcmp(test_choose, FILE_TEST))
     {
-        // TODO: read filename
         printf(BLU);
         print_typewriter("Good, testing from user file\n", 20);
         printf(CRESET);
